@@ -47,20 +47,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="SozlukDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SozlukDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="SozlukDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SozlukDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="SozlukUygulamasiDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SozlukUygulamasiDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -68,17 +58,6 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="SozlukDataSet.xsc">
-      <DependentUpon>SozlukDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SozlukDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SozlukDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SozlukDataSet.xss">
-      <DependentUpon>SozlukDataSet.xsd</DependentUpon>
     </None>
     <None Include="SozlukDataSet1.xsc">
       <DependentUpon>SozlukDataSet1.xsd</DependentUpon>
@@ -90,17 +69,6 @@
     </None>
     <None Include="SozlukDataSet1.xss">
       <DependentUpon>SozlukDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="SozlukUygulamasiDataSet.xsc">
-      <DependentUpon>SozlukUygulamasiDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SozlukUygulamasiDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SozlukUygulamasiDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SozlukUygulamasiDataSet.xss">
-      <DependentUpon>SozlukUygulamasiDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
