@@ -80,6 +80,7 @@
             this.Controls.Add(this.listBox_sec);
             this.Name = "KelimeSec";
             this.Text = "KelimeSec";
+            this.Load += new System.EventHandler(this.KelimeSec_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listBox_sec)).EndInit();
             this.ResumeLayout(false);
 

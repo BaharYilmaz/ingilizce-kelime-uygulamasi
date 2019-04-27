@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Sözlük.Entities;
+
 
 namespace SözlükUygulaması
 {
@@ -25,6 +27,16 @@ namespace SözlükUygulaması
         private void simpleButton2_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void KelimeSec_Load(object sender, EventArgs e)
+        {
+            ListeDoldur();
+        }
+        private void ListeDoldur()
+        {
+            BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
+            List<Kelime> KelimeListesi = BLL.KelimeListele();
         }
     }
 }
