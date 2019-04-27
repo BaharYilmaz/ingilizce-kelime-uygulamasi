@@ -65,7 +65,7 @@
             this.btn_girisYap.Location = new System.Drawing.Point(99, 287);
             this.btn_girisYap.Name = "btn_girisYap";
             this.btn_girisYap.Size = new System.Drawing.Size(195, 31);
-            this.btn_girisYap.TabIndex = 2;
+            this.btn_girisYap.TabIndex = 3;
             this.btn_girisYap.Text = "Giriş Yap";
             this.btn_girisYap.Click += new System.EventHandler(this.btn_girisYap_Click);
             // 
@@ -82,12 +82,13 @@
             this.txt_sifre.Properties.Appearance.Options.UseForeColor = true;
             this.txt_sifre.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txt_sifre.Size = new System.Drawing.Size(195, 28);
-            this.txt_sifre.TabIndex = 1;
+            this.txt_sifre.TabIndex = 2;
             this.txt_sifre.Click += new System.EventHandler(this.txt_sifre_Click);
             // 
             // txt_kullanıcıAdı
             // 
             this.txt_kullanıcıAdı.EditValue = "Kullanıcı Adı";
+            this.txt_kullanıcıAdı.EnterMoveNextControl = true;
             this.txt_kullanıcıAdı.Location = new System.Drawing.Point(99, 169);
             this.txt_kullanıcıAdı.Name = "txt_kullanıcıAdı";
             this.txt_kullanıcıAdı.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
