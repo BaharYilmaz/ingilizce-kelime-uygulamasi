@@ -34,7 +34,10 @@ namespace SözlükUygulaması
             }
             else
                 MessageBox.Show("Kayıt Ekleme Başarısız", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+            txt_ekleKelime.Text = "";
+            txt_ekleAnlam.Text = "";
+            txt_ekleTur.Text = "";
+            txt_ekleCumle.Text = "";
         }
     }
 }
