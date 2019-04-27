@@ -26,5 +26,10 @@ namespace SözlükUygulaması
         {
 
         }
+
+        private void KelimeSec_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

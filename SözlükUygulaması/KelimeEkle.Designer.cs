@@ -45,6 +45,7 @@
             // 
             // txt_ekleAnlam
             // 
+            this.txt_ekleAnlam.EnterMoveNextControl = true;
             this.txt_ekleAnlam.Location = new System.Drawing.Point(153, 119);
             this.txt_ekleAnlam.Name = "txt_ekleAnlam";
             this.txt_ekleAnlam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -55,6 +56,7 @@
             // 
             // txt_ekleTur
             // 
+            this.txt_ekleTur.EnterMoveNextControl = true;
             this.txt_ekleTur.Location = new System.Drawing.Point(153, 165);
             this.txt_ekleTur.Name = "txt_ekleTur";
             this.txt_ekleTur.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -65,6 +67,8 @@
             // 
             // txt_ekleCumle
             // 
+            this.txt_ekleCumle.EditValue = "";
+            this.txt_ekleCumle.EnterMoveNextControl = true;
             this.txt_ekleCumle.Location = new System.Drawing.Point(153, 208);
             this.txt_ekleCumle.Name = "txt_ekleCumle";
             this.txt_ekleCumle.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -117,6 +121,7 @@
             // txt_ekleKelime
             // 
             this.txt_ekleKelime.EditValue = "";
+            this.txt_ekleKelime.EnterMoveNextControl = true;
             this.txt_ekleKelime.Location = new System.Drawing.Point(153, 69);
             this.txt_ekleKelime.Name = "txt_ekleKelime";
             this.txt_ekleKelime.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
