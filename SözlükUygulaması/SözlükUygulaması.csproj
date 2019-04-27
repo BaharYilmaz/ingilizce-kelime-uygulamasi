@@ -180,6 +180,10 @@
       <Project>{3ef36dd7-9bd5-4cf5-a3d6-f7ab0b4e71f7}</Project>
       <Name>BusinessLogicLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sözlük.Entities\Sözlük.Entities.csproj">
+      <Project>{f4ea4994-b2ab-4ee0-87c9-84a37355c68e}</Project>
+      <Name>Sözlük.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
