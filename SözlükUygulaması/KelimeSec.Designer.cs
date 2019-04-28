@@ -43,6 +43,7 @@
             this.listBox_sec.Name = "listBox_sec";
             this.listBox_sec.Size = new System.Drawing.Size(259, 385);
             this.listBox_sec.TabIndex = 0;
+            this.listBox_sec.Click += new System.EventHandler(this.listBox_sec_Click);
             // 
             // btn_secBiliyorum
             // 
@@ -55,6 +56,7 @@
             this.btn_secBiliyorum.Size = new System.Drawing.Size(94, 64);
             this.btn_secBiliyorum.TabIndex = 1;
             this.btn_secBiliyorum.Text = "Biliyorum";
+            this.btn_secBiliyorum.Click += new System.EventHandler(this.btn_secBiliyorum_Click);
             // 
             // btn_secOgren
             // 
@@ -67,7 +69,7 @@
             this.btn_secOgren.Size = new System.Drawing.Size(94, 64);
             this.btn_secOgren.TabIndex = 1;
             this.btn_secOgren.Text = "Öğren";
-            this.btn_secOgren.Click += new System.EventHandler(this.simpleButton2_Click_1);
+            this.btn_secOgren.Click += new System.EventHandler(this.btn_secOgren_Click);
             // 
             // KelimeSec
             // 

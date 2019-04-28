@@ -62,6 +62,7 @@
             this.Controls.Add(this.listBox_Ogrenilmis);
             this.Name = "OgrenilenKelimeler";
             this.Text = "OgrenilenKelimeler";
+            this.Load += new System.EventHandler(this.OgrenilenKelimeler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listBox_Ogrenilmis)).EndInit();
             this.ResumeLayout(false);
 

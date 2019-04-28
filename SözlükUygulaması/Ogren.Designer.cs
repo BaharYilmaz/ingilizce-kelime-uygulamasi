@@ -63,7 +63,6 @@
             this.labelControl2.Size = new System.Drawing.Size(59, 21);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Anlamı";
-            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
             // labelControl3
             // 
@@ -91,7 +90,6 @@
             this.lbl_ogrenKelime.Name = "lbl_ogrenKelime";
             this.lbl_ogrenKelime.Size = new System.Drawing.Size(260, 86);
             this.lbl_ogrenKelime.TabIndex = 0;
-            this.lbl_ogrenKelime.Click += new System.EventHandler(this.lbl_kelime_Click);
             // 
             // txt_ogrenCumle
             // 
@@ -129,24 +127,24 @@
             this.btn_ileri.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_ileri.Appearance.Options.UseFont = true;
             this.btn_ileri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_ileri.ImageOptions.SvgImage")));
-            this.btn_ileri.Location = new System.Drawing.Point(117, 384);
+            this.btn_ileri.Location = new System.Drawing.Point(223, 384);
             this.btn_ileri.Name = "btn_ileri";
             this.btn_ileri.Size = new System.Drawing.Size(105, 39);
             this.btn_ileri.TabIndex = 2;
             this.btn_ileri.Text = "İleri";
-            this.btn_ileri.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btn_ileri.Click += new System.EventHandler(this.btn_ileri_Click);
             // 
             // btn_geri
             // 
             this.btn_geri.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_geri.Appearance.Options.UseFont = true;
             this.btn_geri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_geri.ImageOptions.SvgImage")));
-            this.btn_geri.Location = new System.Drawing.Point(240, 384);
+            this.btn_geri.Location = new System.Drawing.Point(96, 384);
             this.btn_geri.Name = "btn_geri";
             this.btn_geri.Size = new System.Drawing.Size(105, 39);
             this.btn_geri.TabIndex = 2;
             this.btn_geri.Text = "Geri";
-            this.btn_geri.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click);
             // 
             // btn_bitir
             // 
@@ -158,7 +156,6 @@
             this.btn_bitir.Size = new System.Drawing.Size(105, 39);
             this.btn_bitir.TabIndex = 2;
             this.btn_bitir.Text = "Bitir";
-            this.btn_bitir.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // Ogren
             // 
