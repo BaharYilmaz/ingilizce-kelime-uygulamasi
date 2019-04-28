@@ -156,6 +156,7 @@
             this.btn_bitir.Size = new System.Drawing.Size(105, 39);
             this.btn_bitir.TabIndex = 2;
             this.btn_bitir.Text = "Bitir";
+            this.btn_bitir.Click += new System.EventHandler(this.btn_bitir_Click);
             // 
             // Ogren
             // 

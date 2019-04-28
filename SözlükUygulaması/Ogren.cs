@@ -15,6 +15,7 @@ namespace SözlükUygulaması
     {
         private bool ButonDurum = false;
         int i = 0;
+      
         
 
         public Ogren()
@@ -61,6 +62,15 @@ namespace SözlükUygulaması
         private void btn_geri_Click(object sender, EventArgs e)
         {
             ButonDurum = true;
+        }
+
+        private void btn_bitir_Click(object sender, EventArgs e)
+        {
+            Test t = new Test();
+            this.Hide();
+            t.Show();
+
+
         }
     }
 }

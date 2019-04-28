@@ -234,7 +234,7 @@ namespace SözlükUygulaması
             
                 btn_kelimeSec.Enabled = true;
                 btn_kelimeOgren.Enabled = false;
-                btn_test.Enabled = false;
+                btn_test.Enabled = true;
                 btn_ögrenilmis.Enabled = true;
                 btn_kelimeEkle.Enabled = true;
             

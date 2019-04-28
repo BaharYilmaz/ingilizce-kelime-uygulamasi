@@ -100,7 +100,9 @@ namespace DatabaseLogicLayer
             {
                 command = new SqlCommand
                  (@"update Kelime set 
-                   Durum=@Durum where KeliemeID=@KeliemeID",connect);
+                   KeliemeID=@KeliemeID,
+                   Durum=@Durum where KeliemeID=@KeliemeID", connect);
+                command.Parameters.Add("@KeliemeID", SqlDbType.UniqueIdentifier).Value = k.KeliemeID;
                 command.Parameters.Add("@Durum", SqlDbType.NVarChar).Value = k.Durum;
                 BaglantiAyarla();
                 ReturnValue = command.ExecuteNonQuery();

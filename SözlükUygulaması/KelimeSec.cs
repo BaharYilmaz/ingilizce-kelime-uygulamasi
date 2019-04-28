@@ -14,18 +14,20 @@ namespace SözlükUygulaması
 {
     public partial class KelimeSec : Form
     {
+
         public KelimeSec()
         {
             InitializeComponent();
         }
 
-       
 
         private void KelimeSec_Load(object sender, EventArgs e)
         {
             ListeDoldur();
             btn_secBiliyorum.Enabled = false;
             btn_secOgren.Enabled = false;
+
+
         }
         private void ListeDoldur()
         {
@@ -33,26 +35,50 @@ namespace SözlükUygulaması
             List<Kelime> KelimeListesi = BLL.KelimeListele();
             if (KelimeListesi != null && KelimeListesi.Count > 0)
             {
-                listBox_sec.DataSource = KelimeListesi;
+                foreach (Kelime k in KelimeListesi)
+                {
+                    listBox_sec.Items.Add(k);
+
+                }
             }
 
         }
        
         private void btn_secBiliyorum_Click(object sender, EventArgs e)
         {
-            Guid KelimeID = ((Kelime)listBox_sec.SelectedItem).KeliemeID;
+
             BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
+            Guid KelimeID = ((Kelime)listBox_sec.SelectedItem).KeliemeID;
             BLL.KelimeDurumDuzenle(KelimeID, "test");
             listBox_sec.Items.Remove(listBox_sec.SelectedItem);
+
+      
+
+            if (listBox_sec.ItemCount==0)
+            {
+                Ogren ogr = new Ogren();
+                this.Hide();
+                ogr.Show();
+            }
+
 
         }
 
         private void btn_secOgren_Click(object sender, EventArgs e)
         {
-            Guid KelimeID = ((Kelime)listBox_sec.SelectedItem).KeliemeID;
             BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
+            Guid KelimeID = ((Kelime)listBox_sec.SelectedItem).KeliemeID;
             BLL.KelimeDurumDuzenle(KelimeID, "ogren");
             listBox_sec.Items.Remove(listBox_sec.SelectedItem);
+           
+            if (listBox_sec.ItemCount == 0)
+            {
+                Ogren ogr = new Ogren();
+                this.Hide();
+                ogr.Show();
+            }
+
+
 
         }
 
@@ -60,6 +86,7 @@ namespace SözlükUygulaması
         {
             btn_secOgren.Enabled = true;
             btn_secBiliyorum.Enabled = true;
+           
         }
     }
 }

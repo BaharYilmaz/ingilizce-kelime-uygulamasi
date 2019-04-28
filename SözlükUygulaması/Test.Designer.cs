@@ -32,11 +32,12 @@
             this.btn_testDort = new DevExpress.XtraEditors.CheckButton();
             this.btn_testUc = new DevExpress.XtraEditors.CheckButton();
             this.btn_testIki = new DevExpress.XtraEditors.CheckButton();
-            this.lbl_TestKelime = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panel_Test = new DevExpress.XtraEditors.PanelControl();
+            this.txt_TestKelime = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panel_Test)).BeginInit();
             this.panel_Test.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TestKelime.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_testBir
@@ -72,16 +73,6 @@
             this.btn_testIki.TabIndex = 0;
             this.btn_testIki.Text = "---";
             // 
-            // lbl_TestKelime
-            // 
-            this.lbl_TestKelime.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_TestKelime.Appearance.Options.UseFont = true;
-            this.lbl_TestKelime.Location = new System.Drawing.Point(213, 71);
-            this.lbl_TestKelime.Name = "lbl_TestKelime";
-            this.lbl_TestKelime.Size = new System.Drawing.Size(58, 21);
-            this.lbl_TestKelime.TabIndex = 3;
-            this.lbl_TestKelime.Text = "Kelime";
-            // 
             // labelControl2
             // 
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -106,6 +97,13 @@
             this.panel_Test.Size = new System.Drawing.Size(294, 247);
             this.panel_Test.TabIndex = 4;
             // 
+            // txt_TestKelime
+            // 
+            this.txt_TestKelime.Location = new System.Drawing.Point(176, 60);
+            this.txt_TestKelime.Name = "txt_TestKelime";
+            this.txt_TestKelime.Size = new System.Drawing.Size(125, 22);
+            this.txt_TestKelime.TabIndex = 5;
+            // 
             // Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -113,14 +111,15 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::SözlükUygulaması.Properties.Resources._2;
             this.ClientSize = new System.Drawing.Size(490, 480);
+            this.Controls.Add(this.txt_TestKelime);
             this.Controls.Add(this.panel_Test);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.lbl_TestKelime);
             this.Name = "Test";
             this.Text = "Test";
             this.Load += new System.EventHandler(this.Test_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panel_Test)).EndInit();
             this.panel_Test.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TestKelime.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,8 +131,8 @@
         private DevExpress.XtraEditors.CheckButton btn_testDort;
         private DevExpress.XtraEditors.CheckButton btn_testUc;
         private DevExpress.XtraEditors.CheckButton btn_testIki;
-        private DevExpress.XtraEditors.LabelControl lbl_TestKelime;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.PanelControl panel_Test;
+        private DevExpress.XtraEditors.TextEdit txt_TestKelime;
     }
 }
