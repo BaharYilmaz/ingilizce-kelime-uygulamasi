@@ -32,14 +32,16 @@ namespace SözlükUygulaması
         private void ListeDoldur()
         {
             BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
-            List<Kelime> KelimeListesi = BLL.KelimeListele();
+            List<Kelime> KelimeListesi = BLL.ListeleDurum("NULL");
             if (KelimeListesi != null && KelimeListesi.Count > 0)
             {
-                foreach (Kelime k in KelimeListesi)
+                for (int i = 0; i < 10; i++)
                 {
-                    listBox_sec.Items.Add(k);
+                    listBox_sec.Items.Add(KelimeListesi[i]);
+                }                
+                   
 
-                }
+                
             }
 
         }

@@ -58,34 +58,44 @@ namespace SözlükUygulaması
 
 
             List<Kelime> ListeDurum = BLL.ListeleDurum("test");
+            //int[] sayilar = new int[3];
+            //Random rnd = new Random();
+            //int i = 0;
+            //while (i<3)
+            //{
 
-            for (; ; )
-            {
-                /////
+            //    int sayi = rnd.Next(0, ListeDurum.Count);
+            //    if (sayilar.Contains(sayi))
+            //        continue;
+            //    sayilar[i] = sayi;
+            //    i++;
+            //}
 
+
+            /////
+            
                 Random rnd = new Random();
 
                 int sayi = rnd.Next(ListeDurum.Count / 3);
-                int sayi2 = rnd.Next(ListeDurum.Count / 3, (ListeDurum.Count) * (2 / 3));
-                int sayi3 = rnd.Next(ListeDurum.Count * (2 / 3), ListeDurum.Count);
+                int sayi2 = rnd.Next(ListeDurum.Count / 3, ListeDurum.Count * 2 / 3);
+                int sayi3 = rnd.Next(ListeDurum.Count * 2 / 3, ListeDurum.Count);
 
                 if (Cevap != ListeDurum[sayi].ToString() && Cevap != ListeDurum[sayi2].ToString() && Cevap != ListeDurum[sayi3].ToString())
                 {
-                    if (ListeDurum != null && ListeDurum.Count > 0)
+
+                    while (ListeDurum.Count > 0 && ListeDurum != null)
                     {
-
-
                         btn_testIki.Text = ListeDurum[sayi].KelimeTurkce;
                         btn_testUc.Text = ListeDurum[sayi2].KelimeTurkce;
                         btn_testDort.Text = ListeDurum[sayi3].KelimeTurkce;
                         break;
 
                     }
-                   
+
                 }
-                
-                
-            }
+              
+              
+            
 
         }
            
