@@ -45,43 +45,46 @@ namespace SözlükUygulaması
         }
         private void SecenekDoldur(string Cevap)
         {
+
             BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
             List<Kelime> ListeDurum = BLL.ListeleDurum("test");
-
             Random rnd = new Random();
+            int[] cvp = new int[4];
+            int kucuk = 0, j = 0;
+            string[] cevp = new string[4];
 
-            int sayi = rnd.Next(ListeDurum.Count / 3);
-            int sayi2 = rnd.Next(ListeDurum.Count / 3, ListeDurum.Count * 2 / 3);
-            int sayi3 = rnd.Next(ListeDurum.Count * 2 / 3, ListeDurum.Count);
 
-
-            string[] cevaplar = new string[4] { ListeDurum[sayi].KelimeTurkce, ListeDurum[sayi2].KelimeTurkce, ListeDurum[sayi3].KelimeTurkce, Cevap };
-
-            int[] sayilar = new int[4];
-            int eleman;
-            Random random = new Random();
-
-            
-            int i = 0;
-            while (i < 4)
+            for (int i = 0; i < 4; i++)
             {
-                eleman = random.Next(0, 3);
-                int yoksa = Array.IndexOf(sayilar, eleman);
-                if (yoksa == -1)
+                cvp[i] = rnd.Next(0, 200);
+
+            }
+
+            int[] sayi = new int[3];
+            sayi[0] = rnd.Next(ListeDurum.Count / 3);
+            sayi[1] = rnd.Next(ListeDurum.Count / 3, ListeDurum.Count * 2 / 3);
+            sayi[2] = rnd.Next(ListeDurum.Count * 2 / 3, ListeDurum.Count);
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (cvp[i] < cvp[i + 1]) kucuk = i;
+            }
+            cevp[kucuk] = Cevap;
+
+            for (int i = 0; i < 4; i++)
+            {
+                if (i != kucuk)
                 {
-                    sayilar[i] = eleman;
-                    
-                    i++;
+                    cevp[i] = ListeDurum[sayi[j]].KelimeTurkce;
+                    j++;
                 }
+                else continue;
             }
 
-            while (ListeDurum.Count > 0 && ListeDurum != null)
-            {
-                btn_testBir.Text = cevaplar[sayilar[0]];
-                btn_testIki.Text = cevaplar[sayilar[1]];
-                btn_testUc.Text = cevaplar[sayilar[2]];
-                btn_testDort.Text = cevaplar[sayilar[3]];
-            }
+            btn_testBir.Text = cevp[0];
+            btn_testIki.Text = cevp[1];
+            btn_testUc.Text = cevp[2];
+            btn_testDort.Text = cevp[3];
 
         }
 
