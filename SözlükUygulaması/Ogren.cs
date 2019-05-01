@@ -23,7 +23,8 @@ namespace SözlükUygulaması
             InitializeComponent();
         }
         BusinessLogicLayer.BLL BLL=new BusinessLogicLayer.BLL();
-       
+      
+
 
         private void Ogren_Load(object sender, EventArgs e)
         {
@@ -48,11 +49,12 @@ namespace SözlükUygulaması
                     if (ButonDurum == false) i++;
                     else if(ButonDurum == false) i--;
                     
+                    
             } while (i<liste.Count);
             btn_bitir.Enabled = true;
 
         }
-
+        
         private void btn_ileri_Click(object sender, EventArgs e)
         {
             ButonDurum = false;
@@ -66,6 +68,12 @@ namespace SözlükUygulaması
 
         private void btn_bitir_Click(object sender, EventArgs e)
         {
+            List<Kelime> liste = BLL.ListeleDurum("ogren");
+
+            for (int i = 0; i <liste.Count ; i++)
+            {
+                BLL.TestDurumuEkle(liste[i].KeliemeID);
+            }
             Test t = new Test();
             this.Hide();
             t.Show();

@@ -109,6 +109,37 @@ namespace BusinessLogicLayer
             }
             else return -1;
         }
+        public int TestDurumuEkle(Guid Id)
+        {
+            if (Id != Guid.Empty)
+            {
+                return dll.TestDurumuEkle(new Sözlük.Entities.Test()
+                {
+                    TestID = Id,
+                    Tarih = DateTime.Now,
+                    Derece = 0
+
+                });
+
+            }
+            else return -1;
+        }
+        public int TestDurumuDuzenle(Guid Id)
+        {
+            if (Id != Guid.Empty)
+            {
+                return dll.TestDurumuDuzenle(new Sözlük.Entities.Test()
+                {
+                    TestID = Id,
+                    Tarih = DateTime.Now
+
+
+                });
+
+            }
+            else return -1;
+        }
+
 
     }
 }

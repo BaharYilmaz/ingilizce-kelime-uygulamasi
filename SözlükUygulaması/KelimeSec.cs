@@ -52,6 +52,7 @@ namespace SözlükUygulaması
             BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
             Guid KelimeID = ((Kelime)listBox_sec.SelectedItem).KeliemeID;
             BLL.KelimeDurumDuzenle(KelimeID, "test");
+            BLL.TestDurumuEkle(KelimeID);
             listBox_sec.Items.Remove(listBox_sec.SelectedItem);
 
       

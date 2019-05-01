@@ -19,7 +19,7 @@ namespace SözlükUygulaması
             InitializeComponent();
 
         }
-
+        bool DogruCevap = false;
         private void Test_Load(object sender, EventArgs e)
         {
             KeliemDoldur();
@@ -37,9 +37,12 @@ namespace SözlükUygulaması
                 {
                     txt_TestKelime.Text = ListeDurum[i].KelimeIngilizce;
                     SecenekDoldur(ListeDurum[i].KelimeTurkce);
-                    i++;
+                    if (DogruCevap == true) TestDereceDüzenle(ListeDurum[i].KeliemeID);
+                    else KelimeDurumDuzenle(ListeDurum[i].KeliemeID, "ogren");
+                    i++; 
                 } while (i < ListeDurum.Count);
 
+               
             }
 
         }
@@ -81,12 +84,97 @@ namespace SözlükUygulaması
                 else continue;
             }
 
-            btn_testBir.Text = cvp[0];
-            btn_testIki.Text = cvp[1];
-            btn_testUc.Text = cvp[2];
-            btn_testDort.Text = cvp[3];
+            btn_testBir.Text = cvp[0]; if (btn_testBir.Text == Cevap) btn_testBir.Tag = true; else btn_testBir.Tag = false;
+            btn_testIki.Text = cvp[1]; if (btn_testIki.Text == Cevap) btn_testIki.Tag = true; else btn_testIki.Tag = false;
+            btn_testUc.Text = cvp[2]; if (btn_testUc.Text == Cevap) btn_testUc.Tag = true; else btn_testUc.Tag = false;
+            btn_testDort.Text = cvp[3]; if (btn_testDort.Text == Cevap) btn_testDort.Tag = true; else btn_testDort.Tag = false;
+
+
+        }
+        private void KelimeDurumDuzenle(Guid ıd, string durum)
+        {
+            BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
+            BLL.KelimeDurumDuzenle(ıd, durum);
+        }
+        private void TestDereceDüzenle(Guid ıd)
+        {
+            BusinessLogicLayer.BLL Bll = new BusinessLogicLayer.BLL();
+            Bll.TestDurumuDuzenle(ıd);
+
+        }
+        private void btn_testBir_Click(object sender, EventArgs e)
+        {
+
+            btn_testIki.Enabled = false;
+            btn_testUc.Enabled = false;
+            btn_testDort.Enabled = false;
+
+
+            bool kontrol = (bool)btn_testBir.Tag;
+            if (kontrol)
+            {
+                btn_testBir.Appearance.BackColor = Color.LimeGreen;
+                DogruCevap = true;
+            }
+            else
+                btn_testBir.Appearance.BackColor = Color.Red;
 
         }
 
+        private void btn_testIki_Click(object sender, EventArgs e)
+        {
+            btn_testBir.Enabled = false;
+            btn_testUc.Enabled = false;
+            btn_testDort.Enabled = false;
+
+            bool kontrol = (bool)btn_testIki.Tag;
+            if (kontrol)
+            {
+                btn_testIki.Appearance.BackColor = Color.LimeGreen;
+                DogruCevap = true;
+
+            }
+            else
+                btn_testIki.Appearance.BackColor = Color.OrangeRed;
+
+        }
+
+
+        private void btn_testUc_Click(object sender, EventArgs e)
+        {
+            btn_testIki.Enabled = false;
+            btn_testBir.Enabled = false;
+            btn_testDort.Enabled = false;
+
+            bool kontrol = (bool)btn_testUc.Tag;
+            if (kontrol)
+            {
+                btn_testUc.Appearance.BackColor = Color.LimeGreen;
+                DogruCevap = true;
+
+            }
+            else
+                btn_testUc.Appearance.BackColor = Color.OrangeRed;
+
+        }
+
+        private void btn_testDort_Click(object sender, EventArgs e)
+        {
+
+            btn_testIki.Enabled = false;
+            btn_testUc.Enabled = false;
+            btn_testBir.Enabled = false;
+
+            bool kontrol = (bool)btn_testDort.Tag;
+            if (kontrol)
+            {
+                btn_testDort.Appearance.BackColor = Color.LimeGreen;
+                DogruCevap = true;
+
+            }
+            else
+                btn_testDort.Appearance.BackColor = Color.OrangeRed;
+
+        }
     }
 }

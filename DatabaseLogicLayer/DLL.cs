@@ -148,9 +148,9 @@ namespace DatabaseLogicLayer
             {
 
                 command = new SqlCommand(@"update Test set
-                     Tarih = @Tarih, Derece = @Derece", connect);
+                     Tarih = @Tarih, Derece = Derece+1", connect);
                 command.Parameters.Add("@Tarih", SqlDbType.DateTime).Value = t.Tarih;
-                command.Parameters.Add(" @Derece", SqlDbType.Int).Value = t.Derece;
+               // command.Parameters.Add(" @Derece", SqlDbType.Int).Value = t.Derece;
                 BaglantiAyarla();
                 ReturnValue = command.ExecuteNonQuery();
             }
@@ -168,7 +168,7 @@ namespace DatabaseLogicLayer
         }
         public SqlDataReader TestDereceListe(int derece)
         {
-            command = new SqlCommand("select KelimeIngilizce,KelimeTurkce from Test,Kelime where Derece=@Derece and Kelime.KeliemeID=Test.TestID", connect);
+            command = new SqlCommand("select TestID,KelimeIngilizce,KelimeTurkce from Test,Kelime where Derece=@Derece and Kelime.KeliemeID=Test.TestID", connect);
             command.Parameters.Add("@Derece", SqlDbType.Int).Value = derece;
             BaglantiAyarla();
             return command.ExecuteReader();
@@ -177,7 +177,7 @@ namespace DatabaseLogicLayer
         }
         public SqlDataReader TestListele()
         {
-            command = new SqlCommand("select KelimeIngilizce,KelimeTurkce from Test,Kelime where Kelime.KeliemeID=Test.TestID", connect);
+            command = new SqlCommand("select TestID, KelimeIngilizce,KelimeTurkce from Test,Kelime where Kelime.KeliemeID=Test.TestID", connect);
             BaglantiAyarla();
             return command.ExecuteReader();
 
