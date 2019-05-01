@@ -17,87 +17,73 @@ namespace SözlükUygulaması
         public Test()
         {
             InitializeComponent();
-           
+
         }
 
         private void Test_Load(object sender, EventArgs e)
         {
             KeliemDoldur();
         }
-
-        private void btn_testUc_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+        
         private void KeliemDoldur()
         {
             BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
-
-
-
             List<Kelime> ListeDurum = BLL.ListeleDurum("test");
 
-            if (ListeDurum!=null&&ListeDurum.Count>0) 
-            { int i =0;
-                //for (int i = 0; i < ListeDurum.Count; i++)
+            if (ListeDurum != null && ListeDurum.Count > 0)
+            {
+                int i = 0;
                 do
                 {
-                    txt_TestKelime.Text = ListeDurum[i].KelimeIngilizce; ///
-                    btn_testBir.Text = ListeDurum[i].KelimeTurkce;
+                    txt_TestKelime.Text = ListeDurum[i].KelimeIngilizce;
                     SecenekDoldur(ListeDurum[i].KelimeTurkce);
                     i++;
-                } while (i< ListeDurum.Count);
+                } while (i < ListeDurum.Count);
 
             }
 
         }
         private void SecenekDoldur(string Cevap)
         {
-
             BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
-
-
             List<Kelime> ListeDurum = BLL.ListeleDurum("test");
-            //int[] sayilar = new int[3];
-            //Random rnd = new Random();
-            //int i = 0;
-            //while (i<3)
-            //{
 
-            //    int sayi = rnd.Next(0, ListeDurum.Count);
-            //    if (sayilar.Contains(sayi))
-            //        continue;
-            //    sayilar[i] = sayi;
-            //    i++;
-            //}
+            Random rnd = new Random();
+
+            int sayi = rnd.Next(ListeDurum.Count / 3);
+            int sayi2 = rnd.Next(ListeDurum.Count / 3, ListeDurum.Count * 2 / 3);
+            int sayi3 = rnd.Next(ListeDurum.Count * 2 / 3, ListeDurum.Count);
 
 
-            /////
+            string[] cevaplar = new string[4] { ListeDurum[sayi].KelimeTurkce, ListeDurum[sayi2].KelimeTurkce, ListeDurum[sayi3].KelimeTurkce, Cevap };
+
+            int[] sayilar = new int[4];
+            int eleman;
+            Random random = new Random();
+
             
-                Random rnd = new Random();
-
-                int sayi = rnd.Next(ListeDurum.Count / 3);
-                int sayi2 = rnd.Next(ListeDurum.Count / 3, ListeDurum.Count * 2 / 3);
-                int sayi3 = rnd.Next(ListeDurum.Count * 2 / 3, ListeDurum.Count);
-
-                if (Cevap != ListeDurum[sayi].ToString() && Cevap != ListeDurum[sayi2].ToString() && Cevap != ListeDurum[sayi3].ToString())
+            int i = 0;
+            while (i < 4)
+            {
+                eleman = random.Next(0, 3);
+                int yoksa = Array.IndexOf(sayilar, eleman);
+                if (yoksa == -1)
                 {
-
-                    while (ListeDurum.Count > 0 && ListeDurum != null)
-                    {
-                        btn_testIki.Text = ListeDurum[sayi].KelimeTurkce;
-                        btn_testUc.Text = ListeDurum[sayi2].KelimeTurkce;
-                        btn_testDort.Text = ListeDurum[sayi3].KelimeTurkce;
-                        break;
-
-                    }
-
+                    sayilar[i] = eleman;
+                    
+                    i++;
                 }
-              
-              
-            
+            }
+
+            while (ListeDurum.Count > 0 && ListeDurum != null)
+            {
+                btn_testBir.Text = cevaplar[sayilar[0]];
+                btn_testIki.Text = cevaplar[sayilar[1]];
+                btn_testUc.Text = cevaplar[sayilar[2]];
+                btn_testDort.Text = cevaplar[sayilar[3]];
+            }
 
         }
-           
+
     }
 }
