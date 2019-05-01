@@ -14,6 +14,8 @@ namespace BusinessLogicLayer
         DatabaseLogicLayer.DLL dll;
         List<Kelime> KelimeListesi = new List<Kelime>();
         List<Kelime> KelimeListeleDurum = new List<Kelime>();
+        List<Test> ListeTestDerece = new List<Test>();
+        List<Test> TestListele = new List<Test>();
 
         public BLL()
         {
@@ -24,7 +26,7 @@ namespace BusinessLogicLayer
         {
             if (!string.IsNullOrEmpty(kelimeIngilizce) && !string.IsNullOrEmpty(kelimeTurkce) && !string.IsNullOrEmpty(aciklama) && !string.IsNullOrEmpty(cumle))
             {
-                return dll.KelimeEkle(new Sözlük.Entities.Kelime()//yeni nesne oluşturulur burada
+                return dll.KelimeEkle(new Kelime()//yeni nesne oluşturulur burada
                 {
                     KeliemeID = Guid.NewGuid(),
                     KelimeIngilizce = kelimeIngilizce,
@@ -113,7 +115,7 @@ namespace BusinessLogicLayer
         {
             if (Id != Guid.Empty)
             {
-                return dll.TestDurumuEkle(new Sözlük.Entities.Test()
+                return dll.TestDurumuEkle(new Test()
                 {
                     TestID = Id,
                     Tarih = DateTime.Now,
@@ -128,7 +130,7 @@ namespace BusinessLogicLayer
         {
             if (Id != Guid.Empty)
             {
-                return dll.TestDurumuDuzenle(new Sözlük.Entities.Test()
+                return dll.TestDurumuDuzenle(new Test()
                 {
                     TestID = Id,
                     Tarih = DateTime.Now
@@ -139,7 +141,65 @@ namespace BusinessLogicLayer
             }
             else return -1;
         }
+        public List<Test> TestDereceListe(int derece)
+        {
+            try
+            {
+                SqlDataReader reader = dll.TestDereceListe(derece);
+                while (reader.Read())
+                {
+                    ListeTestDerece.Add(new Sözlük.Entities.Test()
+                    {
+                        KeliemeID = reader.IsDBNull(0) ? Guid.Empty : reader.GetGuid(0),
+                        KelimeIngilizce = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                        KelimeTurkce = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                       
+                    });
+                }
+                reader.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                dll.BaglantiAyarla();
+            }
+            return ListeTestDerece;
+
+        }
+        public List<Test> ListeleTest()
+        {
+            try
+            {
+                SqlDataReader reader = dll.TestListele();
+                while (reader.Read())
+                {
+                    TestListele.Add(new Test()
+                    {
+                        KeliemeID = reader.IsDBNull(0) ? Guid.Empty : reader.GetGuid(0),
+                        KelimeIngilizce = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                        KelimeTurkce = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                        Derece = reader.GetInt32(3),
+                        
+                    });
+                }
+                reader.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                dll.BaglantiAyarla();
+            }
+            return TestListele;
 
 
+        }
     }
 }

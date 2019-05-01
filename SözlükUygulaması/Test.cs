@@ -37,8 +37,8 @@ namespace SözlükUygulaması
                 {
                     txt_TestKelime.Text = ListeDurum[i].KelimeIngilizce;
                     SecenekDoldur(ListeDurum[i].KelimeTurkce);
-                    if (DogruCevap == true) TestDereceDüzenle(ListeDurum[i].KeliemeID);
-                    else KelimeDurumDuzenle(ListeDurum[i].KeliemeID, "ogren");
+                    //if (DogruCevap == true) TestDereceDüzenle(ListeDurum[i].KeliemeID);
+                    //else { KelimeDurumDuzenle(ListeDurum[i].KeliemeID, "ogren"); }
                     i++; 
                 } while (i < ListeDurum.Count);
 

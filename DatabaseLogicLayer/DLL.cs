@@ -177,7 +177,7 @@ namespace DatabaseLogicLayer
         }
         public SqlDataReader TestListele()
         {
-            command = new SqlCommand("select TestID, KelimeIngilizce,KelimeTurkce from Test,Kelime where Kelime.KeliemeID=Test.TestID", connect);
+            command = new SqlCommand("select TestID, KelimeIngilizce,KelimeTurkce,Derece from Test,Kelime where Kelime.KeliemeID=Test.TestID", connect);
             BaglantiAyarla();
             return command.ExecuteReader();
 
