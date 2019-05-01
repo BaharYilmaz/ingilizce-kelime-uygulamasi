@@ -49,14 +49,14 @@ namespace SözlükUygulaması
             BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
             List<Kelime> ListeDurum = BLL.ListeleDurum("test");
             Random rnd = new Random();
-            int[] cvp = new int[4];
+            int[] sayilar = new int[4];//random sayi atma
             int kucuk = 0, j = 0;
-            string[] cevp = new string[4];
+            string[] cvp = new string[4];//en küçük değerli indis alınır
 
 
             for (int i = 0; i < 4; i++)
             {
-                cvp[i] = rnd.Next(0, 200);
+                sayilar[i] = rnd.Next(0, 200);
 
             }
 
@@ -67,24 +67,24 @@ namespace SözlükUygulaması
 
             for (int i = 0; i < 3; i++)
             {
-                if (cvp[i] < cvp[i + 1]) kucuk = i;
+                if (sayilar[i] < sayilar[i + 1]) kucuk = i;
             }
-            cevp[kucuk] = Cevap;
+            cvp[kucuk] = Cevap;
 
             for (int i = 0; i < 4; i++)
             {
                 if (i != kucuk)
                 {
-                    cevp[i] = ListeDurum[sayi[j]].KelimeTurkce;
+                    cvp[i] = ListeDurum[sayi[j]].KelimeTurkce;
                     j++;
                 }
                 else continue;
             }
 
-            btn_testBir.Text = cevp[0];
-            btn_testIki.Text = cevp[1];
-            btn_testUc.Text = cevp[2];
-            btn_testDort.Text = cevp[3];
+            btn_testBir.Text = cvp[0];
+            btn_testIki.Text = cvp[1];
+            btn_testUc.Text = cvp[2];
+            btn_testDort.Text = cvp[3];
 
         }
 
