@@ -24,29 +24,33 @@ namespace SözlükUygulaması
         {
             KeliemDoldur();
         }
-        
+
         private void KeliemDoldur()
         {
             BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
             List<Kelime> ListeDurum = BLL.ListeleDurum("test");
 
-            if (ListeDurum != null && ListeDurum.Count > 0)
+            int i = 0;
+            while (ListeDurum != null && ListeDurum.Count > 0 && i < ListeDurum.Count)
             {
-                int i = 0;
-                do
+                txt_TestKelime.Text = ListeDurum[i].KelimeIngilizce;
+                bool kontrol = SecenekDoldur(ListeDurum[i].KelimeTurkce);
+                if (kontrol)
                 {
-                    txt_TestKelime.Text = ListeDurum[i].KelimeIngilizce;
-                    SecenekDoldur(ListeDurum[i].KelimeTurkce);
-                    //if (DogruCevap == true) TestDereceDüzenle(ListeDurum[i].KeliemeID);
-                    //else { KelimeDurumDuzenle(ListeDurum[i].KeliemeID, "ogren"); }
-                    i++; 
-                } while (i < ListeDurum.Count);
+                   // BLL.KelimeDereceDuzenle(ListeDurum[i].KelimeID);
+                    i++;
+                }
+                else
+                {
+                  //  BLL.KelimeDurumDuzenle(ListeDurum[i].KelimeID, "ogren");//bll tekrar cağrılmalı mı
+                  //false dönmeyle ilgili bi sıkıntı
+                    i++;
+                }
 
-               
             }
 
         }
-        private void SecenekDoldur(string Cevap)
+        private bool SecenekDoldur(string Cevap)
         {
 
             BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
@@ -89,19 +93,18 @@ namespace SözlükUygulaması
             btn_testUc.Text = cvp[2]; if (btn_testUc.Text == Cevap) btn_testUc.Tag = true; else btn_testUc.Tag = false;
             btn_testDort.Text = cvp[3]; if (btn_testDort.Text == Cevap) btn_testDort.Tag = true; else btn_testDort.Tag = false;
 
-
+            return DogruCevap;
         }
         private void KelimeDurumDuzenle(Guid ıd, string durum)
         {
             BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
             BLL.KelimeDurumDuzenle(ıd, durum);
         }
-        private void TestDereceDüzenle(Guid ıd)
+        private void DereceKontrol()
         {
-            BusinessLogicLayer.BLL Bll = new BusinessLogicLayer.BLL();
-            Bll.TestDurumuDuzenle(ıd);
 
         }
+
         private void btn_testBir_Click(object sender, EventArgs e)
         {
 
@@ -115,6 +118,7 @@ namespace SözlükUygulaması
             {
                 btn_testBir.Appearance.BackColor = Color.LimeGreen;
                 DogruCevap = true;
+
             }
             else
                 btn_testBir.Appearance.BackColor = Color.Red;

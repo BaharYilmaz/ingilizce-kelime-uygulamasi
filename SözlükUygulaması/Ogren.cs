@@ -72,8 +72,8 @@ namespace SözlükUygulaması
 
             for (int i = 0; i <liste.Count ; i++)
             {
-                BLL.KelimeDurumDuzenle(liste[i].KeliemeID,"test");
-                BLL.TestDurumuEkle(liste[i].KeliemeID);
+                BLL.KelimeDurumDuzenle(liste[i].KelimeID,"test");
+                BLL.KelimeDereceDuzenle(liste[i].KelimeID);
             }
             Test t = new Test();
             this.Hide();

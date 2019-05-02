@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sözlük.Entities
 {
-    public class Test:Kelime
+    public class Test
     {
         public Guid TestID { get; set; }
         public DateTime Tarih { get; set; }
