@@ -48,7 +48,7 @@
             this.btn_testBir.Size = new System.Drawing.Size(168, 29);
             this.btn_testBir.TabIndex = 0;
             this.btn_testBir.Text = "---";
-            this.btn_testBir.Click += new System.EventHandler(this.btn_testBir_Click);
+            this.btn_testBir.Click += new System.EventHandler(this.btn_testBir_Click_1);
             // 
             // btn_testDort
             // 
@@ -57,7 +57,7 @@
             this.btn_testDort.Size = new System.Drawing.Size(168, 29);
             this.btn_testDort.TabIndex = 0;
             this.btn_testDort.Text = "---";
-            this.btn_testDort.Click += new System.EventHandler(this.btn_testDort_Click);
+            this.btn_testDort.Click += new System.EventHandler(this.btn_testDort_Click_1);
             // 
             // btn_testUc
             // 
@@ -66,7 +66,7 @@
             this.btn_testUc.Size = new System.Drawing.Size(168, 29);
             this.btn_testUc.TabIndex = 0;
             this.btn_testUc.Text = "---";
-            this.btn_testUc.Click += new System.EventHandler(this.btn_testUc_Click);
+            this.btn_testUc.Click += new System.EventHandler(this.btn_testUc_Click_1);
             // 
             // btn_testIki
             // 
@@ -75,7 +75,7 @@
             this.btn_testIki.Size = new System.Drawing.Size(168, 29);
             this.btn_testIki.TabIndex = 0;
             this.btn_testIki.Text = "---";
-            this.btn_testIki.Click += new System.EventHandler(this.btn_testIki_Click);
+            this.btn_testIki.Click += new System.EventHandler(this.btn_testIki_Click_1);
             // 
             // labelControl2
             // 

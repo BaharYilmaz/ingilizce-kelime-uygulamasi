@@ -13,44 +13,47 @@ namespace SözlükUygulaması
 {
     public partial class Test : Form
     {
+        BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
+        public bool KontrolCevap { get; set; }
+        Guid ıd;
+        int i = 0;
 
         public Test()
         {
             InitializeComponent();
 
         }
-        bool DogruCevap = false;
         private void Test_Load(object sender, EventArgs e)
         {
             KeliemDoldur();
+           
         }
 
         private void KeliemDoldur()
         {
-            BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
+            
             List<Kelime> ListeDurum = BLL.ListeleDurum("test");
-
-            int i = 0;
-            while (ListeDurum != null && ListeDurum.Count > 0 && i < ListeDurum.Count)
+            i++;
+            if (ListeDurum != null && ListeDurum.Count > 0 && i < ListeDurum.Count)
             {
                 txt_TestKelime.Text = ListeDurum[i].KelimeIngilizce;
-                bool kontrol = SecenekDoldur(ListeDurum[i].KelimeTurkce);
-                if (kontrol)
-                {
-                   // BLL.KelimeDereceDuzenle(ListeDurum[i].KelimeID);
-                    i++;
-                }
-                else
-                {
-                  //  BLL.KelimeDurumDuzenle(ListeDurum[i].KelimeID, "ogren");//bll tekrar cağrılmalı mı
-                  //false dönmeyle ilgili bi sıkıntı
-                    i++;
-                }
+                ıd = ListeDurum[i].KelimeID;
+                btn_testIki.Enabled = true;
+                btn_testUc.Enabled = true;
+                btn_testBir.Enabled = true;
+                btn_testDort.Enabled = true;
 
+                btn_testBir.Appearance.BackColor = Color.White;
+                btn_testIki.Appearance.BackColor = Color.White;
+                btn_testUc.Appearance.BackColor = Color.White;
+                btn_testDort.Appearance.BackColor = Color.White;
+
+
+                SecenekDoldur(ListeDurum[i].KelimeTurkce);
             }
 
         }
-        private bool SecenekDoldur(string Cevap)
+        private void SecenekDoldur(string Cevap)
         {
 
             BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
@@ -93,92 +96,110 @@ namespace SözlükUygulaması
             btn_testUc.Text = cvp[2]; if (btn_testUc.Text == Cevap) btn_testUc.Tag = true; else btn_testUc.Tag = false;
             btn_testDort.Text = cvp[3]; if (btn_testDort.Text == Cevap) btn_testDort.Tag = true; else btn_testDort.Tag = false;
 
-            return DogruCevap;
         }
-        private void KelimeDurumDuzenle(Guid ıd, string durum)
+
+        private void Kontrol()
         {
-            BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
-            BLL.KelimeDurumDuzenle(ıd, durum);
-        }
-        private void DereceKontrol()
-        {
+
+            if (KontrolCevap == true)
+            {
+                BLL.KelimeDereceDuzenle(ıd);
+                KeliemDoldur();
+            }
+            else
+            {
+                BLL.KelimeDurumDuzenle(ıd, "ogren");
+                KeliemDoldur();
+
+            }
+            
 
         }
 
-        private void btn_testBir_Click(object sender, EventArgs e)
-        {
 
+        private void btn_testBir_Click_1(object sender, EventArgs e)
+        {
             btn_testIki.Enabled = false;
             btn_testUc.Enabled = false;
             btn_testDort.Enabled = false;
 
-
-            bool kontrol = (bool)btn_testBir.Tag;
-            if (kontrol)
+            bool kontrol1 = (bool)btn_testBir.Tag;
+            if (kontrol1 == true)
             {
                 btn_testBir.Appearance.BackColor = Color.LimeGreen;
-                DogruCevap = true;
-
+                KontrolCevap = true;
             }
             else
-                btn_testBir.Appearance.BackColor = Color.Red;
+            {
+                btn_testBir.Appearance.BackColor = Color.OrangeRed;
+                KontrolCevap = false;
+            }
+            Kontrol();
 
         }
 
-        private void btn_testIki_Click(object sender, EventArgs e)
+        private void btn_testIki_Click_1(object sender, EventArgs e)
         {
             btn_testBir.Enabled = false;
             btn_testUc.Enabled = false;
             btn_testDort.Enabled = false;
 
-            bool kontrol = (bool)btn_testIki.Tag;
-            if (kontrol)
+            bool kontrol1 = (bool)btn_testIki.Tag;
+            if (kontrol1 == true)
             {
                 btn_testIki.Appearance.BackColor = Color.LimeGreen;
-                DogruCevap = true;
-
+                KontrolCevap = true;
             }
             else
+            {
                 btn_testIki.Appearance.BackColor = Color.OrangeRed;
+                KontrolCevap = false;
+            }
+            Kontrol();
 
         }
 
-
-        private void btn_testUc_Click(object sender, EventArgs e)
+        private void btn_testUc_Click_1(object sender, EventArgs e)
         {
+
             btn_testIki.Enabled = false;
             btn_testBir.Enabled = false;
             btn_testDort.Enabled = false;
 
-            bool kontrol = (bool)btn_testUc.Tag;
-            if (kontrol)
+            bool kontrol1 = (bool)btn_testUc.Tag;
+            if (kontrol1 == true)
             {
                 btn_testUc.Appearance.BackColor = Color.LimeGreen;
-                DogruCevap = true;
-
+                KontrolCevap = true;
             }
             else
+            {
                 btn_testUc.Appearance.BackColor = Color.OrangeRed;
-
+                KontrolCevap = false;
+            }
+            Kontrol();
         }
 
-        private void btn_testDort_Click(object sender, EventArgs e)
-        {
 
+        private void btn_testDort_Click_1(object sender, EventArgs e)
+        {
             btn_testIki.Enabled = false;
             btn_testUc.Enabled = false;
             btn_testBir.Enabled = false;
 
-            bool kontrol = (bool)btn_testDort.Tag;
-            if (kontrol)
+            bool kontrol1 = (bool)btn_testDort.Tag;
+            if (kontrol1 == true)
             {
-                btn_testDort.Appearance.BackColor = Color.LimeGreen;
-                DogruCevap = true;
-
+                btn_testDort.Appearance.BackColor = Color.LimeGreen;              
+                KontrolCevap = true;
             }
             else
+            {
                 btn_testDort.Appearance.BackColor = Color.OrangeRed;
-
+                KontrolCevap = false;
+            }
+            Kontrol();
+           
         }
     }
 }
