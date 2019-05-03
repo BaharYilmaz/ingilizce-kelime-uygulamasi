@@ -23,7 +23,8 @@ namespace SözlükUygulaması
             InitializeComponent();
         }
         BusinessLogicLayer.BLL BLL=new BusinessLogicLayer.BLL();
-       
+      
+
 
         private void Ogren_Load(object sender, EventArgs e)
         {
@@ -34,38 +35,62 @@ namespace SözlükUygulaması
         private void Doldur()
         {
             List<Kelime> liste = BLL.ListeleDurum("ogren");
-            
-            do
+
+            if (i == 0) btn_geri.Enabled = false;
+            else btn_geri.Enabled = true;
+
+            if (i == liste.Count) btn_ileri.Enabled = false;
+            else btn_ileri.Enabled = true;
+
+            if (ButonDurum == true) i = i - 1;
+            else i++;
+
+            if (i < liste.Count)
             {
-                if(i==0)  btn_geri.Enabled = false;
-                if (i == liste.Count) btn_ileri.Enabled = false;
 
                 lbl_ogrenKelime.Text = liste[i].KelimeIngilizce;
                 txt_ogrenAnlam.Text = liste[i].KelimeTurkce;
                 txt_ogrenTur.Text = liste[i].Aciklama;
                 txt_ogrenCumle.Text = liste[i].Cumle;
 
+<<<<<<< HEAD
+
+            }
+            else if (liste.Count == 0) btn_bitir.Enabled = true;
+
+=======
                     if (ButonDurum == false) i++;
                     else if(ButonDurum == false) i--;
                     
+                    
             } while (i<liste.Count);
             btn_bitir.Enabled = true;
+>>>>>>> df59da853d361ecd6d2b5fb81689578e2ea4964f
 
         }
-
+        
         private void btn_ileri_Click(object sender, EventArgs e)
         {
-            ButonDurum = false;
+            Doldur();
 
         }
 
         private void btn_geri_Click(object sender, EventArgs e)
         {
             ButonDurum = true;
+            Doldur();
+            ButonDurum = false;
         }
 
         private void btn_bitir_Click(object sender, EventArgs e)
         {
+            List<Kelime> liste = BLL.ListeleDurum("ogren");
+
+            for (int i = 0; i <liste.Count ; i++)
+            {
+                BLL.KelimeDurumDuzenle(liste[i].KelimeID,"test");
+                BLL.KelimeDereceDuzenle(liste[i].KelimeID);
+            }
             Test t = new Test();
             this.Hide();
             t.Show();
