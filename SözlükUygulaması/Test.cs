@@ -14,10 +14,9 @@ namespace SözlükUygulaması
     public partial class Test : Form
     {
         BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
-        public bool KontrolCevap { get; set; }
-        Guid ıd;
-        int i = 0;
-        DateTime dt;
+        private bool KontrolCevap { get; set; }
+        private Guid ID { get; set; }
+        private int i = 0;
 
         public Test()
         {
@@ -40,7 +39,7 @@ namespace SözlükUygulaması
             if (ListeYazdir != null && ListeYazdir.Count > 0 && i < ListeYazdir.Count)
             {
                 txt_TestKelime.Text = ListeYazdir[i].KelimeIngilizce;
-                ıd = ListeYazdir[i].KelimeID;
+                ID = ListeYazdir[i].KelimeID;
 
                 btn_testIki.Enabled = true;
                 btn_testUc.Enabled = true;
@@ -104,22 +103,30 @@ namespace SözlükUygulaması
 
         private void Kontrol()
         {
-            TimeSpan ts = DateTime.Now - dt;
 
-            if (KontrolCevap == true && ts.Seconds < 5)
+            if (KontrolCevap == true )
             {
-                BLL.KelimeDereceDuzenle(ıd);
+               List<Kelime>ListeBasarili=BLL.ListeleDerece(4);
+                for (int i = 0; i < ListeBasarili.Count; i++)
+                {
+                    if (ID == ListeBasarili[i].KelimeID)
+                    {
+                        BLL.KelimeDurumDuzenle(ID, "ogrenilmis");
+                    }
+                    else
+                        BLL.KelimeDereceDuzenle(ID);
+                }
+              
+                BLL.KelimeDereceDuzenle(ID);
                 KelimeDoldur();
             }
-            else if (KontrolCevap == false && ts.Seconds < 5)
+            else 
             {
-                BLL.KelimeDurumDuzenle(ıd, "ogren");
+                BLL.KelimeDurumDuzenle(ID, "ogren");
                 KelimeDoldur();
 
             }
-            else return;
-            
-
+          
         }
 
 
@@ -140,7 +147,6 @@ namespace SözlükUygulaması
                 btn_testBir.Appearance.BackColor = Color.OrangeRed;
                 KontrolCevap = false;
             }
-            dt = DateTime.Now;
             Kontrol();
 
         }
@@ -162,7 +168,6 @@ namespace SözlükUygulaması
                 btn_testIki.Appearance.BackColor = Color.OrangeRed;
                 KontrolCevap = false;
             }
-            dt = DateTime.Now;
             Kontrol();
 
         }
@@ -185,7 +190,6 @@ namespace SözlükUygulaması
                 btn_testUc.Appearance.BackColor = Color.OrangeRed;
                 KontrolCevap = false;
             }
-            dt = DateTime.Now;
             Kontrol();
         }
 
@@ -207,7 +211,6 @@ namespace SözlükUygulaması
                 btn_testDort.Appearance.BackColor = Color.OrangeRed;
                 KontrolCevap = false;
             }
-            dt = DateTime.Now;
             Kontrol();
            
         }

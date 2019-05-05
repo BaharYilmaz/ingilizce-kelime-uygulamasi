@@ -179,19 +179,19 @@ namespace BusinessLogicLayer
                 for (int i = 0; i < listDerece.Count; i++)
                 {
                     TimeSpan fark = DateTime.Now - listDerece[i].Tarih;
-                    if (fark.Days == 1)
+                    if (j==1 && fark.Days == 1)
                     {
                         listdurum.Add(listDerece[i]);
                     }
-                    else if (fark.Days == 7)
+                    else if (j==2 && fark.Days == 7)
                     {
                         listdurum.Add(listDerece[i]);
                     }
-                    else if (fark.Days == 30)
+                    else if (j==3 && fark.Days == 30)
                     {
                         listdurum.Add(listDerece[i]);
                     }
-                    else if (fark.Days == 180)
+                    else if (j==4 && fark.Days == 180)
                     {
                         listdurum.Add(listDerece[i]);
                     }
