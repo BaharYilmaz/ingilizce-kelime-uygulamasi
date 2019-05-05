@@ -53,19 +53,18 @@ namespace SözlükUygulaması
                 txt_ogrenTur.Text = liste[i].Aciklama;
                 txt_ogrenCumle.Text = liste[i].Cumle;
 
-<<<<<<< HEAD
+
 
             }
             else if (liste.Count == 0) btn_bitir.Enabled = true;
-
-=======
+            { 
                     if (ButonDurum == false) i++;
                     else if(ButonDurum == false) i--;
                     
                     
             } while (i<liste.Count);
             btn_bitir.Enabled = true;
->>>>>>> df59da853d361ecd6d2b5fb81689578e2ea4964f
+
 
         }
         

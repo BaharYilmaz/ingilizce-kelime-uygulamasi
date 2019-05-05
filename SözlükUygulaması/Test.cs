@@ -17,6 +17,7 @@ namespace SözlükUygulaması
         public bool KontrolCevap { get; set; }
         Guid ıd;
         int i = 0;
+        DateTime dt;
 
         public Test()
         {
@@ -25,19 +26,22 @@ namespace SözlükUygulaması
         }
         private void Test_Load(object sender, EventArgs e)
         {
-            KeliemDoldur();
+            
+            KelimeDoldur();
+           
            
         }
 
-        private void KeliemDoldur()
+        private void KelimeDoldur()
         {
             
-            List<Kelime> ListeDurum = BLL.ListeleDurum("test");
+            List<Kelime> ListeYazdir =BLL.TesteYazdir();
             i++;
-            if (ListeDurum != null && ListeDurum.Count > 0 && i < ListeDurum.Count)
+            if (ListeYazdir != null && ListeYazdir.Count > 0 && i < ListeYazdir.Count)
             {
-                txt_TestKelime.Text = ListeDurum[i].KelimeIngilizce;
-                ıd = ListeDurum[i].KelimeID;
+                txt_TestKelime.Text = ListeYazdir[i].KelimeIngilizce;
+                ıd = ListeYazdir[i].KelimeID;
+
                 btn_testIki.Enabled = true;
                 btn_testUc.Enabled = true;
                 btn_testBir.Enabled = true;
@@ -49,7 +53,7 @@ namespace SözlükUygulaması
                 btn_testDort.Appearance.BackColor = Color.White;
 
 
-                SecenekDoldur(ListeDurum[i].KelimeTurkce);
+                SecenekDoldur(ListeYazdir[i].KelimeTurkce);
             }
 
         }
@@ -100,18 +104,20 @@ namespace SözlükUygulaması
 
         private void Kontrol()
         {
+            TimeSpan ts = DateTime.Now - dt;
 
-            if (KontrolCevap == true)
+            if (KontrolCevap == true && ts.Seconds < 5)
             {
                 BLL.KelimeDereceDuzenle(ıd);
-                KeliemDoldur();
+                KelimeDoldur();
             }
-            else
+            else if (KontrolCevap == false && ts.Seconds < 5)
             {
                 BLL.KelimeDurumDuzenle(ıd, "ogren");
-                KeliemDoldur();
+                KelimeDoldur();
 
             }
+            else return;
             
 
         }
@@ -134,6 +140,7 @@ namespace SözlükUygulaması
                 btn_testBir.Appearance.BackColor = Color.OrangeRed;
                 KontrolCevap = false;
             }
+            dt = DateTime.Now;
             Kontrol();
 
         }
@@ -155,6 +162,7 @@ namespace SözlükUygulaması
                 btn_testIki.Appearance.BackColor = Color.OrangeRed;
                 KontrolCevap = false;
             }
+            dt = DateTime.Now;
             Kontrol();
 
         }
@@ -177,6 +185,7 @@ namespace SözlükUygulaması
                 btn_testUc.Appearance.BackColor = Color.OrangeRed;
                 KontrolCevap = false;
             }
+            dt = DateTime.Now;
             Kontrol();
         }
 
@@ -198,8 +207,10 @@ namespace SözlükUygulaması
                 btn_testDort.Appearance.BackColor = Color.OrangeRed;
                 KontrolCevap = false;
             }
+            dt = DateTime.Now;
             Kontrol();
            
         }
+
     }
 }

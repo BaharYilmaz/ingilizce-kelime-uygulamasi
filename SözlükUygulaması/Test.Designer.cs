@@ -35,7 +35,6 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panel_Test = new DevExpress.XtraEditors.PanelControl();
             this.txt_TestKelime = new DevExpress.XtraEditors.TextEdit();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.panel_Test)).BeginInit();
             this.panel_Test.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TestKelime.Properties)).BeginInit();
@@ -108,21 +107,13 @@
             this.txt_TestKelime.Size = new System.Drawing.Size(125, 22);
             this.txt_TestKelime.TabIndex = 5;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(508, 179);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel1.TabIndex = 6;
-            // 
             // Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::SözlükUygulaması.Properties.Resources._2;
-            this.ClientSize = new System.Drawing.Size(954, 493);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(509, 493);
             this.Controls.Add(this.txt_TestKelime);
             this.Controls.Add(this.panel_Test);
             this.Controls.Add(this.labelControl2);
@@ -146,6 +137,5 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.PanelControl panel_Test;
         private DevExpress.XtraEditors.TextEdit txt_TestKelime;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
