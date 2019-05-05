@@ -114,11 +114,13 @@ namespace SözlükUygulaması
                         BLL.KelimeDurumDuzenle(ID, "ogrenilmis");
                     }
                     else
+                    {
                         BLL.KelimeDereceDuzenle(ID);
+                        KelimeDoldur();
+                    }
+
                 }
               
-                BLL.KelimeDereceDuzenle(ID);
-                KelimeDoldur();
             }
             else 
             {

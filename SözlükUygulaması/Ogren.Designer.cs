@@ -84,6 +84,7 @@
             this.lbl_ogrenKelime.Appearance.Options.UseForeColor = true;
             this.lbl_ogrenKelime.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lbl_ogrenKelime.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.lbl_ogrenKelime.Enabled = false;
             this.lbl_ogrenKelime.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
             this.lbl_ogrenKelime.LineVisible = true;
             this.lbl_ogrenKelime.Location = new System.Drawing.Point(206, 56);
@@ -93,6 +94,7 @@
             // 
             // txt_ogrenCumle
             // 
+            this.txt_ogrenCumle.Enabled = false;
             this.txt_ogrenCumle.Location = new System.Drawing.Point(206, 271);
             this.txt_ogrenCumle.Name = "txt_ogrenCumle";
             this.txt_ogrenCumle.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -104,6 +106,7 @@
             // 
             // txt_ogrenTur
             // 
+            this.txt_ogrenTur.Enabled = false;
             this.txt_ogrenTur.Location = new System.Drawing.Point(206, 228);
             this.txt_ogrenTur.Name = "txt_ogrenTur";
             this.txt_ogrenTur.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -114,6 +117,7 @@
             // 
             // txt_ogrenAnlam
             // 
+            this.txt_ogrenAnlam.Enabled = false;
             this.txt_ogrenAnlam.Location = new System.Drawing.Point(206, 184);
             this.txt_ogrenAnlam.Name = "txt_ogrenAnlam";
             this.txt_ogrenAnlam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
