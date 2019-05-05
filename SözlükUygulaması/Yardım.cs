@@ -21,5 +21,10 @@ namespace SözlükUygulaması
         {
 
         }
+
+        private void Yardım_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

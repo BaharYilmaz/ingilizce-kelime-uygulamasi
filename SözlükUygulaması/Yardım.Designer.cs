@@ -78,6 +78,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Yardım";
             this.Text = "Yardım";
+            this.Load += new System.EventHandler(this.Yardım_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
