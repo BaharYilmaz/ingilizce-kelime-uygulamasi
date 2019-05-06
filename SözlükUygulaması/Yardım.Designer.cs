@@ -55,6 +55,7 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Uygulamamızda amacımız ingilizce kelime ezberinde kullanıcılara yardımcı olmaktır" +
     ".";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label1
             // 
