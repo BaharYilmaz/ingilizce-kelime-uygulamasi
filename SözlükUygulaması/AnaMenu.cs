@@ -36,6 +36,9 @@ namespace SözlükUygulaması
         Test T;
         OgrenilenKelimeler OK;
         KelimeEkle KE;
+        Yardım Y;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbn_Yardim;
+        private DevExpress.XtraBars.BarButtonItem btn_Yardim;
         public bool kontrol;
 
 
@@ -60,6 +63,8 @@ namespace SözlükUygulaması
             this.btn_ögrenilmis = new DevExpress.XtraBars.BarButtonItem();
             this.rbn_kelimeEkle = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btn_kelimeEkle = new DevExpress.XtraBars.BarButtonItem();
+            this.rbn_Yardim = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btn_Yardim = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.rbnCtrl_anaMenu = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -75,7 +80,8 @@ namespace SözlükUygulaması
             this.rbn_ogren,
             this.rbn_test,
             this.rbn_ogrenilen,
-            this.rbn_kelimeEkle});
+            this.rbn_kelimeEkle,
+            this.rbn_Yardim});
             this.ribbonPage1.Name = "ribbonPage1";
             // 
             // rbn_kelimeSec
@@ -151,6 +157,19 @@ namespace SözlükUygulaması
             this.btn_kelimeEkle.Name = "btn_kelimeEkle";
             this.btn_kelimeEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_kelimeEkle_ItemClick);
             // 
+            // rbn_Yardim
+            // 
+            this.rbn_Yardim.ItemLinks.Add(this.btn_Yardim);
+            this.rbn_Yardim.Name = "rbn_Yardim";
+            // 
+            // btn_Yardim
+            // 
+            this.btn_Yardim.Caption = "YARDIM";
+            this.btn_Yardim.Id = 10;
+            this.btn_Yardim.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Yardim.ImageOptions.Image")));
+            this.btn_Yardim.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_Yardim.ImageOptions.LargeImage")));
+            this.btn_Yardim.Name = "btn_Yardim";
+            // 
             // barButtonItem2
             // 
             this.barButtonItem2.Id = 7;
@@ -167,9 +186,10 @@ namespace SözlükUygulaması
             this.btn_ögrenilmis,
             this.btn_kelimeEkle,
             this.barButtonItem2,
-            this.btn_kelimeOgren});
+            this.btn_kelimeOgren,
+            this.btn_Yardim});
             this.rbnCtrl_anaMenu.Location = new System.Drawing.Point(0, 0);
-            this.rbnCtrl_anaMenu.MaxItemId = 10;
+            this.rbnCtrl_anaMenu.MaxItemId = 11;
             this.rbnCtrl_anaMenu.Name = "rbnCtrl_anaMenu";
             this.rbnCtrl_anaMenu.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -233,10 +253,12 @@ namespace SözlükUygulaması
         {
             
                 btn_kelimeSec.Enabled = true;
-                btn_kelimeOgren.Enabled = false;
+                btn_kelimeOgren.Enabled = true;
                 btn_test.Enabled = true;
                 btn_ögrenilmis.Enabled = true;
                 btn_kelimeEkle.Enabled = true;
+                btn_Yardim.Enabled = true;
+
             
             
         }
@@ -315,6 +337,24 @@ namespace SözlükUygulaması
         private void KE_FormClosed(object sender, FormClosedEventArgs e)
         {
             KE = null;
+        }
+
+        private void btn_Yardim_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Y == null)
+            {
+                Y = new Yardım();
+                Y.MdiParent = this;
+                Y.FormClosed += Y_FormClosed;
+                Y.Show();
+            }
+            else
+                Y.Activate();
+        }
+
+        private void Y_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Y = null;
         }
     }
 }
