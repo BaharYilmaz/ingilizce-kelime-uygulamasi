@@ -251,16 +251,13 @@ namespace SözlükUygulaması
 
         private void AnaMenu_Load(object sender, EventArgs e)
         {
-            
-                btn_kelimeSec.Enabled = true;
-                btn_kelimeOgren.Enabled = true;
-                btn_test.Enabled = true;
-                btn_ögrenilmis.Enabled = true;
-                btn_kelimeEkle.Enabled = true;
-                btn_Yardim.Enabled = true;
+            btn_kelimeSec.Enabled = true;
+            btn_kelimeOgren.Enabled = true;
+            btn_test.Enabled = true;
+            btn_ögrenilmis.Enabled = true;
+            btn_kelimeEkle.Enabled = true;
+            btn_Yardim.Enabled = true;
 
-            
-            
         }
 
         private void btn_kelimeOgren_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
