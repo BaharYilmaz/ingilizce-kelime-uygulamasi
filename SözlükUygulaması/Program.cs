@@ -16,7 +16,7 @@ namespace SözlükUygulaması
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GirisEkranı());
+            Application.Run(new Home());
         }
     }
 }
