@@ -29,7 +29,8 @@ namespace SözlükUygulaması
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem btn_ogren;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbn_Yardim;
+        private DevExpress.XtraBars.BarButtonItem btn_Yardim;
 
         KelimeSec KS;
         Ogren O;
@@ -37,8 +38,7 @@ namespace SözlükUygulaması
         OgrenilenKelimeler OK;
         KelimeEkle KE;
         Yardım Y;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbn_Yardim;
-        private DevExpress.XtraBars.BarButtonItem btn_Yardim;
+        
         public bool kontrol;
 
 
@@ -169,6 +169,7 @@ namespace SözlükUygulaması
             this.btn_Yardim.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Yardim.ImageOptions.Image")));
             this.btn_Yardim.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_Yardim.ImageOptions.LargeImage")));
             this.btn_Yardim.Name = "btn_Yardim";
+            this.btn_Yardim.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Yardim_ItemClick_1);
             // 
             // barButtonItem2
             // 
@@ -251,16 +252,13 @@ namespace SözlükUygulaması
 
         private void AnaMenu_Load(object sender, EventArgs e)
         {
-            
-                btn_kelimeSec.Enabled = true;
-                btn_kelimeOgren.Enabled = true;
-                btn_test.Enabled = true;
-                btn_ögrenilmis.Enabled = true;
-                btn_kelimeEkle.Enabled = true;
-                btn_Yardim.Enabled = true;
+            btn_kelimeSec.Enabled = true;
+            btn_kelimeOgren.Enabled = true;
+            btn_test.Enabled = true;
+            btn_ögrenilmis.Enabled = true;
+            btn_kelimeEkle.Enabled = true;
+            btn_Yardim.Enabled = true;
 
-            
-            
         }
 
         private void btn_kelimeOgren_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -338,8 +336,9 @@ namespace SözlükUygulaması
         {
             KE = null;
         }
+        
 
-        private void btn_Yardim_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btn_Yardim_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (Y == null)
             {
