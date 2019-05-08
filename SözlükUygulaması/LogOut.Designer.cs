@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogOut));
             this.btn_cikisYap = new DevExpress.XtraEditors.SimpleButton();
             this.txt_sifre = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_sifre.Properties)).BeginInit();
@@ -36,12 +35,11 @@
             // 
             // btn_cikisYap
             // 
-            this.btn_cikisYap.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_cikisYap.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_cikisYap.Appearance.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btn_cikisYap.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_cikisYap.Appearance.Options.UseBackColor = true;
             this.btn_cikisYap.Appearance.Options.UseFont = true;
-            this.btn_cikisYap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_girisYap.ImageOptions.Image")));
-            this.btn_cikisYap.Location = new System.Drawing.Point(277, 205);
+            this.btn_cikisYap.Location = new System.Drawing.Point(171, 196);
             this.btn_cikisYap.Name = "btn_cikisYap";
             this.btn_cikisYap.Size = new System.Drawing.Size(195, 31);
             this.btn_cikisYap.TabIndex = 5;
@@ -51,7 +49,7 @@
             // txt_sifre
             // 
             this.txt_sifre.EditValue = "Şifre";
-            this.txt_sifre.Location = new System.Drawing.Point(277, 145);
+            this.txt_sifre.Location = new System.Drawing.Point(171, 136);
             this.txt_sifre.Name = "txt_sifre";
             this.txt_sifre.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txt_sifre.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -66,12 +64,14 @@
             // 
             // LogOut
             // 
+            this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btn_cikisYap);
             this.Controls.Add(this.txt_sifre);
             this.Name = "LogOut";
-            this.Size = new System.Drawing.Size(578, 417);
+            this.Size = new System.Drawing.Size(517, 393);
             this.Load += new System.EventHandler(this.LogOut_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_sifre.Properties)).EndInit();
             this.ResumeLayout(false);

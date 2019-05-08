@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this._container = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.pnl_home = new System.Windows.Forms.Panel();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.ace_profil = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_giris = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -45,7 +46,6 @@
             this.ace_yardim = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator3 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.pnl_home = new System.Windows.Forms.Panel();
             this._container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
@@ -62,6 +62,13 @@
             this._container.Size = new System.Drawing.Size(1055, 676);
             this._container.TabIndex = 3;
             this._container.Click += new System.EventHandler(this._container_Click);
+            // 
+            // pnl_home
+            // 
+            this.pnl_home.Location = new System.Drawing.Point(206, 6);
+            this.pnl_home.Name = "pnl_home";
+            this.pnl_home.Size = new System.Drawing.Size(849, 670);
+            this.pnl_home.TabIndex = 0;
             // 
             // accordionControl1
             // 
@@ -93,7 +100,7 @@
             this.accordionControl1.Appearance.Group.Pressed.Options.UseForeColor = true;
             this.accordionControl1.Appearance.Hint.BackColor = System.Drawing.Color.Transparent;
             this.accordionControl1.Appearance.Hint.Options.UseBackColor = true;
-            this.accordionControl1.Appearance.Item.Disabled.BackColor = System.Drawing.Color.PowderBlue;
+            this.accordionControl1.Appearance.Item.Disabled.BackColor = System.Drawing.Color.Aquamarine;
             this.accordionControl1.Appearance.Item.Disabled.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.accordionControl1.Appearance.Item.Disabled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.accordionControl1.Appearance.Item.Disabled.Options.UseBackColor = true;
@@ -237,13 +244,6 @@
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(1055, 30);
             this.fluentDesignFormControl1.TabIndex = 5;
             this.fluentDesignFormControl1.TabStop = false;
-            // 
-            // pnl_home
-            // 
-            this.pnl_home.Location = new System.Drawing.Point(206, 6);
-            this.pnl_home.Name = "pnl_home";
-            this.pnl_home.Size = new System.Drawing.Size(849, 670);
-            this.pnl_home.TabIndex = 0;
             // 
             // Home
             // 
