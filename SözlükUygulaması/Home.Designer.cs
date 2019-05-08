@@ -33,39 +33,98 @@
             this.ace_profil = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_giris = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_cikis = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.ace_Istatistik = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.ace_AnaMenu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_kelimeSec = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_ogren = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_test = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_ogrenilen = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_kelimeEkle = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlSeparator2 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.ace_yardim = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlSeparator3 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.ace_Istatistik = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.pnl_home = new System.Windows.Forms.Panel();
+            this._container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // _container
             // 
+            this._container.Appearance.BackColor = System.Drawing.Color.Azure;
+            this._container.Appearance.Options.UseBackColor = true;
+            this._container.Controls.Add(this.pnl_home);
             this._container.Dock = System.Windows.Forms.DockStyle.Fill;
             this._container.Location = new System.Drawing.Point(0, 30);
             this._container.Name = "_container";
-            this._container.Size = new System.Drawing.Size(936, 683);
+            this._container.Size = new System.Drawing.Size(1055, 676);
             this._container.TabIndex = 3;
             this._container.Click += new System.EventHandler(this._container_Click);
             // 
             // accordionControl1
             // 
+            this.accordionControl1.Appearance.AccordionControl.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.accordionControl1.Appearance.AccordionControl.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.Group.Disabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.accordionControl1.Appearance.Group.Disabled.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.accordionControl1.Appearance.Group.Disabled.ForeColor = System.Drawing.Color.Gray;
+            this.accordionControl1.Appearance.Group.Disabled.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.Group.Disabled.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Disabled.Options.UseForeColor = true;
+            this.accordionControl1.Appearance.Group.Hovered.BackColor = System.Drawing.Color.AliceBlue;
+            this.accordionControl1.Appearance.Group.Hovered.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.accordionControl1.Appearance.Group.Hovered.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.accordionControl1.Appearance.Group.Hovered.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.Group.Hovered.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Hovered.Options.UseForeColor = true;
+            this.accordionControl1.Appearance.Group.Normal.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.accordionControl1.Appearance.Group.Normal.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.accordionControl1.Appearance.Group.Normal.ForeColor = System.Drawing.Color.White;
+            this.accordionControl1.Appearance.Group.Normal.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.Group.Normal.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Normal.Options.UseForeColor = true;
+            this.accordionControl1.Appearance.Group.Pressed.BackColor = System.Drawing.Color.White;
+            this.accordionControl1.Appearance.Group.Pressed.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.accordionControl1.Appearance.Group.Pressed.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.accordionControl1.Appearance.Group.Pressed.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.Group.Pressed.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Pressed.Options.UseForeColor = true;
+            this.accordionControl1.Appearance.Hint.BackColor = System.Drawing.Color.Transparent;
+            this.accordionControl1.Appearance.Hint.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.Item.Disabled.BackColor = System.Drawing.Color.PowderBlue;
+            this.accordionControl1.Appearance.Item.Disabled.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.accordionControl1.Appearance.Item.Disabled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControl1.Appearance.Item.Disabled.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.Item.Disabled.Options.UseFont = true;
+            this.accordionControl1.Appearance.Item.Disabled.Options.UseForeColor = true;
+            this.accordionControl1.Appearance.Item.Hovered.BackColor = System.Drawing.Color.AliceBlue;
+            this.accordionControl1.Appearance.Item.Hovered.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.accordionControl1.Appearance.Item.Hovered.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.Item.Hovered.Options.UseFont = true;
+            this.accordionControl1.Appearance.Item.Normal.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.accordionControl1.Appearance.Item.Normal.Options.UseFont = true;
+            this.accordionControl1.Appearance.Item.Pressed.BackColor = System.Drawing.Color.AliceBlue;
+            this.accordionControl1.Appearance.Item.Pressed.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.accordionControl1.Appearance.Item.Pressed.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.Item.Pressed.Options.UseFont = true;
+            this.accordionControl1.Appearance.ItemWithContainer.Hovered.BackColor = System.Drawing.Color.Transparent;
+            this.accordionControl1.Appearance.ItemWithContainer.Hovered.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.ItemWithContainer.Normal.BackColor = System.Drawing.Color.Transparent;
+            this.accordionControl1.Appearance.ItemWithContainer.Normal.Options.UseBackColor = true;
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.ace_profil,
+            this.accordionControlSeparator1,
             this.ace_AnaMenu,
-            this.ace_yardim});
+            this.accordionControlSeparator2,
+            this.ace_yardim,
+            this.accordionControlSeparator3});
             this.accordionControl1.Location = new System.Drawing.Point(0, 30);
             this.accordionControl1.Name = "accordionControl1";
-            this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Fluent;
-            this.accordionControl1.Size = new System.Drawing.Size(200, 683);
+            this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Auto;
+            this.accordionControl1.Size = new System.Drawing.Size(200, 676);
             this.accordionControl1.TabIndex = 4;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -76,6 +135,7 @@
             this.ace_cikis,
             this.ace_Istatistik});
             this.ace_profil.Expanded = true;
+            this.ace_profil.ImageOptions.Image = global::SözlükUygulaması.Properties.Resources.baseline_account_circle_white_36dp;
             this.ace_profil.Name = "ace_profil";
             this.ace_profil.Text = "PROFİL";
             // 
@@ -93,6 +153,16 @@
             this.ace_cikis.Text = "Çıkış Yap";
             this.ace_cikis.Click += new System.EventHandler(this.ace_cikis_Click);
             // 
+            // ace_Istatistik
+            // 
+            this.ace_Istatistik.Name = "ace_Istatistik";
+            this.ace_Istatistik.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.ace_Istatistik.Text = "İstatistik";
+            // 
+            // accordionControlSeparator1
+            // 
+            this.accordionControlSeparator1.Name = "accordionControlSeparator1";
+            // 
             // ace_AnaMenu
             // 
             this.ace_AnaMenu.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
@@ -101,6 +171,8 @@
             this.ace_test,
             this.ace_ogrenilen,
             this.ace_kelimeEkle});
+            this.ace_AnaMenu.Expanded = true;
+            this.ace_AnaMenu.ImageOptions.Image = global::SözlükUygulaması.Properties.Resources.baseline_home_white_36dp;
             this.ace_AnaMenu.Name = "ace_AnaMenu";
             this.ace_AnaMenu.Text = "ANA MENU";
             // 
@@ -139,12 +211,21 @@
             this.ace_kelimeEkle.Text = "Kelime Ekle";
             this.ace_kelimeEkle.Click += new System.EventHandler(this.ace_kelimeEkle_Click);
             // 
+            // accordionControlSeparator2
+            // 
+            this.accordionControlSeparator2.Name = "accordionControlSeparator2";
+            // 
             // ace_yardim
             // 
+            this.ace_yardim.ImageOptions.Image = global::SözlükUygulaması.Properties.Resources.baseline_help_white_36dp;
             this.ace_yardim.Name = "ace_yardim";
             this.ace_yardim.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.ace_yardim.Text = "YARDIM";
             this.ace_yardim.Click += new System.EventHandler(this.ace_yardim_Click);
+            // 
+            // accordionControlSeparator3
+            // 
+            this.accordionControlSeparator3.Name = "accordionControlSeparator3";
             // 
             // fluentDesignFormControl1
             // 
@@ -153,21 +234,22 @@
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
             this.fluentDesignFormControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(936, 30);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1055, 30);
             this.fluentDesignFormControl1.TabIndex = 5;
             this.fluentDesignFormControl1.TabStop = false;
             // 
-            // ace_Istatistik
+            // pnl_home
             // 
-            this.ace_Istatistik.Name = "ace_Istatistik";
-            this.ace_Istatistik.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.ace_Istatistik.Text = "İstatistik";
+            this.pnl_home.Location = new System.Drawing.Point(206, 6);
+            this.pnl_home.Name = "pnl_home";
+            this.pnl_home.Size = new System.Drawing.Size(849, 670);
+            this.pnl_home.TabIndex = 0;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 713);
+            this.ClientSize = new System.Drawing.Size(1055, 706);
             this.ControlContainer = this._container;
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this._container);
@@ -177,6 +259,7 @@
             this.NavigationControl = this.accordionControl1;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
+            this._container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             this.ResumeLayout(false);
@@ -199,5 +282,9 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_yardim;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_Istatistik;
+        private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator1;
+        private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator2;
+        private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator3;
+        private System.Windows.Forms.Panel pnl_home;
     }
 }
