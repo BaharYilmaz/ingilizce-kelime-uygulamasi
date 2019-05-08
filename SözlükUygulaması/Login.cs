@@ -38,8 +38,8 @@ namespace SözlükUygulaması
         private void btn_girisYap_Click(object sender, EventArgs e)
         {
             if (txt_kullanıcıAdı.Text == "a" && txt_sifre.Text == "a")
-            {//
-                Kontrol = false;
+            {
+                Kontrol = true;
                 Home h = new Home();
                 this.Hide();
                 h.Show();
@@ -48,21 +48,23 @@ namespace SözlükUygulaması
             }
             else
             {
+                Kontrol = false;
                 MessageBox.Show("Lütfen doğru kullanıcı adı veya şifre giriniz.");
                 txt_kullanıcıAdı.Text = "";
                 txt_sifre.Text = "";
             }
         }
 
-        private void txt_kullanıcıAdı_EditValueChanged(object sender, EventArgs e)
+        private void txt_kullanıcıAdı_Click(object sender, EventArgs e)
         {
             txt_kullanıcıAdı.Text = "";
 
         }
 
-        private void txt_sifre_EditValueChanged(object sender, EventArgs e)
+        private void txt_sifre_Click(object sender, EventArgs e)
         {
             txt_sifre.Text = "";
+
         }
     }
 }

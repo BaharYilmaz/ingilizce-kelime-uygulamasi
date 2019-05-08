@@ -12,9 +12,13 @@ namespace SözlükUygulaması
 {
     public partial class Home : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
+        public bool kontrol;
+
         public Home()
         {
             InitializeComponent();
+            this.kontrol = Login.Kontrol;
+
         }
 
         private void _container_Click(object sender, EventArgs e)
@@ -35,7 +39,13 @@ namespace SözlükUygulaması
 
         private void ace_cikis_Click(object sender, EventArgs e)
         {
-
+            if (!_container.Controls.Contains(LogOut.Instance))
+            {
+                _container.Controls.Add(LogOut.Instance);
+                LogOut.Instance.Dock = DockStyle.Fill;
+                LogOut.Instance.BringToFront();
+            }
+            LogOut.Instance.BringToFront();
         }
 
         private void ace_kelimeSec_Click(object sender, EventArgs e)
@@ -106,6 +116,34 @@ namespace SözlükUygulaması
                 Help.Instance.BringToFront();
             }
             Help.Instance.BringToFront();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            if (kontrol == false)
+            {
+                ace_giris.Enabled = true;
+                ace_cikis.Enabled = false;
+                ace_Istatistik.Enabled = false;
+                ace_AnaMenu.Enabled = false;
+                ace_kelimeSec.Enabled = false;
+                ace_kelimeEkle.Enabled = false;
+                ace_ogren.Enabled = false;
+                ace_test.Enabled = false;
+                ace_ogrenilen.Enabled = false;
+            }
+            else
+            {
+                ace_giris.Enabled = false;
+                ace_cikis.Enabled = true;
+                ace_Istatistik.Enabled = true;
+                ace_AnaMenu.Enabled = true;
+                ace_kelimeSec.Enabled = true;
+                ace_kelimeEkle.Enabled = true;
+                ace_ogren.Enabled = true;
+                ace_test.Enabled = true;
+                ace_ogrenilen.Enabled = true;
+            }
         }
     }
 }

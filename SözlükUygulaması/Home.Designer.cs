@@ -33,7 +33,7 @@
             this.ace_profil = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_giris = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_cikis = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.ace_AnaMenu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_kelimeSec = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_ogren = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_test = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -41,6 +41,7 @@
             this.ace_kelimeEkle = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_yardim = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.ace_Istatistik = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +60,7 @@
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.ace_profil,
-            this.accordionControlElement2,
+            this.ace_AnaMenu,
             this.ace_yardim});
             this.accordionControl1.Location = new System.Drawing.Point(0, 30);
             this.accordionControl1.Name = "accordionControl1";
@@ -72,7 +73,8 @@
             // 
             this.ace_profil.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.ace_giris,
-            this.ace_cikis});
+            this.ace_cikis,
+            this.ace_Istatistik});
             this.ace_profil.Expanded = true;
             this.ace_profil.Name = "ace_profil";
             this.ace_profil.Text = "PROFİL";
@@ -91,17 +93,16 @@
             this.ace_cikis.Text = "Çıkış Yap";
             this.ace_cikis.Click += new System.EventHandler(this.ace_cikis_Click);
             // 
-            // accordionControlElement2
+            // ace_AnaMenu
             // 
-            this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.ace_AnaMenu.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.ace_kelimeSec,
             this.ace_ogren,
             this.ace_test,
             this.ace_ogrenilen,
             this.ace_kelimeEkle});
-            this.accordionControlElement2.Expanded = true;
-            this.accordionControlElement2.Name = "accordionControlElement2";
-            this.accordionControlElement2.Text = "ANA MENU";
+            this.ace_AnaMenu.Name = "ace_AnaMenu";
+            this.ace_AnaMenu.Text = "ANA MENU";
             // 
             // ace_kelimeSec
             // 
@@ -156,6 +157,12 @@
             this.fluentDesignFormControl1.TabIndex = 5;
             this.fluentDesignFormControl1.TabStop = false;
             // 
+            // ace_Istatistik
+            // 
+            this.ace_Istatistik.Name = "ace_Istatistik";
+            this.ace_Istatistik.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.ace_Istatistik.Text = "İstatistik";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -169,6 +176,7 @@
             this.Name = "Home";
             this.NavigationControl = this.accordionControl1;
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             this.ResumeLayout(false);
@@ -182,7 +190,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_profil;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_giris;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_cikis;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ace_AnaMenu;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_kelimeSec;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_ogren;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_test;
@@ -190,5 +198,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_kelimeEkle;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_yardim;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ace_Istatistik;
     }
 }
