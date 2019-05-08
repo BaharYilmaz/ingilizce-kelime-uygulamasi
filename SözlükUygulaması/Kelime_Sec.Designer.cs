@@ -37,12 +37,25 @@
             // btn_secOgren
             // 
             this.btn_secOgren.Appearance.BackColor = System.Drawing.Color.White;
-            this.btn_secOgren.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_secOgren.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_secOgren.Appearance.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.btn_secOgren.Appearance.Options.UseBackColor = true;
             this.btn_secOgren.Appearance.Options.UseFont = true;
-            this.btn_secOgren.Location = new System.Drawing.Point(586, 313);
+            this.btn_secOgren.Appearance.Options.UseForeColor = true;
+            this.btn_secOgren.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_secOgren.AppearanceDisabled.Options.UseFont = true;
+            this.btn_secOgren.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_secOgren.AppearanceHovered.Options.UseFont = true;
+            this.btn_secOgren.AppearancePressed.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btn_secOgren.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_secOgren.AppearancePressed.ForeColor = System.Drawing.Color.White;
+            this.btn_secOgren.AppearancePressed.Options.UseBackColor = true;
+            this.btn_secOgren.AppearancePressed.Options.UseFont = true;
+            this.btn_secOgren.AppearancePressed.Options.UseForeColor = true;
+            this.btn_secOgren.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btn_secOgren.Location = new System.Drawing.Point(487, 325);
             this.btn_secOgren.Name = "btn_secOgren";
-            this.btn_secOgren.Size = new System.Drawing.Size(94, 64);
+            this.btn_secOgren.Size = new System.Drawing.Size(134, 72);
             this.btn_secOgren.TabIndex = 7;
             this.btn_secOgren.Text = "Öğren";
             this.btn_secOgren.Click += new System.EventHandler(this.btn_secOgren_Click);
@@ -50,12 +63,25 @@
             // btn_secBiliyorum
             // 
             this.btn_secBiliyorum.Appearance.BackColor = System.Drawing.Color.White;
-            this.btn_secBiliyorum.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_secBiliyorum.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_secBiliyorum.Appearance.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.btn_secBiliyorum.Appearance.Options.UseBackColor = true;
             this.btn_secBiliyorum.Appearance.Options.UseFont = true;
-            this.btn_secBiliyorum.Location = new System.Drawing.Point(586, 212);
+            this.btn_secBiliyorum.Appearance.Options.UseForeColor = true;
+            this.btn_secBiliyorum.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_secBiliyorum.AppearanceDisabled.Options.UseFont = true;
+            this.btn_secBiliyorum.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_secBiliyorum.AppearanceHovered.Options.UseFont = true;
+            this.btn_secBiliyorum.AppearancePressed.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btn_secBiliyorum.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_secBiliyorum.AppearancePressed.ForeColor = System.Drawing.Color.White;
+            this.btn_secBiliyorum.AppearancePressed.Options.UseBackColor = true;
+            this.btn_secBiliyorum.AppearancePressed.Options.UseFont = true;
+            this.btn_secBiliyorum.AppearancePressed.Options.UseForeColor = true;
+            this.btn_secBiliyorum.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btn_secBiliyorum.Location = new System.Drawing.Point(487, 201);
             this.btn_secBiliyorum.Name = "btn_secBiliyorum";
-            this.btn_secBiliyorum.Size = new System.Drawing.Size(94, 64);
+            this.btn_secBiliyorum.Size = new System.Drawing.Size(134, 76);
             this.btn_secBiliyorum.TabIndex = 6;
             this.btn_secBiliyorum.Text = "Biliyorum";
             this.btn_secBiliyorum.Click += new System.EventHandler(this.btn_secBiliyorum_Click);
@@ -63,17 +89,21 @@
             // listBox_sec
             // 
             this.listBox_sec.Appearance.BackColor = System.Drawing.Color.White;
+            this.listBox_sec.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listBox_sec.Appearance.Options.UseBackColor = true;
+            this.listBox_sec.Appearance.Options.UseFont = true;
             this.listBox_sec.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.listBox_sec.Location = new System.Drawing.Point(282, 117);
+            this.listBox_sec.Location = new System.Drawing.Point(122, 100);
             this.listBox_sec.Name = "listBox_sec";
-            this.listBox_sec.Size = new System.Drawing.Size(259, 385);
+            this.listBox_sec.Size = new System.Drawing.Size(296, 420);
             this.listBox_sec.TabIndex = 5;
             this.listBox_sec.SelectedIndexChanged += new System.EventHandler(this.listBox_sec_SelectedIndexChanged);
             this.listBox_sec.Click += new System.EventHandler(this.listBox_sec_Click);
             // 
             // Kelime_Sec
             // 
+            this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btn_secOgren);

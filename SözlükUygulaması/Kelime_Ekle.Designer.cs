@@ -45,14 +45,16 @@
             // 
             // btn_ekle
             // 
-            this.btn_ekle.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_ekle.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_ekle.Appearance.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btn_ekle.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_ekle.Appearance.ForeColor = System.Drawing.Color.White;
             this.btn_ekle.Appearance.Options.UseBackColor = true;
             this.btn_ekle.Appearance.Options.UseFont = true;
+            this.btn_ekle.Appearance.Options.UseForeColor = true;
             this.btn_ekle.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.btn_ekle.Location = new System.Drawing.Point(411, 377);
+            this.btn_ekle.Location = new System.Drawing.Point(288, 405);
             this.btn_ekle.Name = "btn_ekle";
-            this.btn_ekle.Size = new System.Drawing.Size(260, 39);
+            this.btn_ekle.Size = new System.Drawing.Size(260, 56);
             this.btn_ekle.TabIndex = 26;
             this.btn_ekle.Text = "Ekle";
             this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
@@ -61,7 +63,7 @@
             // 
             this.txt_ekleKelime.EditValue = "";
             this.txt_ekleKelime.EnterMoveNextControl = true;
-            this.txt_ekleKelime.Location = new System.Drawing.Point(411, 135);
+            this.txt_ekleKelime.Location = new System.Drawing.Point(288, 163);
             this.txt_ekleKelime.Name = "txt_ekleKelime";
             this.txt_ekleKelime.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_ekleKelime.Properties.Appearance.Options.UseFont = true;
@@ -72,7 +74,7 @@
             // txt_ekleAnlam
             // 
             this.txt_ekleAnlam.EnterMoveNextControl = true;
-            this.txt_ekleAnlam.Location = new System.Drawing.Point(411, 185);
+            this.txt_ekleAnlam.Location = new System.Drawing.Point(288, 213);
             this.txt_ekleAnlam.Name = "txt_ekleAnlam";
             this.txt_ekleAnlam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_ekleAnlam.Properties.Appearance.Options.UseFont = true;
@@ -83,7 +85,7 @@
             // txt_ekleTur
             // 
             this.txt_ekleTur.EnterMoveNextControl = true;
-            this.txt_ekleTur.Location = new System.Drawing.Point(411, 231);
+            this.txt_ekleTur.Location = new System.Drawing.Point(288, 259);
             this.txt_ekleTur.Name = "txt_ekleTur";
             this.txt_ekleTur.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_ekleTur.Properties.Appearance.Options.UseFont = true;
@@ -95,7 +97,7 @@
             // 
             this.txt_ekleCumle.EditValue = "";
             this.txt_ekleCumle.EnterMoveNextControl = true;
-            this.txt_ekleCumle.Location = new System.Drawing.Point(411, 274);
+            this.txt_ekleCumle.Location = new System.Drawing.Point(288, 302);
             this.txt_ekleCumle.Name = "txt_ekleCumle";
             this.txt_ekleCumle.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_ekleCumle.Properties.Appearance.Options.UseFont = true;
@@ -108,7 +110,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(322, 142);
+            this.labelControl4.Location = new System.Drawing.Point(199, 170);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(58, 21);
             this.labelControl4.TabIndex = 19;
@@ -118,7 +120,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(322, 234);
+            this.labelControl3.Location = new System.Drawing.Point(199, 262);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(39, 21);
             this.labelControl3.TabIndex = 18;
@@ -128,7 +130,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(322, 192);
+            this.labelControl2.Location = new System.Drawing.Point(199, 220);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(59, 21);
             this.labelControl2.TabIndex = 20;
@@ -138,7 +140,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(322, 277);
+            this.labelControl1.Location = new System.Drawing.Point(199, 305);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(53, 21);
             this.labelControl1.TabIndex = 21;
@@ -146,6 +148,8 @@
             // 
             // Kelime_Ekle
             // 
+            this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btn_ekle);

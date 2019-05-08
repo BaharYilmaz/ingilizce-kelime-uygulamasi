@@ -39,7 +39,7 @@
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(249, 218);
+            this.label1.Location = new System.Drawing.Point(195, 262);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(485, 245);
             this.label1.TabIndex = 11;
@@ -49,7 +49,7 @@
             // 
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(533, 82);
+            this.label3.Location = new System.Drawing.Point(479, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(201, 119);
             this.label3.TabIndex = 10;
@@ -59,7 +59,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(243, 82);
+            this.pictureBox1.Location = new System.Drawing.Point(189, 126);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(275, 119);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -68,6 +68,8 @@
             // 
             // Help
             // 
+            this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);

@@ -44,7 +44,8 @@ namespace SözlükUygulaması
             {
                 for (int i = 0; i < 10; i++)
                 {
-                    listBox_sec.Items.Add(KelimeListesi[i]);
+                   
+                   listBox_sec.Items.Add(KelimeListesi[i]);
                 }
 
             }

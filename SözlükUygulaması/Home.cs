@@ -74,13 +74,13 @@ namespace SözlükUygulaması
 
         private void ace_ogren_Click(object sender, EventArgs e)
         {
-            if (!pnl_home.Controls.Contains(Ogren_.Instance))
+            if (!pnl_home.Controls.Contains(KelimeOgren.Instance))
             {
-                pnl_home.Controls.Add(Ogren_.Instance);
-                Ogren_.Instance.Dock = DockStyle.Fill;
-                Ogren_.Instance.BringToFront();
+                pnl_home.Controls.Add(KelimeOgren.Instance);
+                KelimeOgren.Instance.Dock = DockStyle.Fill;
+                KelimeOgren.Instance.BringToFront();
             }
-            Ogren_.Instance.BringToFront();
+            KelimeOgren.Instance.BringToFront();
         }
 
         private void ace_test_Click(object sender, EventArgs e)

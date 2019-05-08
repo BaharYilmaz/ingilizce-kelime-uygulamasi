@@ -35,25 +35,33 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.labelControl1.Appearance.Options.UseBackColor = true;
             this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(220, 100);
+            this.labelControl1.Location = new System.Drawing.Point(158, 38);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(225, 34);
+            this.labelControl1.Size = new System.Drawing.Size(335, 34);
             this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "Öğrenilmiş Kelimeler";
             // 
             // listBox_Ogrenilmis
             // 
-            this.listBox_Ogrenilmis.Location = new System.Drawing.Point(158, 140);
+            this.listBox_Ogrenilmis.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listBox_Ogrenilmis.Appearance.Options.UseFont = true;
+            this.listBox_Ogrenilmis.Location = new System.Drawing.Point(141, 106);
             this.listBox_Ogrenilmis.MultiColumn = true;
             this.listBox_Ogrenilmis.Name = "listBox_Ogrenilmis";
-            this.listBox_Ogrenilmis.Size = new System.Drawing.Size(352, 390);
+            this.listBox_Ogrenilmis.Size = new System.Drawing.Size(367, 450);
             this.listBox_Ogrenilmis.TabIndex = 4;
             // 
             // Ogrenilmis
             // 
+            this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.labelControl1);

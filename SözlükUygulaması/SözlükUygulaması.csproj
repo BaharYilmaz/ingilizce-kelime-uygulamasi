@@ -92,6 +92,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="KelimeOgren.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KelimeOgren.Designer.cs">
+      <DependentUpon>KelimeOgren.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kelime_Ekle.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,12 +128,6 @@
     <Compile Include="Ogrenilmis.Designer.cs">
       <DependentUpon>Ogrenilmis.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ogren_.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Ogren_.Designer.cs">
-      <DependentUpon>Ogren_.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test_.cs">
@@ -141,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KelimeOgren.resx">
+      <DependentUpon>KelimeOgren.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kelime_Ekle.resx">
       <DependentUpon>Kelime_Ekle.cs</DependentUpon>
@@ -156,9 +159,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ogrenilmis.resx">
       <DependentUpon>Ogrenilmis.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ogren_.resx">
-      <DependentUpon>Ogren_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

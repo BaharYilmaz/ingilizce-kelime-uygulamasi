@@ -12,15 +12,15 @@ using Sözlük.Entities;
 
 namespace SözlükUygulaması
 {
-    public partial class Ogren_ : DevExpress.XtraEditors.XtraUserControl
+    public partial class KelimeOgren : DevExpress.XtraEditors.XtraUserControl
     {
-        private static Ogren_ _instance;
-        public static Ogren_ Instance
+        private static KelimeOgren _instance;
+        public static KelimeOgren Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new Ogren_();
+                    _instance = new KelimeOgren();
                 return _instance;
 
             }
@@ -29,12 +29,13 @@ namespace SözlükUygulaması
         int i = 0;
         BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
 
-        public Ogren_()
+
+        public KelimeOgren()
         {
             InitializeComponent();
         }
 
-        private void Ogren__Load(object sender, EventArgs e)
+        private void KelimeOgren_Load(object sender, EventArgs e)
         {
             Doldur();
             btn_bitir.Enabled = false;
@@ -69,11 +70,12 @@ namespace SözlükUygulaması
                 else if (ButonDurum == false) i--;
 
 
-            } while (i < liste.Count) ;
+            }// while (i < liste.Count) ;
             btn_bitir.Enabled = true;
 
 
         }
+
 
         private void btn_geri_Click(object sender, EventArgs e)
         {
@@ -85,7 +87,6 @@ namespace SözlükUygulaması
         private void btn_ileri_Click(object sender, EventArgs e)
         {
             Doldur();
-
         }
 
         private void btn_bitir_Click(object sender, EventArgs e)
