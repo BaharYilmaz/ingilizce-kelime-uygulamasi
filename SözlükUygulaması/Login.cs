@@ -27,6 +27,7 @@ namespace SözlükUygulaması
         public Login()
         {
             InitializeComponent();
+
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -35,16 +36,16 @@ namespace SözlükUygulaması
         }
         public static bool Kontrol { get; set; }
 
-        private void btn_girisYap_Click(object sender, EventArgs e)
+        
+        private void btn_girisYap_Click_1(object sender, EventArgs e)
         {
             if (txt_kullanıcıAdı.Text == "a" && txt_sifre.Text == "a")
             {
                 Kontrol = true;
+                
                 Home h = new Home();
                 this.Hide();
                 h.Show();
-
-
             }
             else
             {
@@ -55,13 +56,13 @@ namespace SözlükUygulaması
             }
         }
 
-        private void txt_kullanıcıAdı_Click(object sender, EventArgs e)
+        private void txt_kullanıcıAdı_Click_1(object sender, EventArgs e)
         {
             txt_kullanıcıAdı.Text = "";
 
         }
 
-        private void txt_sifre_Click(object sender, EventArgs e)
+        private void txt_sifre_Click_1(object sender, EventArgs e)
         {
             txt_sifre.Text = "";
 

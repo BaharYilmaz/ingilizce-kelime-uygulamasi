@@ -75,7 +75,7 @@ namespace SözlükUygulaması
             {
                 if (j < 10)
                 {
-                    Ogren_ ogr = new Ogren_();
+                    KelimeOgren ogr = new KelimeOgren();
                     this.Hide();
                     ogr.Show();
                 }
@@ -98,7 +98,7 @@ namespace SözlükUygulaması
 
             if (listBox_sec.ItemCount == 0)
             {
-                Ogren_ ogr = new Ogren_();
+                KelimeOgren ogr = new KelimeOgren();
                 this.Hide();
                 ogr.Show();
             }

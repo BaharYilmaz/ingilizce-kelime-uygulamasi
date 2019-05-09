@@ -64,6 +64,7 @@
             this.btn_girisYap.Size = new System.Drawing.Size(195, 43);
             this.btn_girisYap.TabIndex = 7;
             this.btn_girisYap.Text = "Giriş Yap";
+            this.btn_girisYap.Click += new System.EventHandler(this.btn_girisYap_Click_1);
             // 
             // txt_sifre
             // 
@@ -79,6 +80,7 @@
             this.txt_sifre.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txt_sifre.Size = new System.Drawing.Size(195, 28);
             this.txt_sifre.TabIndex = 6;
+            this.txt_sifre.Click += new System.EventHandler(this.txt_sifre_Click_1);
             // 
             // txt_kullanıcıAdı
             // 
@@ -95,6 +97,7 @@
             this.txt_kullanıcıAdı.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txt_kullanıcıAdı.Size = new System.Drawing.Size(195, 28);
             this.txt_kullanıcıAdı.TabIndex = 5;
+            this.txt_kullanıcıAdı.Click += new System.EventHandler(this.txt_kullanıcıAdı_Click_1);
             // 
             // pictureBox1
             // 

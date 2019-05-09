@@ -32,10 +32,10 @@ namespace SözlükUygulaması
             this.kontrol = Login.Kontrol;
 
         }
-
+       
         private void _container_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void ace_giris_Click(object sender, EventArgs e)
@@ -92,8 +92,6 @@ namespace SözlükUygulaması
                 Test_.Instance.BringToFront();
             }
             Test_.Instance.BringToFront();
-
-
         }
 
         private void ace_ogrenilen_Click(object sender, EventArgs e)
@@ -156,6 +154,11 @@ namespace SözlükUygulaması
                 ace_test.Enabled = true;
                 ace_ogrenilen.Enabled = true;
             }
+        }
+      
+        private void pnl_home_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

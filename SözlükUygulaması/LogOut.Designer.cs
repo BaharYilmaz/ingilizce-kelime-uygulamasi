@@ -39,7 +39,7 @@
             this.btn_cikisYap.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_cikisYap.Appearance.Options.UseBackColor = true;
             this.btn_cikisYap.Appearance.Options.UseFont = true;
-            this.btn_cikisYap.Location = new System.Drawing.Point(171, 196);
+            this.btn_cikisYap.Location = new System.Drawing.Point(245, 249);
             this.btn_cikisYap.Name = "btn_cikisYap";
             this.btn_cikisYap.Size = new System.Drawing.Size(195, 31);
             this.btn_cikisYap.TabIndex = 5;
@@ -49,7 +49,7 @@
             // txt_sifre
             // 
             this.txt_sifre.EditValue = "Şifre";
-            this.txt_sifre.Location = new System.Drawing.Point(171, 136);
+            this.txt_sifre.Location = new System.Drawing.Point(245, 189);
             this.txt_sifre.Name = "txt_sifre";
             this.txt_sifre.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txt_sifre.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));

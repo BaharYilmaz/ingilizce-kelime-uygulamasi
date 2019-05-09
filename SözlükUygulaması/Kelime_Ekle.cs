@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using Sözlük.Entities;
 
 namespace SözlükUygulaması
 {
@@ -28,7 +29,7 @@ namespace SözlükUygulaması
         {
             InitializeComponent();
         }
-
+        private Boolean durum=false;
         private void Kelime_Ekle_Load(object sender, EventArgs e)
         {
 
@@ -37,19 +38,40 @@ namespace SözlükUygulaması
         private void btn_ekle_Click(object sender, EventArgs e)
         {
             BusinessLogicLayer.BLL bll = new BusinessLogicLayer.BLL();
+            List<Kelime> KelimeListe = bll.KelimeListele();
 
-            int returnValue = bll.KelimeEkle(txt_ekleKelime.Text, txt_ekleAnlam.Text, txt_ekleTur.Text, txt_ekleCumle.Text);
-            if (returnValue > 0)
+            
+            if (KelimeListe != null )
             {
+                for (int i = 0; i < KelimeListe.Count; i++)
+                {
+                    if (KelimeListe[i].KelimeIngilizce == txt_ekleKelime.Text)
+                    {
+                        durum = true;
+                        break;
+                    }
+                    
+                    
+                }
+
+            }
+
+            if (durum == false)
+            {
+                
+                bll.KelimeEkle(txt_ekleKelime.Text, txt_ekleAnlam.Text, txt_ekleTur.Text, txt_ekleCumle.Text);
                 MessageBox.Show("Yeni Kayit Eklendi", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
-                MessageBox.Show("Kayıt Ekleme Başarısız", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            txt_ekleKelime.Text = "";
-            txt_ekleAnlam.Text = "";
-            txt_ekleTur.Text = "";
-            txt_ekleCumle.Text = "";
+            {
+                MessageBox.Show("Kayıt Ekleme Başarısız. Aynı Kelimeden Bulunmaktadır.", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_ekleKelime.Text = "";
+                txt_ekleAnlam.Text = "";
+                txt_ekleTur.Text = "";
+                txt_ekleCumle.Text = "";
+                durum = false;
+            }
         }
     }
 }

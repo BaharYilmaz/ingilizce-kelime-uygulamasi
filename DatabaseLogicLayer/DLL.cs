@@ -19,7 +19,7 @@ namespace DatabaseLogicLayer
 
         public DLL()
         {
-            connect = new SqlConnection(@"Data Source=DESKTOP-GP8FKQL;Initial Catalog=Sozluk;Integrated Security=True");
+            connect = new SqlConnection(@"Data Source=DESKTOP-ECAMK9C\ZISANSQL;Initial Catalog=Sozluk;Persist Security Info=True;User ID=sa;Password=sql225756");
 
         }
         public void BaglantiAyarla()
@@ -63,12 +63,12 @@ namespace DatabaseLogicLayer
             }
             return ReturnValue;
         }
-        //public SqlDataReader KelimeListele()
-        //{
-        //    command = new SqlCommand("select*from Kelime", connect);
-        //    BaglantiAyarla();
-        //    return command.ExecuteReader();
-        //}
+        public SqlDataReader KelimeListele()
+        {
+            command = new SqlCommand("select*from Kelime", connect);
+            BaglantiAyarla();
+            return command.ExecuteReader();
+        }
         public SqlDataReader KelimeListeleDurum(string durum)
         {
             command = new SqlCommand("select*from Kelime where Durum=@Durum", connect);

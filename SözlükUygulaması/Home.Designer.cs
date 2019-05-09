@@ -69,6 +69,7 @@
             this.pnl_home.Name = "pnl_home";
             this.pnl_home.Size = new System.Drawing.Size(849, 670);
             this.pnl_home.TabIndex = 0;
+            this.pnl_home.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_home_Paint);
             // 
             // accordionControl1
             // 

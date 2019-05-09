@@ -44,37 +44,37 @@ namespace BusinessLogicLayer
                 return -1;
         }
 
-        //public List<Kelime> KelimeListele()
-        //{
-        //    try
-        //    {
-        //        SqlDataReader reader = dll.KelimeListele();
-        //        while (reader.Read())
-        //        {
-        //            KelimeListesi.Add(new Kelime()
-        //            {
-        //                KelimeID = reader.IsDBNull(0) ? Guid.Empty : reader.GetGuid(0),
-        //                KelimeIngilizce = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
-        //                KelimeTurkce = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
-        //                Aciklama = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
-        //                Cumle = reader.IsDBNull(4) ? string.Empty : reader.GetString(4),
-        //                Durum = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
-        //            });
-        //        }
-        //        reader.Close();
-        //    }
-        //    catch (Exception)
-        //    {
+        public List<Kelime> KelimeListele()
+        {
+            try
+            {
+                SqlDataReader reader = dll.KelimeListele();
+                while (reader.Read())
+                {
+                    KelimeListesi.Add(new Kelime()
+                    {
+                        KelimeID = reader.IsDBNull(0) ? Guid.Empty : reader.GetGuid(0),
+                        KelimeIngilizce = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                        KelimeTurkce = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                        Aciklama = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
+                        Cumle = reader.IsDBNull(4) ? string.Empty : reader.GetString(4),
+                        Durum = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
+                    });
+                }
+                reader.Close();
+            }
+            catch (Exception)
+            {
 
-        //        throw;
-        //    }
-        //    finally
-        //    {
-        //        dll.BaglantiAyarla();
-        //    }
-        //    return KelimeListesi;
+                throw;
+            }
+            finally
+            {
+                dll.BaglantiAyarla();
+            }
+            return KelimeListesi;
 
-        //}
+        }
         public List<Kelime> ListeleDurum(string durum)
         {
             try

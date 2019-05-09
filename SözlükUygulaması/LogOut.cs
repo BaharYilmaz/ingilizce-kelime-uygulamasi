@@ -44,8 +44,7 @@ namespace SözlükUygulaması
                 sonuc = MessageBox.Show("Çıkmak İstediğinizden Emin misiniz ?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (sonuc == DialogResult.No)
                 {
-                    Home h = new Home();
-                    h.Show();
+                    txt_sifre.Text = "";
                 }
                 if (sonuc == DialogResult.Yes)
                 {
