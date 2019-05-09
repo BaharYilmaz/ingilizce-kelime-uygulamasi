@@ -84,7 +84,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.MediumAquamarine;
             this.pictureBox1.Image = global::SözlükUygulaması.Properties.Resources.indir1111;
-            this.pictureBox1.Location = new System.Drawing.Point(120, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(121, -2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(119, 125);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

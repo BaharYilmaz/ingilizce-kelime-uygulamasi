@@ -16,7 +16,7 @@ namespace Sözlük.Entities
         public string Durum { get; set; }
         public DateTime Tarih { get; set; }
         public int Derece { get; set; }
-
+       
         public override string ToString()
         {
             return KelimeIngilizce;//

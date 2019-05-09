@@ -133,7 +133,21 @@ namespace SözlükUygulaması
                 ace_ogrenilen.Enabled = true;
             
         }
-      
-        
+
+        private void ace_Istatistik_Click(object sender, EventArgs e)
+        {
+            if (!pnl_home.Controls.Contains(Istatistik.Instance))
+            {
+                pnl_home.Controls.Add(Istatistik.Instance);
+                Istatistik.Instance.Dock = DockStyle.Fill;
+                Istatistik.Instance.BringToFront();
+            }
+            Istatistik.Instance.BringToFront();
+        }
+
+        private void pnl_home_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

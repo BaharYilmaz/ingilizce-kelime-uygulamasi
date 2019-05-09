@@ -15,9 +15,7 @@ namespace BusinessLogicLayer
         List<Kelime> KelimeListesi = new List<Kelime>();
         List<Kelime> KelimeListeleDurum = new List<Kelime>();
         List<Kelime> KelimeListeleDerece = new List<Kelime>();
-
-        //List<Test> ListeTestDerece = new List<Test>();
-        //List<Test> TestListele = new List<Test>();
+        List<Istatistik_> ListIstatistik = new List<Istatistik_>();
 
         public BLL()
         {
@@ -35,7 +33,7 @@ namespace BusinessLogicLayer
                     KelimeTurkce = kelimeTurkce,
                     Aciklama = aciklama,
                     Cumle = cumle,
-                    Derece=-1
+                    Derece = -1
 
                 });
 
@@ -147,31 +145,35 @@ namespace BusinessLogicLayer
         {
             if (ID != Guid.Empty)
             {
-                    return dll.DurumGüncelle(new Kelime()
-                    {
+                return dll.DurumGüncelle(new Kelime()
+                {
 
-                        KelimeID = ID,
-                        Durum = durum
+                    KelimeID = ID,
+                    Durum = durum
 
-                    });
-                
+                });
+
             }
             else return -1;
         }
-        public int KelimeDereceDuzenle(Guid ID,int derece)
+        public int KelimeDereceDuzenle(Guid ID, int derece)
         {
             if (ID != Guid.Empty)
             {
-              
+
                 return dll.DereceGüncelle(new Kelime()
                 {
                     KelimeID = ID,
-                    Derece=derece,
+                    Derece = derece,
                     Tarih = DateTime.Now
 
                 });
             }
             else return -1;
+        }
+        public int Sifirla()
+        {
+            return dll.Sifirla();
         }
         public List<Kelime> TesteYazdir()
         {
@@ -183,19 +185,19 @@ namespace BusinessLogicLayer
                 for (int i = 0; i < listDerece.Count; i++)
                 {
                     TimeSpan fark = DateTime.Now - listDerece[i].Tarih;
-                    if (j==1 && fark.Days == 1)
+                    if (j == 1 && fark.Days == 1)
                     {
                         listdurum.Add(listDerece[i]);
                     }
-                    else if (j==2 && fark.Days == 7)
+                    else if (j == 2 && fark.Days == 7)
                     {
                         listdurum.Add(listDerece[i]);
                     }
-                    else if (j==3 && fark.Days == 30)
+                    else if (j == 3 && fark.Days == 30)
                     {
                         listdurum.Add(listDerece[i]);
                     }
-                    else if (j==4 && fark.Days == 180)
+                    else if (j == 4 && fark.Days == 180)
                     {
                         listdurum.Add(listDerece[i]);
                     }
@@ -206,98 +208,29 @@ namespace BusinessLogicLayer
             return listdurum;
 
         }
+        public List<Istatistik_> IstatistikYazdir()
+        {
+            try
+            {
+                SqlDataReader reader = dll.IstatistikYazdir();
+                while (reader.Read())
+                {
+                    ListIstatistik.Add(new Istatistik_()
+                    {
+                        Ay = reader.GetInt32(0),
+                        KelimeSayisi = reader.GetInt32(1)
+               
+                    });
+                  
+                }
+                reader.Close();
 
+            }
+            catch (Exception) { throw; }
+            finally { dll.BaglantiAyarla(); }
+            return ListIstatistik;
 
-        //    public int TestDurumuEkle(Guid Id)
-        //    {
-        //        if (Id != Guid.Empty)
-        //        {
-        //            return dll.TestDurumuEkle(new Test()
-        //            {
-        //                TestID = Id,
-        //                Tarih = DateTime.Now,
-        //                Derece = 0
-
-        //            });
-
-        //        }
-        //        else return -1;
-        //    }
-        //    public int TestDurumuDuzenle(Guid Id)
-        //    {
-        //        if (Id != Guid.Empty)
-        //        {
-        //            return dll.TestDurumuDuzenle(new Test()
-        //            {
-        //                TestID = Id,
-        //                Tarih = DateTime.Now
-
-
-        //            });
-
-        //        }
-        //        else return -1;
-        //    }
-        //    public List<Test> TestDereceListe(int derece)
-        //    {
-        //        try
-        //        {
-        //            SqlDataReader reader = dll.TestDereceListe(derece);
-        //            while (reader.Read())
-        //            {
-        //                ListeTestDerece.Add(new Sözlük.Entities.Test()
-        //                {
-        //                    KeliemeID = reader.IsDBNull(0) ? Guid.Empty : reader.GetGuid(0),
-        //                    KelimeIngilizce = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
-        //                    KelimeTurkce = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
-
-        //                });
-        //            }
-        //            reader.Close();
-        //        }
-        //        catch (Exception)
-        //        {
-
-        //            throw;
-        //        }
-        //        finally
-        //        {
-        //            dll.BaglantiAyarla();
-        //        }
-        //        return ListeTestDerece;
-
-        //    }
-        //    public List<Test> ListeleTest()
-        //    {
-        //        try
-        //        {
-        //            SqlDataReader reader = dll.TestListele();
-        //            while (reader.Read())
-        //            {
-        //                TestListele.Add(new Test()
-        //                {
-        //                    KeliemeID = reader.IsDBNull(0) ? Guid.Empty : reader.GetGuid(0),
-        //                    KelimeIngilizce = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
-        //                    KelimeTurkce = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
-        //                    Derece = reader.GetInt32(3),
-
-        //                });
-        //            }
-        //            reader.Close();
-        //        }
-        //        catch (Exception)
-        //        {
-
-        //            throw;
-        //        }
-        //        finally
-        //        {
-        //            dll.BaglantiAyarla();
-        //        }
-        //        return TestListele;
-
-
-        //    }
-        //}
+        }
+        
     }
 }

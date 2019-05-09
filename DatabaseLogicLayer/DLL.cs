@@ -134,87 +134,31 @@ namespace DatabaseLogicLayer
             }return ReturnValue;
 
         }
+        public int Sifirla()
+        {
+            try
+            {
+                command = new SqlCommand(@"update Kelime set Durum='NULL',Tarih=Null,Derece=-1 ", connect);
+                BaglantiAyarla();
+                ReturnValue = command.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                BaglantiAyarla();
+            }
+            return ReturnValue;
 
-
-        //public SqlDataReader TekKayitListele(Guid Id)
-        //{
-        //    command = new SqlCommand("select * from Kelime where KeliemeID = @KeliemeID", connect);
-        //    command.Parameters.Add("@KelimeID", SqlDbType.UniqueIdentifier).Value = Id;
-        //    BaglantiAyarla();
-        //    return command.ExecuteReader();
-        //}
-        //public SqlDataReader TekKelimeGoster(Guid Id)
-        //{
-        //    command = new SqlCommand("select * from Kelime where KeliemeID = @KeliemeID", connect);
-        //    command.Parameters.Add("@KeliemeID", SqlDbType.UniqueIdentifier).Value = Id;
-        //    BaglantiAyarla();
-        //    return command.ExecuteReader();
-        //}
-
-        //public int TestDurumuEkle(Test T)
-        //{
-        //    try
-        //    {
-        //        command=new SqlCommand("insert into Test(TestID,Tarih,Derece)"+
-        //                               "values(@TestID, @Tarih, @Derece)",connect);
-        //        command.Parameters.Add("@TestID", SqlDbType.UniqueIdentifier).Value = T.TestID;
-        //        command.Parameters.Add("@Tarih", SqlDbType.DateTime).Value = T.Tarih;
-        //        command.Parameters.Add("@Derece", SqlDbType.Int).Value = T.Derece;
-        //        BaglantiAyarla();
-        //        ReturnValue= command.ExecuteNonQuery();
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw;
-        //    }
-        //    finally
-        //    {
-        //        BaglantiAyarla();
-        //    }
-        //    return ReturnValue;
-        //}
-        ////public int TestDurumuDuzenle(Test t)
-        //{
-        //    try
-        //    {
-
-        //        command = new SqlCommand(@"update Test set
-        //             Tarih = @Tarih, Derece = Derece+1", connect);
-        //        command.Parameters.Add("@Tarih", SqlDbType.DateTime).Value = t.Tarih;
-        //       // command.Parameters.Add(" @Derece", SqlDbType.Int).Value = t.Derece;
-        //        BaglantiAyarla();
-        //        ReturnValue = command.ExecuteNonQuery();
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw;
-        //    }
-        //    finally
-        //    {
-        //        BaglantiAyarla();
-        //    }
-        //    return ReturnValue;
-
-        //}
-        ////public SqlDataReader TestDereceListe(int derece)
-        //{
-        //    command = new SqlCommand("select TestID,KelimeIngilizce,KelimeTurkce from Test,Kelime where Derece=@Derece and Kelime.KeliemeID=Test.TestID", connect);
-        //    command.Parameters.Add("@Derece", SqlDbType.Int).Value = derece;
-        //    BaglantiAyarla();
-        //    return command.ExecuteReader();
-
-
-        //}
-        //public SqlDataReader TestListele()
-        //{
-        //    command = new SqlCommand("select TestID, KelimeIngilizce,KelimeTurkce,Derece from Test,Kelime where Kelime.KeliemeID=Test.TestID", connect);
-        //    BaglantiAyarla();
-        //    return command.ExecuteReader();
-
-
-        //}
+        }
+        public SqlDataReader IstatistikYazdir()
+        {
+            command = new SqlCommand(" select DATEPART(MM,Tarih)as 'Ay', COUNT(Durum) as 'Kelime' from Kelime where Durum='ogrenilmis' group by Tarih", connect);
+            BaglantiAyarla();
+            return command.ExecuteReader();
+        }
     }
 
 }

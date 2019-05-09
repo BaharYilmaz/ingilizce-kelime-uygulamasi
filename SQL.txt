@@ -88,6 +88,35 @@ cerate proc spDuzenleDerece
 )
 as
 begin
-update Kelime set KeliemeID=@KeliemeID, Derece+=1 ,Tarih=@Tarih where KeliemeID=@KeliemeID and Durum='test'
+update Kelime set KeliemeID=@KeliemeID, Derece=@Derece ,Tarih=@Tarih where KeliemeID=@KeliemeID and Durum='test'
+
+
+create proc Sifirla
+(
+@KeliemeID uniqueidentifier,
+@KelimeIngilizce nvarchar (30),
+@KelimeTurkce nvarchar (30),
+@Aciklama nvarchar(20),
+@Cumle nvarchar (200),
+@Durum nvarchar(10),
+@Tarih DateTime,
+@Derece int 
+)
+as
+begin
+update Kelime set Durum='NULL',Tarih=Null,Derece=-1 
+end
+GO
+--istatistik için
+ select DATEPART(MM,Tarih)as 'Ay', COUNT(Durum) as 'Kelime' from Kelime where Durum='ogrenilmis' group by Tarih
+
+
+
+
+
+
+
+
+
 end
 

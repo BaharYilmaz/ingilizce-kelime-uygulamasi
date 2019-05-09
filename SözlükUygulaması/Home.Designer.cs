@@ -68,6 +68,7 @@
             this.pnl_home.Name = "pnl_home";
             this.pnl_home.Size = new System.Drawing.Size(812, 670);
             this.pnl_home.TabIndex = 0;
+            this.pnl_home.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_home_Paint);
             // 
             // accordionControl1
             // 
@@ -156,6 +157,7 @@
             this.ace_Istatistik.Name = "ace_Istatistik";
             this.ace_Istatistik.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.ace_Istatistik.Text = "İstatistik";
+            this.ace_Istatistik.Click += new System.EventHandler(this.ace_Istatistik_Click);
             // 
             // accordionControlSeparator1
             // 
