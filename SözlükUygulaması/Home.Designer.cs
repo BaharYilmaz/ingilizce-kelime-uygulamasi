@@ -32,7 +32,6 @@
             this.pnl_home = new System.Windows.Forms.Panel();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.ace_profil = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.ace_giris = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_cikis = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_Istatistik = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
@@ -69,7 +68,6 @@
             this.pnl_home.Name = "pnl_home";
             this.pnl_home.Size = new System.Drawing.Size(812, 670);
             this.pnl_home.TabIndex = 0;
-            this.pnl_home.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_home_Paint);
             // 
             // accordionControl1
             // 
@@ -139,20 +137,12 @@
             // ace_profil
             // 
             this.ace_profil.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.ace_giris,
             this.ace_cikis,
             this.ace_Istatistik});
             this.ace_profil.Expanded = true;
             this.ace_profil.ImageOptions.Image = global::SözlükUygulaması.Properties.Resources.baseline_account_circle_white_36dp;
             this.ace_profil.Name = "ace_profil";
             this.ace_profil.Text = "PROFİL";
-            // 
-            // ace_giris
-            // 
-            this.ace_giris.Name = "ace_giris";
-            this.ace_giris.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.ace_giris.Text = "Giriş Yap";
-            this.ace_giris.Click += new System.EventHandler(this.ace_giris_Click);
             // 
             // ace_cikis
             // 
@@ -272,7 +262,6 @@
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer _container;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_profil;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement ace_giris;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_cikis;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_AnaMenu;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_kelimeSec;

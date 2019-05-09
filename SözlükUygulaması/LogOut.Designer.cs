@@ -30,7 +30,11 @@
         {
             this.btn_cikisYap = new DevExpress.XtraEditors.SimpleButton();
             this.txt_sifre = new DevExpress.XtraEditors.TextEdit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.txt_sifre.Properties)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_cikisYap
@@ -39,7 +43,7 @@
             this.btn_cikisYap.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_cikisYap.Appearance.Options.UseBackColor = true;
             this.btn_cikisYap.Appearance.Options.UseFont = true;
-            this.btn_cikisYap.Location = new System.Drawing.Point(245, 249);
+            this.btn_cikisYap.Location = new System.Drawing.Point(85, 272);
             this.btn_cikisYap.Name = "btn_cikisYap";
             this.btn_cikisYap.Size = new System.Drawing.Size(195, 31);
             this.btn_cikisYap.TabIndex = 5;
@@ -50,7 +54,7 @@
             // txt_sifre
             // 
             this.txt_sifre.EditValue = "Şifre";
-            this.txt_sifre.Location = new System.Drawing.Point(245, 189);
+            this.txt_sifre.Location = new System.Drawing.Point(85, 212);
             this.txt_sifre.Name = "txt_sifre";
             this.txt_sifre.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txt_sifre.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -64,19 +68,44 @@
             this.txt_sifre.UseWaitCursor = true;
             this.txt_sifre.Click += new System.EventHandler(this.txt_sifre_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.txt_sifre);
+            this.panel1.Controls.Add(this.btn_cikisYap);
+            this.panel1.Location = new System.Drawing.Point(142, 76);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(377, 364);
+            this.panel1.TabIndex = 6;
+            this.panel1.UseWaitCursor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.pictureBox1.Image = global::SözlükUygulaması.Properties.Resources.indir1111;
+            this.pictureBox1.Location = new System.Drawing.Point(120, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(119, 125);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.UseWaitCursor = true;
+            // 
             // LogOut
             // 
             this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btn_cikisYap);
-            this.Controls.Add(this.txt_sifre);
+            this.Controls.Add(this.panel1);
             this.Name = "LogOut";
             this.Size = new System.Drawing.Size(690, 522);
             this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.LogOut_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_sifre.Properties)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -85,5 +114,7 @@
 
         private DevExpress.XtraEditors.SimpleButton btn_cikisYap;
         private DevExpress.XtraEditors.TextEdit txt_sifre;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

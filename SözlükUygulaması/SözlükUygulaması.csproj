@@ -80,6 +80,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GirisYap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisYap.Designer.cs">
+      <DependentUpon>GirisYap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Help.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,12 +116,6 @@
     <Compile Include="Kelime_Sec.Designer.cs">
       <DependentUpon>Kelime_Sec.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="LogOut.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +136,9 @@
     <Compile Include="Test_.Designer.cs">
       <DependentUpon>Test_.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GirisYap.resx">
+      <DependentUpon>GirisYap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,9 +153,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Kelime_Sec.resx">
       <DependentUpon>Kelime_Sec.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogOut.resx">
       <DependentUpon>LogOut.cs</DependentUpon>
@@ -214,6 +214,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\baseline_help_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indir1111.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

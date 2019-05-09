@@ -29,7 +29,7 @@ namespace SözlükUygulaması
         public Home()
         {
             InitializeComponent();
-            this.kontrol = Login.Kontrol;
+   
 
         }
        
@@ -38,16 +38,7 @@ namespace SözlükUygulaması
             
         }
 
-        private void ace_giris_Click(object sender, EventArgs e)
-        {
-            if (!pnl_home.Controls.Contains(Login.Instance))
-            {
-                pnl_home.Controls.Add(Login.Instance);
-                Login.Instance.Dock = DockStyle.Fill;
-                Login.Instance.BringToFront();
-            }
-            Login.Instance.BringToFront();
-        }
+        
 
         private void ace_cikis_Click(object sender, EventArgs e)
         {
@@ -130,21 +121,8 @@ namespace SözlükUygulaması
 
         private void Home_Load(object sender, EventArgs e)
         {
-            if (kontrol == false)
-            {
-                ace_giris.Enabled = true;
-                ace_cikis.Enabled = false;
-                ace_Istatistik.Enabled = false;
-                ace_AnaMenu.Enabled = true;
-                ace_kelimeSec.Enabled = false;
-                ace_kelimeEkle.Enabled = false;
-                ace_ogren.Enabled = false;
-                ace_test.Enabled = false;
-                ace_ogrenilen.Enabled = false;
-            }
-            else
-            {
-                ace_giris.Enabled = false;
+           
+                ace_profil.Enabled = true;
                 ace_cikis.Enabled = true;
                 ace_Istatistik.Enabled = true;
                 ace_AnaMenu.Enabled = true;
@@ -153,12 +131,9 @@ namespace SözlükUygulaması
                 ace_ogren.Enabled = true;
                 ace_test.Enabled = true;
                 ace_ogrenilen.Enabled = true;
-            }
+            
         }
       
-        private void pnl_home_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }
