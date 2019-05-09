@@ -48,8 +48,10 @@ namespace SözlükUygulaması
                 }
                 if (sonuc == DialogResult.Yes)
                 {
+                   
                     this.Close();
                     Application.Exit();
+                    
                 }
             }
             else

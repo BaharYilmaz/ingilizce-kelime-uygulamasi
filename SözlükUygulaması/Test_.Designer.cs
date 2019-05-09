@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn_testIki = new DevExpress.XtraEditors.CheckButton();
             this.btn_testUc = new DevExpress.XtraEditors.CheckButton();
             this.btn_testBir = new DevExpress.XtraEditors.CheckButton();
@@ -35,6 +36,7 @@
             this.panel_Test = new DevExpress.XtraEditors.PanelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txt_TestKelime = new System.Windows.Forms.TextBox();
+            this.timer_test = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panel_Test)).BeginInit();
             this.panel_Test.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +56,7 @@
             // 
             this.btn_testUc.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_testUc.Appearance.Options.UseFont = true;
-            this.btn_testUc.Location = new System.Drawing.Point(34, 173);
+            this.btn_testUc.Location = new System.Drawing.Point(34, 174);
             this.btn_testUc.Name = "btn_testUc";
             this.btn_testUc.Size = new System.Drawing.Size(337, 48);
             this.btn_testUc.TabIndex = 0;
@@ -92,7 +94,7 @@
             this.panel_Test.Controls.Add(this.btn_testUc);
             this.panel_Test.Controls.Add(this.btn_testBir);
             this.panel_Test.Controls.Add(this.btn_testDort);
-            this.panel_Test.Location = new System.Drawing.Point(105, 234);
+            this.panel_Test.Location = new System.Drawing.Point(193, 250);
             this.panel_Test.Name = "panel_Test";
             this.panel_Test.Size = new System.Drawing.Size(406, 323);
             this.panel_Test.TabIndex = 10;
@@ -103,7 +105,7 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(105, 166);
+            this.labelControl2.Location = new System.Drawing.Point(193, 182);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(406, 28);
             this.labelControl2.TabIndex = 9;
@@ -113,11 +115,15 @@
             // 
             this.txt_TestKelime.BackColor = System.Drawing.Color.AliceBlue;
             this.txt_TestKelime.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_TestKelime.Location = new System.Drawing.Point(158, 85);
+            this.txt_TestKelime.Location = new System.Drawing.Point(246, 101);
             this.txt_TestKelime.Name = "txt_TestKelime";
             this.txt_TestKelime.Size = new System.Drawing.Size(294, 32);
             this.txt_TestKelime.TabIndex = 12;
             this.txt_TestKelime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // timer_test
+            // 
+            this.timer_test.Tick += new System.EventHandler(this.timer_test_Tick);
             // 
             // Test_
             // 
@@ -129,7 +135,7 @@
             this.Controls.Add(this.panel_Test);
             this.Controls.Add(this.labelControl2);
             this.Name = "Test_";
-            this.Size = new System.Drawing.Size(610, 610);
+            this.Size = new System.Drawing.Size(792, 703);
             this.Load += new System.EventHandler(this.Test__Load);
             ((System.ComponentModel.ISupportInitialize)(this.panel_Test)).EndInit();
             this.panel_Test.ResumeLayout(false);
@@ -147,5 +153,6 @@
         private DevExpress.XtraEditors.PanelControl panel_Test;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.TextBox txt_TestKelime;
+        private System.Windows.Forms.Timer timer_test;
     }
 }

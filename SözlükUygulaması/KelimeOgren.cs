@@ -27,7 +27,7 @@ namespace SözlükUygulaması
         }
         private bool ButonDurum = false;
         int i = 0;
-        BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
+        
 
 
         public KelimeOgren()
@@ -42,6 +42,7 @@ namespace SözlükUygulaması
         }
         private void Doldur()
         {
+            BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
             List<Kelime> liste = BLL.ListeleDurum("ogren");
 
             if (i == 0) btn_geri.Enabled = false;
@@ -64,8 +65,9 @@ namespace SözlükUygulaması
 
 
             }
-            else if (liste.Count == 0) btn_bitir.Enabled = true;
+            else if (liste.Count == 0) 
             {
+                btn_bitir.Enabled = true;
                 if (ButonDurum == false) i++;
                 else if (ButonDurum == false) i--;
 
@@ -91,12 +93,13 @@ namespace SözlükUygulaması
 
         private void btn_bitir_Click(object sender, EventArgs e)
         {
+            BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
             List<Kelime> liste = BLL.ListeleDurum("ogren");
 
             for (int i = 0; i < liste.Count; i++)
             {
                 BLL.KelimeDurumDuzenle(liste[i].KelimeID, "test");
-                BLL.KelimeDereceDuzenle(liste[i].KelimeID);
+                BLL.KelimeDereceDuzenle(liste[i].KelimeID,0);
             }
             Test_ t =  Test_.Instance;
             t.Show();

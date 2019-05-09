@@ -140,6 +140,7 @@
             // txt_ogrenTur
             // 
             this.txt_ogrenTur.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_ogrenTur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_ogrenTur.Location = new System.Drawing.Point(268, 279);
             this.txt_ogrenTur.Name = "txt_ogrenTur";
             this.txt_ogrenTur.Size = new System.Drawing.Size(302, 28);
@@ -149,6 +150,7 @@
             // txt_ogrenAnlam
             // 
             this.txt_ogrenAnlam.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_ogrenAnlam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_ogrenAnlam.Location = new System.Drawing.Point(268, 234);
             this.txt_ogrenAnlam.Name = "txt_ogrenAnlam";
             this.txt_ogrenAnlam.Size = new System.Drawing.Size(302, 28);

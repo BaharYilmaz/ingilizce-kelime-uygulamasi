@@ -44,6 +44,7 @@
             this.btn_cikisYap.Size = new System.Drawing.Size(195, 31);
             this.btn_cikisYap.TabIndex = 5;
             this.btn_cikisYap.Text = "Çıkış Yap";
+            this.btn_cikisYap.UseWaitCursor = true;
             this.btn_cikisYap.Click += new System.EventHandler(this.btn_cikisYap_Click);
             // 
             // txt_sifre
@@ -60,6 +61,7 @@
             this.txt_sifre.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txt_sifre.Size = new System.Drawing.Size(195, 28);
             this.txt_sifre.TabIndex = 4;
+            this.txt_sifre.UseWaitCursor = true;
             this.txt_sifre.Click += new System.EventHandler(this.txt_sifre_Click);
             // 
             // LogOut
@@ -71,7 +73,8 @@
             this.Controls.Add(this.btn_cikisYap);
             this.Controls.Add(this.txt_sifre);
             this.Name = "LogOut";
-            this.Size = new System.Drawing.Size(517, 393);
+            this.Size = new System.Drawing.Size(690, 522);
+            this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.LogOut_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_sifre.Properties)).EndInit();
             this.ResumeLayout(false);

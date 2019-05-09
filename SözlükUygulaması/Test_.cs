@@ -25,14 +25,15 @@ namespace SözlükUygulaması
 
             }
         }
-        BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
         private bool KontrolCevap { get; set; }
         private Guid ID { get; set; }
         private int i = 0;
+        private int derece ;
 
         public Test_()
         {
             InitializeComponent();
+            timer_test.Interval=1000;
         }
 
         private void Test__Load(object sender, EventArgs e)
@@ -41,25 +42,14 @@ namespace SözlükUygulaması
         }
         private void KelimeDoldur()
         {
-
+            BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
             List<Kelime> ListeYazdir = BLL.TesteYazdir();
             i++;
             if (ListeYazdir != null && ListeYazdir.Count > 0 && i < ListeYazdir.Count)
             {
                 txt_TestKelime.Text = ListeYazdir[i].KelimeIngilizce;
                 ID = ListeYazdir[i].KelimeID;
-
-                btn_testIki.Enabled = true;
-                btn_testUc.Enabled = true;
-                btn_testBir.Enabled = true;
-                btn_testDort.Enabled = true;
-
-                btn_testBir.Appearance.BackColor = Color.White;
-                btn_testIki.Appearance.BackColor = Color.White;
-                btn_testUc.Appearance.BackColor = Color.White;
-                btn_testDort.Appearance.BackColor = Color.White;
-
-
+                derece = ListeYazdir[i].Derece;
                 SecenekDoldur(ListeYazdir[i].KelimeTurkce);
             }
 
@@ -80,11 +70,21 @@ namespace SözlükUygulaması
                 sayilar[i] = rnd.Next(0, 200);
 
             }
-
             int[] sayi = new int[3];
-            sayi[0] = rnd.Next(ListeDurum.Count / 3);
-            sayi[1] = rnd.Next(ListeDurum.Count / 3, ListeDurum.Count * 2 / 3);
-            sayi[2] = rnd.Next(ListeDurum.Count * 2 / 3, ListeDurum.Count);
+            for (; ; )
+            {
+                
+                sayi[0] = rnd.Next(ListeDurum.Count / 3);
+                sayi[1] = rnd.Next(ListeDurum.Count / 3, ListeDurum.Count * 2 / 3);
+                sayi[2] = rnd.Next(ListeDurum.Count * 2 / 3, ListeDurum.Count);
+                if (Cevap == ListeDurum[sayi[0]].KelimeTurkce || Cevap == ListeDurum[sayi[1]].KelimeTurkce || Cevap == ListeDurum[sayi[2]].KelimeTurkce)
+                {
+                    return;
+                }
+                else
+                    break;
+            }
+
 
             for (int i = 0; i < 3; i++)
             {
@@ -101,7 +101,7 @@ namespace SözlükUygulaması
                 }
                 else continue;
             }
-
+            
             btn_testBir.Text = cvp[0]; if (btn_testBir.Text == Cevap) btn_testBir.Tag = true; else btn_testBir.Tag = false;
             btn_testIki.Text = cvp[1]; if (btn_testIki.Text == Cevap) btn_testIki.Tag = true; else btn_testIki.Tag = false;
             btn_testUc.Text = cvp[2]; if (btn_testUc.Text == Cevap) btn_testUc.Tag = true; else btn_testUc.Tag = false;
@@ -111,6 +111,8 @@ namespace SözlükUygulaması
 
         private void Kontrol()
         {
+            BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
+
 
             if (KontrolCevap == true)
             {
@@ -120,19 +122,22 @@ namespace SözlükUygulaması
                     if (ID == ListeBasarili[i].KelimeID)
                     {
                         BLL.KelimeDurumDuzenle(ID, "ogrenilmis");
-                    }
-                    else
-                    {
-                        BLL.KelimeDereceDuzenle(ID);
+                        BLL.KelimeDereceDuzenle(ID,-1);
                         KelimeDoldur();
+                        break;
                     }
-
+                   
                 }
+                
+                    BLL.KelimeDereceDuzenle(ID,derece++);                
+                    KelimeDoldur();
+                
 
             }
             else
             {
                 BLL.KelimeDurumDuzenle(ID, "ogren");
+                BLL.KelimeDereceDuzenle(ID, -1);
                 KelimeDoldur();
 
             }
@@ -157,7 +162,8 @@ namespace SözlükUygulaması
                 btn_testBir.Appearance.BackColor = Color.OrangeRed;
                 KontrolCevap = false;
             }
-            Kontrol();
+            timer_test.Start();
+          
 
         }
 
@@ -179,7 +185,8 @@ namespace SözlükUygulaması
                 btn_testIki.Appearance.BackColor = Color.OrangeRed;
                 KontrolCevap = false;
             }
-            Kontrol();
+            timer_test.Start();
+         
 
         }
 
@@ -200,7 +207,8 @@ namespace SözlükUygulaması
                 btn_testUc.Appearance.BackColor = Color.OrangeRed;
                 KontrolCevap = false;
             }
-            Kontrol();
+            timer_test.Start();
+          
         }
 
         private void btn_testDort_Click(object sender, EventArgs e)
@@ -220,6 +228,23 @@ namespace SözlükUygulaması
                 btn_testDort.Appearance.BackColor = Color.OrangeRed;
                 KontrolCevap = false;
             }
+            timer_test.Start();
+          
+
+        }
+
+        private void timer_test_Tick(object sender, EventArgs e)
+        {
+            btn_testIki.Enabled = true;
+            btn_testUc.Enabled = true;
+            btn_testBir.Enabled = true;
+            btn_testDort.Enabled = true;
+
+            btn_testBir.Appearance.BackColor = Color.White;
+            btn_testIki.Appearance.BackColor = Color.White;
+            btn_testUc.Appearance.BackColor = Color.White;
+            btn_testDort.Appearance.BackColor = Color.White;
+            timer_test.Stop();
             Kontrol();
         }
     }

@@ -115,9 +115,9 @@ namespace DatabaseLogicLayer
                 command = new SqlCommand
                  (@"update Kelime set 
                    KeliemeID=@KeliemeID,
-                   Derece+=1,Tarih=@Tarih where KeliemeID=@KeliemeID and Durum='test'", connect);
+                   Derece=@Derece,Tarih=@Tarih where KeliemeID=@KeliemeID and Durum='test'", connect);
                 command.Parameters.Add("@KeliemeID", SqlDbType.UniqueIdentifier).Value = k.KelimeID;
-               // command.Parameters.Add("@Derece", SqlDbType.NVarChar).Value = k.Derece;
+                command.Parameters.Add("@Derece", SqlDbType.NVarChar).Value = k.Derece;
                 command.Parameters.Add("@Tarih", SqlDbType.NVarChar).Value = k.Tarih;
 
                 BaglantiAyarla();

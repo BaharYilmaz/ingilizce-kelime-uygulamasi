@@ -65,9 +65,9 @@
             // 
             // pnl_home
             // 
-            this.pnl_home.Location = new System.Drawing.Point(206, 6);
+            this.pnl_home.Location = new System.Drawing.Point(243, 6);
             this.pnl_home.Name = "pnl_home";
-            this.pnl_home.Size = new System.Drawing.Size(849, 670);
+            this.pnl_home.Size = new System.Drawing.Size(812, 670);
             this.pnl_home.TabIndex = 0;
             this.pnl_home.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_home_Paint);
             // 
@@ -132,7 +132,7 @@
             this.accordionControl1.Location = new System.Drawing.Point(0, 30);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Auto;
-            this.accordionControl1.Size = new System.Drawing.Size(200, 676);
+            this.accordionControl1.Size = new System.Drawing.Size(244, 676);
             this.accordionControl1.TabIndex = 4;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 

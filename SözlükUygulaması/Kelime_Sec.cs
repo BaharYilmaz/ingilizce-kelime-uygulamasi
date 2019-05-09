@@ -67,7 +67,7 @@ namespace SözlükUygulaması
             BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
             Guid KelimeID = ((Kelime)listBox_sec.SelectedItem).KelimeID;
             BLL.KelimeDurumDuzenle(KelimeID, "test");
-            BLL.KelimeDereceDuzenle(KelimeID);
+            BLL.KelimeDereceDuzenle(KelimeID,0);
             listBox_sec.Items.Remove(listBox_sec.SelectedItem);
             j++;
 
@@ -96,8 +96,7 @@ namespace SözlükUygulaması
 
             if (listBox_sec.ItemCount == 0)
             {
-                KelimeOgren ogr = new KelimeOgren();
-                this.Hide();
+                KelimeOgren ogr = KelimeOgren.Instance;
                 ogr.Show();
             }
 

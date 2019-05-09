@@ -147,22 +147,26 @@ namespace BusinessLogicLayer
         {
             if (ID != Guid.Empty)
             {
-                return dll.DurumGüncelle(new Kelime()
-                {
-                    KelimeID = ID,
-                    Durum = durum
+                    return dll.DurumGüncelle(new Kelime()
+                    {
 
-                });
+                        KelimeID = ID,
+                        Durum = durum
+
+                    });
+                
             }
             else return -1;
         }
-        public int KelimeDereceDuzenle(Guid ID)
+        public int KelimeDereceDuzenle(Guid ID,int derece)
         {
             if (ID != Guid.Empty)
             {
+              
                 return dll.DereceGüncelle(new Kelime()
                 {
                     KelimeID = ID,
+                    Derece=derece,
                     Tarih = DateTime.Now
 
                 });
