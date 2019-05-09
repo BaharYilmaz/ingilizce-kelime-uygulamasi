@@ -32,15 +32,13 @@
             this.btn_bitir = new DevExpress.XtraEditors.SimpleButton();
             this.btn_geri = new DevExpress.XtraEditors.SimpleButton();
             this.btn_ileri = new DevExpress.XtraEditors.SimpleButton();
-            this.txt_ogrenAnlam = new DevExpress.XtraEditors.TextEdit();
-            this.txt_ogrenTur = new DevExpress.XtraEditors.TextEdit();
             this.lbl_ogrenKelime = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txt_ogrnCumle = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_ogrenAnlam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_ogrenTur.Properties)).BeginInit();
+            this.txt_ogrenTur = new System.Windows.Forms.TextBox();
+            this.txt_ogrenAnlam = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_bitir
@@ -79,32 +77,6 @@
             this.btn_ileri.Text = "İleri";
             this.btn_ileri.Click += new System.EventHandler(this.btn_ileri_Click);
             // 
-            // txt_ogrenAnlam
-            // 
-            this.txt_ogrenAnlam.Enabled = false;
-            this.txt_ogrenAnlam.Location = new System.Drawing.Point(268, 231);
-            this.txt_ogrenAnlam.Name = "txt_ogrenAnlam";
-            this.txt_ogrenAnlam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_ogrenAnlam.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_ogrenAnlam.Properties.Appearance.Options.UseFont = true;
-            this.txt_ogrenAnlam.Properties.Appearance.Options.UseForeColor = true;
-            this.txt_ogrenAnlam.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txt_ogrenAnlam.Size = new System.Drawing.Size(302, 28);
-            this.txt_ogrenAnlam.TabIndex = 7;
-            // 
-            // txt_ogrenTur
-            // 
-            this.txt_ogrenTur.Enabled = false;
-            this.txt_ogrenTur.Location = new System.Drawing.Point(268, 275);
-            this.txt_ogrenTur.Name = "txt_ogrenTur";
-            this.txt_ogrenTur.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_ogrenTur.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_ogrenTur.Properties.Appearance.Options.UseFont = true;
-            this.txt_ogrenTur.Properties.Appearance.Options.UseForeColor = true;
-            this.txt_ogrenTur.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txt_ogrenTur.Size = new System.Drawing.Size(302, 28);
-            this.txt_ogrenTur.TabIndex = 8;
-            // 
             // lbl_ogrenKelime
             // 
             this.lbl_ogrenKelime.Appearance.BackColor = System.Drawing.Color.White;
@@ -116,7 +88,7 @@
             this.lbl_ogrenKelime.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.lbl_ogrenKelime.Enabled = false;
             this.lbl_ogrenKelime.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
-            this.lbl_ogrenKelime.Location = new System.Drawing.Point(342, 127);
+            this.lbl_ogrenKelime.Location = new System.Drawing.Point(364, 128);
             this.lbl_ogrenKelime.Name = "lbl_ogrenKelime";
             this.lbl_ogrenKelime.Size = new System.Drawing.Size(93, 33);
             this.lbl_ogrenKelime.TabIndex = 3;
@@ -157,6 +129,7 @@
             // txt_ogrnCumle
             // 
             this.txt_ogrnCumle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ogrnCumle.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_ogrnCumle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_ogrnCumle.Location = new System.Drawing.Point(268, 327);
             this.txt_ogrnCumle.Multiline = true;
@@ -164,18 +137,36 @@
             this.txt_ogrnCumle.Size = new System.Drawing.Size(302, 147);
             this.txt_ogrnCumle.TabIndex = 13;
             // 
+            // txt_ogrenTur
+            // 
+            this.txt_ogrenTur.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_ogrenTur.Location = new System.Drawing.Point(268, 279);
+            this.txt_ogrenTur.Name = "txt_ogrenTur";
+            this.txt_ogrenTur.Size = new System.Drawing.Size(302, 28);
+            this.txt_ogrenTur.TabIndex = 16;
+            this.txt_ogrenTur.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_ogrenAnlam
+            // 
+            this.txt_ogrenAnlam.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_ogrenAnlam.Location = new System.Drawing.Point(268, 234);
+            this.txt_ogrenAnlam.Name = "txt_ogrenAnlam";
+            this.txt_ogrenAnlam.Size = new System.Drawing.Size(302, 28);
+            this.txt_ogrenAnlam.TabIndex = 16;
+            this.txt_ogrenAnlam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // KelimeOgren
             // 
             this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txt_ogrenAnlam);
+            this.Controls.Add(this.txt_ogrenTur);
             this.Controls.Add(this.txt_ogrnCumle);
             this.Controls.Add(this.btn_bitir);
             this.Controls.Add(this.btn_geri);
             this.Controls.Add(this.btn_ileri);
-            this.Controls.Add(this.txt_ogrenAnlam);
-            this.Controls.Add(this.txt_ogrenTur);
             this.Controls.Add(this.lbl_ogrenKelime);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
@@ -183,8 +174,6 @@
             this.Name = "KelimeOgren";
             this.Size = new System.Drawing.Size(734, 673);
             this.Load += new System.EventHandler(this.KelimeOgren_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txt_ogrenAnlam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_ogrenTur.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,12 +184,12 @@
         private DevExpress.XtraEditors.SimpleButton btn_bitir;
         private DevExpress.XtraEditors.SimpleButton btn_geri;
         private DevExpress.XtraEditors.SimpleButton btn_ileri;
-        private DevExpress.XtraEditors.TextEdit txt_ogrenAnlam;
-        private DevExpress.XtraEditors.TextEdit txt_ogrenTur;
         private DevExpress.XtraEditors.LabelControl lbl_ogrenKelime;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.TextBox txt_ogrnCumle;
+        private System.Windows.Forms.TextBox txt_ogrenTur;
+        private System.Windows.Forms.TextBox txt_ogrenAnlam;
     }
 }

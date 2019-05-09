@@ -70,7 +70,7 @@ namespace SözlükUygulaması
                 else if (ButonDurum == false) i--;
 
 
-            }// while (i < liste.Count) ;
+            }
             btn_bitir.Enabled = true;
 
 
@@ -98,8 +98,7 @@ namespace SözlükUygulaması
                 BLL.KelimeDurumDuzenle(liste[i].KelimeID, "test");
                 BLL.KelimeDereceDuzenle(liste[i].KelimeID);
             }
-            Test_ t = new Test_();
-            this.Hide();
+            Test_ t =  Test_.Instance;
             t.Show();
         }
     }
