@@ -59,7 +59,7 @@ namespace SözlükUygulaması
                 lbl_ogrenKelime.Text = liste[i].KelimeIngilizce;
                 txt_ogrenAnlam.Text = liste[i].KelimeTurkce;
                 txt_ogrenTur.Text = liste[i].Aciklama;
-                txt_ogrenCumle.Text = liste[i].Cumle;
+                txt_ogrnCumle.Text = liste[i].Cumle;
 
 
 

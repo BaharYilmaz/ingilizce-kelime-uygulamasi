@@ -61,7 +61,10 @@ namespace SözlükUygulaması
                 
                 bll.KelimeEkle(txt_ekleKelime.Text, txt_ekleAnlam.Text, txt_ekleTur.Text, txt_ekleCumle.Text);
                 MessageBox.Show("Yeni Kayit Eklendi", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                txt_ekleKelime.Text = "";
+                txt_ekleAnlam.Text = "";
+                txt_ekleTur.Text = "";
+                txt_ekleCumle.Text = "";
             }
             else
             {

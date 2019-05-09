@@ -75,14 +75,12 @@ namespace SözlükUygulaması
             {
                 if (j < 10)
                 {
-                    KelimeOgren ogr = new KelimeOgren();
-                    this.Hide();
+                    KelimeOgren ogr = KelimeOgren.Instance;
                     ogr.Show();
                 }
                 else
                 {
-                    Test_ test = new Test_();
-                    this.Hide();
+                    Test_ test = Test_.Instance;
                     test.Show();
                 }
             }
