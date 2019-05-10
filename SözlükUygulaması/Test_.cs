@@ -28,12 +28,12 @@ namespace SözlükUygulaması
         private bool KontrolCevap { get; set; }
         private Guid ID { get; set; }
         private int i = 0;
-        private int derece ;
+        private int derece;
 
         public Test_()
         {
             InitializeComponent();
-            timer_test.Interval=1000;
+            timer_test.Interval = 1000;
         }
 
         private void Test__Load(object sender, EventArgs e)
@@ -42,8 +42,7 @@ namespace SözlükUygulaması
         }
         private void KelimeDoldur()
         {
-            BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
-            List<Kelime> ListeYazdir = BLL.TesteYazdir();
+            List<Kelime> ListeYazdir = TesteYazdir();
             i++;
             if (ListeYazdir != null && ListeYazdir.Count > 0 && i < ListeYazdir.Count)
             {
@@ -51,6 +50,11 @@ namespace SözlükUygulaması
                 ID = ListeYazdir[i].KelimeID;
                 derece = ListeYazdir[i].Derece;
                 SecenekDoldur(ListeYazdir[i].KelimeTurkce);
+            }
+            if (ListeYazdir.Count==0)
+            {
+                panel_Test.Enabled = false;
+                lbl_bilgi.Text = "TEST TAMAMLANDI";
             }
 
         }
@@ -73,7 +77,7 @@ namespace SözlükUygulaması
             int[] sayi = new int[3];
             for (; ; )
             {
-                
+
                 sayi[0] = rnd.Next(ListeDurum.Count / 3);
                 sayi[1] = rnd.Next(ListeDurum.Count / 3, ListeDurum.Count * 2 / 3);
                 sayi[2] = rnd.Next(ListeDurum.Count * 2 / 3, ListeDurum.Count);
@@ -101,7 +105,7 @@ namespace SözlükUygulaması
                 }
                 else continue;
             }
-            
+
             btn_testBir.Text = cvp[0]; if (btn_testBir.Text == Cevap) btn_testBir.Tag = true; else btn_testBir.Tag = false;
             btn_testIki.Text = cvp[1]; if (btn_testIki.Text == Cevap) btn_testIki.Tag = true; else btn_testIki.Tag = false;
             btn_testUc.Text = cvp[2]; if (btn_testUc.Text == Cevap) btn_testUc.Tag = true; else btn_testUc.Tag = false;
@@ -122,16 +126,16 @@ namespace SözlükUygulaması
                     if (ID == ListeBasarili[i].KelimeID)
                     {
                         BLL.KelimeDurumDuzenle(ID, "ogrenilmis");
-                        BLL.KelimeDereceDuzenle(ID,-1);
+                        BLL.KelimeDereceDuzenle(ID, -1);
                         KelimeDoldur();
                         break;
                     }
-                   
+
                 }
-                
-                    BLL.KelimeDereceDuzenle(ID,derece++);                
-                    KelimeDoldur();
-                
+
+                BLL.KelimeDereceDuzenle(ID, derece++);
+                KelimeDoldur();
+
 
             }
             else
@@ -144,12 +148,10 @@ namespace SözlükUygulaması
 
         }
 
-      
+
         private void btn_testBir_Click(object sender, EventArgs e)
         {
-            btn_testIki.Enabled = false;
-            btn_testUc.Enabled = false;
-            btn_testDort.Enabled = false;
+            panel_Test.Enabled = true;
 
             bool kontrol1 = (bool)btn_testBir.Tag;
             if (kontrol1 == true)
@@ -163,16 +165,14 @@ namespace SözlükUygulaması
                 KontrolCevap = false;
             }
             timer_test.Start();
-          
+
 
         }
 
 
         private void btn_testIki_Click(object sender, EventArgs e)
         {
-            btn_testBir.Enabled = false;
-            btn_testUc.Enabled = false;
-            btn_testDort.Enabled = false;
+            panel_Test.Enabled = true;
 
             bool kontrol1 = (bool)btn_testIki.Tag;
             if (kontrol1 == true)
@@ -186,15 +186,13 @@ namespace SözlükUygulaması
                 KontrolCevap = false;
             }
             timer_test.Start();
-         
+
 
         }
 
         private void btn_testUc_Click(object sender, EventArgs e)
         {
-            btn_testIki.Enabled = false;
-            btn_testBir.Enabled = false;
-            btn_testDort.Enabled = false;
+            panel_Test.Enabled = true;
 
             bool kontrol1 = (bool)btn_testUc.Tag;
             if (kontrol1 == true)
@@ -208,19 +206,17 @@ namespace SözlükUygulaması
                 KontrolCevap = false;
             }
             timer_test.Start();
-          
+
         }
 
         private void btn_testDort_Click(object sender, EventArgs e)
         {
-             btn_testIki.Enabled = false;
-            btn_testUc.Enabled = false;
-            btn_testBir.Enabled = false;
-
+            panel_Test.Enabled = true;
+            
             bool kontrol1 = (bool)btn_testDort.Tag;
             if (kontrol1 == true)
             {
-                btn_testDort.Appearance.BackColor = Color.LimeGreen;              
+                btn_testDort.Appearance.BackColor = Color.LimeGreen;
                 KontrolCevap = true;
             }
             else
@@ -229,16 +225,13 @@ namespace SözlükUygulaması
                 KontrolCevap = false;
             }
             timer_test.Start();
-          
+
 
         }
 
         private void timer_test_Tick(object sender, EventArgs e)
         {
-            btn_testIki.Enabled = true;
-            btn_testUc.Enabled = true;
-            btn_testBir.Enabled = true;
-            btn_testDort.Enabled = true;
+            panel_Test.Enabled = false;
 
             btn_testBir.Appearance.BackColor = Color.White;
             btn_testIki.Appearance.BackColor = Color.White;
@@ -247,5 +240,41 @@ namespace SözlükUygulaması
             timer_test.Stop();
             Kontrol();
         }
+        public List<Kelime> TesteYazdir()
+        {
+            BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
+            List<Kelime> listdurum = BLL.ListeleDerece(0);
+            int j = 1;
+            while (j < 5)
+            {
+                BusinessLogicLayer.BLL Bll = new BusinessLogicLayer.BLL();
+                List<Kelime> listDerece = Bll.ListeleDerece(j);
+                for (int i = 0; i < listDerece.Count; i++)
+                {
+                    int fark = DateTime.Now.Day - listDerece[i].Tarih.Day;
+
+                    if (j == 1 && fark >= 1)
+                    {
+                        listdurum.Add(listDerece[i]);
+                    }
+                    else if (j == 2 && fark >= 7)
+                    {
+                        listdurum.Add(listDerece[i]);
+                    }
+                    else if (j == 3 && fark >= 30)
+                    {
+                        listdurum.Add(listDerece[i]);
+                    }
+                    else if (j == 4 && fark >= 180)
+                    {
+                        listdurum.Add(listDerece[i]);
+                    }
+                    else continue;
+                }
+                j++;
+            }
+            return listdurum;
+        }
+
     }
 }

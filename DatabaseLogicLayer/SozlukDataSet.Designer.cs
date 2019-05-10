@@ -20,29 +20,23 @@ namespace DatabaseLogicLayer {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SozlukDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("SozlukDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SozlukDataSet1 : global::System.Data.DataSet {
+    public partial class SozlukDataSet : global::System.Data.DataSet {
         
         private KelimeDataTable tableKelime;
         
-        private TestDataTable tableTest;
-        
         private spKelimeListeleDataTable tablespKelimeListele;
         
-        private spTekKelimeGosterDataTable tablespTekKelimeGoster;
+        private spKelimeListeleDereceDataTable tablespKelimeListeleDerece;
         
-        private spTestDereceListeDataTable tablespTestDereceListe;
-        
-        private spTestListeDataTable tablespTestListe;
-        
-        private global::System.Data.DataRelation relationFK__Test__TestID__38996AB5;
+        private spKelimeListeleDurumDataTable tablespKelimeListeleDurum;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public SozlukDataSet1() {
+        public SozlukDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -53,7 +47,7 @@ namespace DatabaseLogicLayer {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected SozlukDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected SozlukDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -69,20 +63,14 @@ namespace DatabaseLogicLayer {
                 if ((ds.Tables["Kelime"] != null)) {
                     base.Tables.Add(new KelimeDataTable(ds.Tables["Kelime"]));
                 }
-                if ((ds.Tables["Test"] != null)) {
-                    base.Tables.Add(new TestDataTable(ds.Tables["Test"]));
-                }
                 if ((ds.Tables["spKelimeListele"] != null)) {
                     base.Tables.Add(new spKelimeListeleDataTable(ds.Tables["spKelimeListele"]));
                 }
-                if ((ds.Tables["spTekKelimeGoster"] != null)) {
-                    base.Tables.Add(new spTekKelimeGosterDataTable(ds.Tables["spTekKelimeGoster"]));
+                if ((ds.Tables["spKelimeListeleDerece"] != null)) {
+                    base.Tables.Add(new spKelimeListeleDereceDataTable(ds.Tables["spKelimeListeleDerece"]));
                 }
-                if ((ds.Tables["spTestDereceListe"] != null)) {
-                    base.Tables.Add(new spTestDereceListeDataTable(ds.Tables["spTestDereceListe"]));
-                }
-                if ((ds.Tables["spTestListe"] != null)) {
-                    base.Tables.Add(new spTestListeDataTable(ds.Tables["spTestListe"]));
+                if ((ds.Tables["spKelimeListeleDurum"] != null)) {
+                    base.Tables.Add(new spKelimeListeleDurumDataTable(ds.Tables["spKelimeListeleDurum"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -116,16 +104,6 @@ namespace DatabaseLogicLayer {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TestDataTable Test {
-            get {
-                return this.tableTest;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public spKelimeListeleDataTable spKelimeListele {
             get {
                 return this.tablespKelimeListele;
@@ -136,9 +114,9 @@ namespace DatabaseLogicLayer {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public spTekKelimeGosterDataTable spTekKelimeGoster {
+        public spKelimeListeleDereceDataTable spKelimeListeleDerece {
             get {
-                return this.tablespTekKelimeGoster;
+                return this.tablespKelimeListeleDerece;
             }
         }
         
@@ -146,19 +124,9 @@ namespace DatabaseLogicLayer {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public spTestDereceListeDataTable spTestDereceListe {
+        public spKelimeListeleDurumDataTable spKelimeListeleDurum {
             get {
-                return this.tablespTestDereceListe;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public spTestListeDataTable spTestListe {
-            get {
-                return this.tablespTestListe;
+                return this.tablespKelimeListeleDurum;
             }
         }
         
@@ -204,7 +172,7 @@ namespace DatabaseLogicLayer {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            SozlukDataSet1 cln = ((SozlukDataSet1)(base.Clone()));
+            SozlukDataSet cln = ((SozlukDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -232,20 +200,14 @@ namespace DatabaseLogicLayer {
                 if ((ds.Tables["Kelime"] != null)) {
                     base.Tables.Add(new KelimeDataTable(ds.Tables["Kelime"]));
                 }
-                if ((ds.Tables["Test"] != null)) {
-                    base.Tables.Add(new TestDataTable(ds.Tables["Test"]));
-                }
                 if ((ds.Tables["spKelimeListele"] != null)) {
                     base.Tables.Add(new spKelimeListeleDataTable(ds.Tables["spKelimeListele"]));
                 }
-                if ((ds.Tables["spTekKelimeGoster"] != null)) {
-                    base.Tables.Add(new spTekKelimeGosterDataTable(ds.Tables["spTekKelimeGoster"]));
+                if ((ds.Tables["spKelimeListeleDerece"] != null)) {
+                    base.Tables.Add(new spKelimeListeleDereceDataTable(ds.Tables["spKelimeListeleDerece"]));
                 }
-                if ((ds.Tables["spTestDereceListe"] != null)) {
-                    base.Tables.Add(new spTestDereceListeDataTable(ds.Tables["spTestDereceListe"]));
-                }
-                if ((ds.Tables["spTestListe"] != null)) {
-                    base.Tables.Add(new spTestListeDataTable(ds.Tables["spTestListe"]));
+                if ((ds.Tables["spKelimeListeleDurum"] != null)) {
+                    base.Tables.Add(new spKelimeListeleDurumDataTable(ds.Tables["spKelimeListeleDurum"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -286,74 +248,47 @@ namespace DatabaseLogicLayer {
                     this.tableKelime.InitVars();
                 }
             }
-            this.tableTest = ((TestDataTable)(base.Tables["Test"]));
-            if ((initTable == true)) {
-                if ((this.tableTest != null)) {
-                    this.tableTest.InitVars();
-                }
-            }
             this.tablespKelimeListele = ((spKelimeListeleDataTable)(base.Tables["spKelimeListele"]));
             if ((initTable == true)) {
                 if ((this.tablespKelimeListele != null)) {
                     this.tablespKelimeListele.InitVars();
                 }
             }
-            this.tablespTekKelimeGoster = ((spTekKelimeGosterDataTable)(base.Tables["spTekKelimeGoster"]));
+            this.tablespKelimeListeleDerece = ((spKelimeListeleDereceDataTable)(base.Tables["spKelimeListeleDerece"]));
             if ((initTable == true)) {
-                if ((this.tablespTekKelimeGoster != null)) {
-                    this.tablespTekKelimeGoster.InitVars();
+                if ((this.tablespKelimeListeleDerece != null)) {
+                    this.tablespKelimeListeleDerece.InitVars();
                 }
             }
-            this.tablespTestDereceListe = ((spTestDereceListeDataTable)(base.Tables["spTestDereceListe"]));
+            this.tablespKelimeListeleDurum = ((spKelimeListeleDurumDataTable)(base.Tables["spKelimeListeleDurum"]));
             if ((initTable == true)) {
-                if ((this.tablespTestDereceListe != null)) {
-                    this.tablespTestDereceListe.InitVars();
+                if ((this.tablespKelimeListeleDurum != null)) {
+                    this.tablespKelimeListeleDurum.InitVars();
                 }
             }
-            this.tablespTestListe = ((spTestListeDataTable)(base.Tables["spTestListe"]));
-            if ((initTable == true)) {
-                if ((this.tablespTestListe != null)) {
-                    this.tablespTestListe.InitVars();
-                }
-            }
-            this.relationFK__Test__TestID__38996AB5 = this.Relations["FK__Test__TestID__38996AB5"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "SozlukDataSet1";
+            this.DataSetName = "SozlukDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SozlukDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/SozlukDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableKelime = new KelimeDataTable();
             base.Tables.Add(this.tableKelime);
-            this.tableTest = new TestDataTable();
-            base.Tables.Add(this.tableTest);
             this.tablespKelimeListele = new spKelimeListeleDataTable();
             base.Tables.Add(this.tablespKelimeListele);
-            this.tablespTekKelimeGoster = new spTekKelimeGosterDataTable();
-            base.Tables.Add(this.tablespTekKelimeGoster);
-            this.tablespTestDereceListe = new spTestDereceListeDataTable();
-            base.Tables.Add(this.tablespTestDereceListe);
-            this.tablespTestListe = new spTestListeDataTable();
-            base.Tables.Add(this.tablespTestListe);
-            this.relationFK__Test__TestID__38996AB5 = new global::System.Data.DataRelation("FK__Test__TestID__38996AB5", new global::System.Data.DataColumn[] {
-                        this.tableKelime.KeliemeIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableTest.TestIDColumn}, false);
-            this.Relations.Add(this.relationFK__Test__TestID__38996AB5);
+            this.tablespKelimeListeleDerece = new spKelimeListeleDereceDataTable();
+            base.Tables.Add(this.tablespKelimeListeleDerece);
+            this.tablespKelimeListeleDurum = new spKelimeListeleDurumDataTable();
+            base.Tables.Add(this.tablespKelimeListeleDurum);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeKelime() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeTest() {
             return false;
         }
         
@@ -365,19 +300,13 @@ namespace DatabaseLogicLayer {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializespTekKelimeGoster() {
+        private bool ShouldSerializespKelimeListeleDerece() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializespTestDereceListe() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializespTestListe() {
+        private bool ShouldSerializespKelimeListeleDurum() {
             return false;
         }
         
@@ -392,7 +321,7 @@ namespace DatabaseLogicLayer {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SozlukDataSet1 ds = new SozlukDataSet1();
+            SozlukDataSet ds = new SozlukDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -440,19 +369,13 @@ namespace DatabaseLogicLayer {
         public delegate void KelimeRowChangeEventHandler(object sender, KelimeRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void TestRowChangeEventHandler(object sender, TestRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void spKelimeListeleRowChangeEventHandler(object sender, spKelimeListeleRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void spTekKelimeGosterRowChangeEventHandler(object sender, spTekKelimeGosterRowChangeEvent e);
+        public delegate void spKelimeListeleDereceRowChangeEventHandler(object sender, spKelimeListeleDereceRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void spTestDereceListeRowChangeEventHandler(object sender, spTestDereceListeRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void spTestListeRowChangeEventHandler(object sender, spTestListeRowChangeEvent e);
+        public delegate void spKelimeListeleDurumRowChangeEventHandler(object sender, spKelimeListeleDurumRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -472,6 +395,10 @@ namespace DatabaseLogicLayer {
             private global::System.Data.DataColumn columnCumle;
             
             private global::System.Data.DataColumn columnDurum;
+            
+            private global::System.Data.DataColumn columnTarih;
+            
+            private global::System.Data.DataColumn columnDerece;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -556,6 +483,22 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TarihColumn {
+                get {
+                    return this.columnTarih;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DereceColumn {
+                get {
+                    return this.columnDerece;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -591,7 +534,7 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public KelimeRow AddKelimeRow(System.Guid KeliemeID, string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum) {
+            public KelimeRow AddKelimeRow(System.Guid KeliemeID, string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum, System.DateTime Tarih, int Derece) {
                 KelimeRow rowKelimeRow = ((KelimeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         KeliemeID,
@@ -599,7 +542,9 @@ namespace DatabaseLogicLayer {
                         KelimeTurkce,
                         Aciklama,
                         Cumle,
-                        Durum};
+                        Durum,
+                        Tarih,
+                        Derece};
                 rowKelimeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowKelimeRow);
                 return rowKelimeRow;
@@ -635,6 +580,8 @@ namespace DatabaseLogicLayer {
                 this.columnAciklama = base.Columns["Aciklama"];
                 this.columnCumle = base.Columns["Cumle"];
                 this.columnDurum = base.Columns["Durum"];
+                this.columnTarih = base.Columns["Tarih"];
+                this.columnDerece = base.Columns["Derece"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -652,6 +599,10 @@ namespace DatabaseLogicLayer {
                 base.Columns.Add(this.columnCumle);
                 this.columnDurum = new global::System.Data.DataColumn("Durum", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDurum);
+                this.columnTarih = new global::System.Data.DataColumn("Tarih", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTarih);
+                this.columnDerece = new global::System.Data.DataColumn("Derece", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDerece);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnKeliemeID}, true));
                 this.columnKeliemeID.AllowDBNull = false;
@@ -728,7 +679,7 @@ namespace DatabaseLogicLayer {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SozlukDataSet1 ds = new SozlukDataSet1();
+                SozlukDataSet ds = new SozlukDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -792,284 +743,6 @@ namespace DatabaseLogicLayer {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TestDataTable : global::System.Data.TypedTableBase<TestRow> {
-            
-            private global::System.Data.DataColumn columnTestID;
-            
-            private global::System.Data.DataColumn columnTarih;
-            
-            private global::System.Data.DataColumn columnDerece;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TestDataTable() {
-                this.TableName = "Test";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal TestDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected TestDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TestIDColumn {
-                get {
-                    return this.columnTestID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TarihColumn {
-                get {
-                    return this.columnTarih;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DereceColumn {
-                get {
-                    return this.columnDerece;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TestRow this[int index] {
-                get {
-                    return ((TestRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event TestRowChangeEventHandler TestRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event TestRowChangeEventHandler TestRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event TestRowChangeEventHandler TestRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event TestRowChangeEventHandler TestRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddTestRow(TestRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TestRow AddTestRow(KelimeRow parentKelimeRowByFK__Test__TestID__38996AB5, System.DateTime Tarih, int Derece) {
-                TestRow rowTestRow = ((TestRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        Tarih,
-                        Derece};
-                if ((parentKelimeRowByFK__Test__TestID__38996AB5 != null)) {
-                    columnValuesArray[0] = parentKelimeRowByFK__Test__TestID__38996AB5[0];
-                }
-                rowTestRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTestRow);
-                return rowTestRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                TestDataTable cln = ((TestDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new TestDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-                this.columnTestID = base.Columns["TestID"];
-                this.columnTarih = base.Columns["Tarih"];
-                this.columnDerece = base.Columns["Derece"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-                this.columnTestID = new global::System.Data.DataColumn("TestID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTestID);
-                this.columnTarih = new global::System.Data.DataColumn("Tarih", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTarih);
-                this.columnDerece = new global::System.Data.DataColumn("Derece", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDerece);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TestRow NewTestRow() {
-                return ((TestRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TestRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(TestRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.TestRowChanged != null)) {
-                    this.TestRowChanged(this, new TestRowChangeEvent(((TestRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.TestRowChanging != null)) {
-                    this.TestRowChanging(this, new TestRowChangeEvent(((TestRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.TestRowDeleted != null)) {
-                    this.TestRowDeleted(this, new TestRowChangeEvent(((TestRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.TestRowDeleting != null)) {
-                    this.TestRowDeleting(this, new TestRowChangeEvent(((TestRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveTestRow(TestRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SozlukDataSet1 ds = new SozlukDataSet1();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TestDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class spKelimeListeleDataTable : global::System.Data.TypedTableBase<spKelimeListeleRow> {
             
             private global::System.Data.DataColumn columnKeliemeID;
@@ -1083,6 +756,10 @@ namespace DatabaseLogicLayer {
             private global::System.Data.DataColumn columnCumle;
             
             private global::System.Data.DataColumn columnDurum;
+            
+            private global::System.Data.DataColumn columnTarih;
+            
+            private global::System.Data.DataColumn columnDerece;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -1167,6 +844,22 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TarihColumn {
+                get {
+                    return this.columnTarih;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DereceColumn {
+                get {
+                    return this.columnDerece;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1202,7 +895,7 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spKelimeListeleRow AddspKelimeListeleRow(System.Guid KeliemeID, string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum) {
+            public spKelimeListeleRow AddspKelimeListeleRow(System.Guid KeliemeID, string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum, System.DateTime Tarih, int Derece) {
                 spKelimeListeleRow rowspKelimeListeleRow = ((spKelimeListeleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         KeliemeID,
@@ -1210,7 +903,9 @@ namespace DatabaseLogicLayer {
                         KelimeTurkce,
                         Aciklama,
                         Cumle,
-                        Durum};
+                        Durum,
+                        Tarih,
+                        Derece};
                 rowspKelimeListeleRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowspKelimeListeleRow);
                 return rowspKelimeListeleRow;
@@ -1246,6 +941,8 @@ namespace DatabaseLogicLayer {
                 this.columnAciklama = base.Columns["Aciklama"];
                 this.columnCumle = base.Columns["Cumle"];
                 this.columnDurum = base.Columns["Durum"];
+                this.columnTarih = base.Columns["Tarih"];
+                this.columnDerece = base.Columns["Derece"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1263,6 +960,10 @@ namespace DatabaseLogicLayer {
                 base.Columns.Add(this.columnCumle);
                 this.columnDurum = new global::System.Data.DataColumn("Durum", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDurum);
+                this.columnTarih = new global::System.Data.DataColumn("Tarih", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTarih);
+                this.columnDerece = new global::System.Data.DataColumn("Derece", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDerece);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnKeliemeID}, true));
                 this.columnKeliemeID.AllowDBNull = false;
@@ -1339,7 +1040,7 @@ namespace DatabaseLogicLayer {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SozlukDataSet1 ds = new SozlukDataSet1();
+                SozlukDataSet ds = new SozlukDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1403,7 +1104,7 @@ namespace DatabaseLogicLayer {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class spTekKelimeGosterDataTable : global::System.Data.TypedTableBase<spTekKelimeGosterRow> {
+        public partial class spKelimeListeleDereceDataTable : global::System.Data.TypedTableBase<spKelimeListeleDereceRow> {
             
             private global::System.Data.DataColumn columnKeliemeID;
             
@@ -1417,10 +1118,14 @@ namespace DatabaseLogicLayer {
             
             private global::System.Data.DataColumn columnDurum;
             
+            private global::System.Data.DataColumn columnTarih;
+            
+            private global::System.Data.DataColumn columnDerece;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTekKelimeGosterDataTable() {
-                this.TableName = "spTekKelimeGoster";
+            public spKelimeListeleDereceDataTable() {
+                this.TableName = "spKelimeListeleDerece";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1428,7 +1133,7 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal spTekKelimeGosterDataTable(global::System.Data.DataTable table) {
+            internal spKelimeListeleDereceDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1445,7 +1150,7 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected spTekKelimeGosterDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected spKelimeListeleDereceDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1500,6 +1205,22 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TarihColumn {
+                get {
+                    return this.columnTarih;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DereceColumn {
+                get {
+                    return this.columnDerece;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1509,57 +1230,59 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTekKelimeGosterRow this[int index] {
+            public spKelimeListeleDereceRow this[int index] {
                 get {
-                    return ((spTekKelimeGosterRow)(this.Rows[index]));
+                    return ((spKelimeListeleDereceRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event spTekKelimeGosterRowChangeEventHandler spTekKelimeGosterRowChanging;
+            public event spKelimeListeleDereceRowChangeEventHandler spKelimeListeleDereceRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event spTekKelimeGosterRowChangeEventHandler spTekKelimeGosterRowChanged;
+            public event spKelimeListeleDereceRowChangeEventHandler spKelimeListeleDereceRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event spTekKelimeGosterRowChangeEventHandler spTekKelimeGosterRowDeleting;
+            public event spKelimeListeleDereceRowChangeEventHandler spKelimeListeleDereceRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event spTekKelimeGosterRowChangeEventHandler spTekKelimeGosterRowDeleted;
+            public event spKelimeListeleDereceRowChangeEventHandler spKelimeListeleDereceRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddspTekKelimeGosterRow(spTekKelimeGosterRow row) {
+            public void AddspKelimeListeleDereceRow(spKelimeListeleDereceRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTekKelimeGosterRow AddspTekKelimeGosterRow(System.Guid KeliemeID, string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum) {
-                spTekKelimeGosterRow rowspTekKelimeGosterRow = ((spTekKelimeGosterRow)(this.NewRow()));
+            public spKelimeListeleDereceRow AddspKelimeListeleDereceRow(System.Guid KeliemeID, string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum, System.DateTime Tarih, int Derece) {
+                spKelimeListeleDereceRow rowspKelimeListeleDereceRow = ((spKelimeListeleDereceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         KeliemeID,
                         KelimeIngilizce,
                         KelimeTurkce,
                         Aciklama,
                         Cumle,
-                        Durum};
-                rowspTekKelimeGosterRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowspTekKelimeGosterRow);
-                return rowspTekKelimeGosterRow;
+                        Durum,
+                        Tarih,
+                        Derece};
+                rowspKelimeListeleDereceRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspKelimeListeleDereceRow);
+                return rowspKelimeListeleDereceRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTekKelimeGosterRow FindByKeliemeID(System.Guid KeliemeID) {
-                return ((spTekKelimeGosterRow)(this.Rows.Find(new object[] {
+            public spKelimeListeleDereceRow FindByKeliemeID(System.Guid KeliemeID) {
+                return ((spKelimeListeleDereceRow)(this.Rows.Find(new object[] {
                             KeliemeID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                spTekKelimeGosterDataTable cln = ((spTekKelimeGosterDataTable)(base.Clone()));
+                spKelimeListeleDereceDataTable cln = ((spKelimeListeleDereceDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1567,7 +1290,7 @@ namespace DatabaseLogicLayer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new spTekKelimeGosterDataTable();
+                return new spKelimeListeleDereceDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1579,6 +1302,8 @@ namespace DatabaseLogicLayer {
                 this.columnAciklama = base.Columns["Aciklama"];
                 this.columnCumle = base.Columns["Cumle"];
                 this.columnDurum = base.Columns["Durum"];
+                this.columnTarih = base.Columns["Tarih"];
+                this.columnDerece = base.Columns["Derece"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1596,6 +1321,10 @@ namespace DatabaseLogicLayer {
                 base.Columns.Add(this.columnCumle);
                 this.columnDurum = new global::System.Data.DataColumn("Durum", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDurum);
+                this.columnTarih = new global::System.Data.DataColumn("Tarih", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTarih);
+                this.columnDerece = new global::System.Data.DataColumn("Derece", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDerece);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnKeliemeID}, true));
                 this.columnKeliemeID.AllowDBNull = false;
@@ -1609,28 +1338,28 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTekKelimeGosterRow NewspTekKelimeGosterRow() {
-                return ((spTekKelimeGosterRow)(this.NewRow()));
+            public spKelimeListeleDereceRow NewspKelimeListeleDereceRow() {
+                return ((spKelimeListeleDereceRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new spTekKelimeGosterRow(builder);
+                return new spKelimeListeleDereceRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(spTekKelimeGosterRow);
+                return typeof(spKelimeListeleDereceRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.spTekKelimeGosterRowChanged != null)) {
-                    this.spTekKelimeGosterRowChanged(this, new spTekKelimeGosterRowChangeEvent(((spTekKelimeGosterRow)(e.Row)), e.Action));
+                if ((this.spKelimeListeleDereceRowChanged != null)) {
+                    this.spKelimeListeleDereceRowChanged(this, new spKelimeListeleDereceRowChangeEvent(((spKelimeListeleDereceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1638,8 +1367,8 @@ namespace DatabaseLogicLayer {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.spTekKelimeGosterRowChanging != null)) {
-                    this.spTekKelimeGosterRowChanging(this, new spTekKelimeGosterRowChangeEvent(((spTekKelimeGosterRow)(e.Row)), e.Action));
+                if ((this.spKelimeListeleDereceRowChanging != null)) {
+                    this.spKelimeListeleDereceRowChanging(this, new spKelimeListeleDereceRowChangeEvent(((spKelimeListeleDereceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1647,8 +1376,8 @@ namespace DatabaseLogicLayer {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.spTekKelimeGosterRowDeleted != null)) {
-                    this.spTekKelimeGosterRowDeleted(this, new spTekKelimeGosterRowChangeEvent(((spTekKelimeGosterRow)(e.Row)), e.Action));
+                if ((this.spKelimeListeleDereceRowDeleted != null)) {
+                    this.spKelimeListeleDereceRowDeleted(this, new spKelimeListeleDereceRowChangeEvent(((spKelimeListeleDereceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1656,14 +1385,14 @@ namespace DatabaseLogicLayer {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.spTekKelimeGosterRowDeleting != null)) {
-                    this.spTekKelimeGosterRowDeleting(this, new spTekKelimeGosterRowChangeEvent(((spTekKelimeGosterRow)(e.Row)), e.Action));
+                if ((this.spKelimeListeleDereceRowDeleting != null)) {
+                    this.spKelimeListeleDereceRowDeleting(this, new spKelimeListeleDereceRowChangeEvent(((spKelimeListeleDereceRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovespTekKelimeGosterRow(spTekKelimeGosterRow row) {
+            public void RemovespKelimeListeleDereceRow(spKelimeListeleDereceRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1672,7 +1401,7 @@ namespace DatabaseLogicLayer {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SozlukDataSet1 ds = new SozlukDataSet1();
+                SozlukDataSet ds = new SozlukDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1690,7 +1419,7 @@ namespace DatabaseLogicLayer {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "spTekKelimeGosterDataTable";
+                attribute2.FixedValue = "spKelimeListeleDereceDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1736,16 +1465,28 @@ namespace DatabaseLogicLayer {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class spTestDereceListeDataTable : global::System.Data.TypedTableBase<spTestDereceListeRow> {
+        public partial class spKelimeListeleDurumDataTable : global::System.Data.TypedTableBase<spKelimeListeleDurumRow> {
+            
+            private global::System.Data.DataColumn columnKeliemeID;
             
             private global::System.Data.DataColumn columnKelimeIngilizce;
             
             private global::System.Data.DataColumn columnKelimeTurkce;
             
+            private global::System.Data.DataColumn columnAciklama;
+            
+            private global::System.Data.DataColumn columnCumle;
+            
+            private global::System.Data.DataColumn columnDurum;
+            
+            private global::System.Data.DataColumn columnTarih;
+            
+            private global::System.Data.DataColumn columnDerece;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTestDereceListeDataTable() {
-                this.TableName = "spTestDereceListe";
+            public spKelimeListeleDurumDataTable() {
+                this.TableName = "spKelimeListeleDurum";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1753,7 +1494,7 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal spTestDereceListeDataTable(global::System.Data.DataTable table) {
+            internal spKelimeListeleDurumDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1770,9 +1511,17 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected spTestDereceListeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected spKelimeListeleDurumDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn KeliemeIDColumn {
+                get {
+                    return this.columnKeliemeID;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1793,6 +1542,46 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn AciklamaColumn {
+                get {
+                    return this.columnAciklama;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CumleColumn {
+                get {
+                    return this.columnCumle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DurumColumn {
+                get {
+                    return this.columnDurum;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TarihColumn {
+                get {
+                    return this.columnTarih;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DereceColumn {
+                get {
+                    return this.columnDerece;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1802,46 +1591,59 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTestDereceListeRow this[int index] {
+            public spKelimeListeleDurumRow this[int index] {
                 get {
-                    return ((spTestDereceListeRow)(this.Rows[index]));
+                    return ((spKelimeListeleDurumRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event spTestDereceListeRowChangeEventHandler spTestDereceListeRowChanging;
+            public event spKelimeListeleDurumRowChangeEventHandler spKelimeListeleDurumRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event spTestDereceListeRowChangeEventHandler spTestDereceListeRowChanged;
+            public event spKelimeListeleDurumRowChangeEventHandler spKelimeListeleDurumRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event spTestDereceListeRowChangeEventHandler spTestDereceListeRowDeleting;
+            public event spKelimeListeleDurumRowChangeEventHandler spKelimeListeleDurumRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event spTestDereceListeRowChangeEventHandler spTestDereceListeRowDeleted;
+            public event spKelimeListeleDurumRowChangeEventHandler spKelimeListeleDurumRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddspTestDereceListeRow(spTestDereceListeRow row) {
+            public void AddspKelimeListeleDurumRow(spKelimeListeleDurumRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTestDereceListeRow AddspTestDereceListeRow(string KelimeIngilizce, string KelimeTurkce) {
-                spTestDereceListeRow rowspTestDereceListeRow = ((spTestDereceListeRow)(this.NewRow()));
+            public spKelimeListeleDurumRow AddspKelimeListeleDurumRow(System.Guid KeliemeID, string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum, System.DateTime Tarih, int Derece) {
+                spKelimeListeleDurumRow rowspKelimeListeleDurumRow = ((spKelimeListeleDurumRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        KeliemeID,
                         KelimeIngilizce,
-                        KelimeTurkce};
-                rowspTestDereceListeRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowspTestDereceListeRow);
-                return rowspTestDereceListeRow;
+                        KelimeTurkce,
+                        Aciklama,
+                        Cumle,
+                        Durum,
+                        Tarih,
+                        Derece};
+                rowspKelimeListeleDurumRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspKelimeListeleDurumRow);
+                return rowspKelimeListeleDurumRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public spKelimeListeleDurumRow FindByKeliemeID(System.Guid KeliemeID) {
+                return ((spKelimeListeleDurumRow)(this.Rows.Find(new object[] {
+                            KeliemeID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                spTestDereceListeDataTable cln = ((spTestDereceListeDataTable)(base.Clone()));
+                spKelimeListeleDurumDataTable cln = ((spKelimeListeleDurumDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1849,51 +1651,76 @@ namespace DatabaseLogicLayer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new spTestDereceListeDataTable();
+                return new spKelimeListeleDurumDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
+                this.columnKeliemeID = base.Columns["KeliemeID"];
                 this.columnKelimeIngilizce = base.Columns["KelimeIngilizce"];
                 this.columnKelimeTurkce = base.Columns["KelimeTurkce"];
+                this.columnAciklama = base.Columns["Aciklama"];
+                this.columnCumle = base.Columns["Cumle"];
+                this.columnDurum = base.Columns["Durum"];
+                this.columnTarih = base.Columns["Tarih"];
+                this.columnDerece = base.Columns["Derece"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
+                this.columnKeliemeID = new global::System.Data.DataColumn("KeliemeID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKeliemeID);
                 this.columnKelimeIngilizce = new global::System.Data.DataColumn("KelimeIngilizce", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKelimeIngilizce);
                 this.columnKelimeTurkce = new global::System.Data.DataColumn("KelimeTurkce", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKelimeTurkce);
+                this.columnAciklama = new global::System.Data.DataColumn("Aciklama", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAciklama);
+                this.columnCumle = new global::System.Data.DataColumn("Cumle", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCumle);
+                this.columnDurum = new global::System.Data.DataColumn("Durum", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDurum);
+                this.columnTarih = new global::System.Data.DataColumn("Tarih", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTarih);
+                this.columnDerece = new global::System.Data.DataColumn("Derece", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDerece);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnKeliemeID}, true));
+                this.columnKeliemeID.AllowDBNull = false;
+                this.columnKeliemeID.Unique = true;
                 this.columnKelimeIngilizce.MaxLength = 30;
                 this.columnKelimeTurkce.MaxLength = 30;
+                this.columnAciklama.MaxLength = 20;
+                this.columnCumle.MaxLength = 200;
+                this.columnDurum.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTestDereceListeRow NewspTestDereceListeRow() {
-                return ((spTestDereceListeRow)(this.NewRow()));
+            public spKelimeListeleDurumRow NewspKelimeListeleDurumRow() {
+                return ((spKelimeListeleDurumRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new spTestDereceListeRow(builder);
+                return new spKelimeListeleDurumRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(spTestDereceListeRow);
+                return typeof(spKelimeListeleDurumRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.spTestDereceListeRowChanged != null)) {
-                    this.spTestDereceListeRowChanged(this, new spTestDereceListeRowChangeEvent(((spTestDereceListeRow)(e.Row)), e.Action));
+                if ((this.spKelimeListeleDurumRowChanged != null)) {
+                    this.spKelimeListeleDurumRowChanged(this, new spKelimeListeleDurumRowChangeEvent(((spKelimeListeleDurumRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1901,8 +1728,8 @@ namespace DatabaseLogicLayer {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.spTestDereceListeRowChanging != null)) {
-                    this.spTestDereceListeRowChanging(this, new spTestDereceListeRowChangeEvent(((spTestDereceListeRow)(e.Row)), e.Action));
+                if ((this.spKelimeListeleDurumRowChanging != null)) {
+                    this.spKelimeListeleDurumRowChanging(this, new spKelimeListeleDurumRowChangeEvent(((spKelimeListeleDurumRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1910,8 +1737,8 @@ namespace DatabaseLogicLayer {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.spTestDereceListeRowDeleted != null)) {
-                    this.spTestDereceListeRowDeleted(this, new spTestDereceListeRowChangeEvent(((spTestDereceListeRow)(e.Row)), e.Action));
+                if ((this.spKelimeListeleDurumRowDeleted != null)) {
+                    this.spKelimeListeleDurumRowDeleted(this, new spKelimeListeleDurumRowChangeEvent(((spKelimeListeleDurumRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1919,14 +1746,14 @@ namespace DatabaseLogicLayer {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.spTestDereceListeRowDeleting != null)) {
-                    this.spTestDereceListeRowDeleting(this, new spTestDereceListeRowChangeEvent(((spTestDereceListeRow)(e.Row)), e.Action));
+                if ((this.spKelimeListeleDurumRowDeleting != null)) {
+                    this.spKelimeListeleDurumRowDeleting(this, new spKelimeListeleDurumRowChangeEvent(((spKelimeListeleDurumRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovespTestDereceListeRow(spTestDereceListeRow row) {
+            public void RemovespKelimeListeleDurumRow(spKelimeListeleDurumRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1935,7 +1762,7 @@ namespace DatabaseLogicLayer {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SozlukDataSet1 ds = new SozlukDataSet1();
+                SozlukDataSet ds = new SozlukDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1953,270 +1780,7 @@ namespace DatabaseLogicLayer {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "spTestDereceListeDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class spTestListeDataTable : global::System.Data.TypedTableBase<spTestListeRow> {
-            
-            private global::System.Data.DataColumn columnKelimeIngilizce;
-            
-            private global::System.Data.DataColumn columnKelimeTurkce;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTestListeDataTable() {
-                this.TableName = "spTestListe";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal spTestListeDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected spTestListeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn KelimeIngilizceColumn {
-                get {
-                    return this.columnKelimeIngilizce;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn KelimeTurkceColumn {
-                get {
-                    return this.columnKelimeTurkce;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTestListeRow this[int index] {
-                get {
-                    return ((spTestListeRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event spTestListeRowChangeEventHandler spTestListeRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event spTestListeRowChangeEventHandler spTestListeRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event spTestListeRowChangeEventHandler spTestListeRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event spTestListeRowChangeEventHandler spTestListeRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddspTestListeRow(spTestListeRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTestListeRow AddspTestListeRow(string KelimeIngilizce, string KelimeTurkce) {
-                spTestListeRow rowspTestListeRow = ((spTestListeRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        KelimeIngilizce,
-                        KelimeTurkce};
-                rowspTestListeRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowspTestListeRow);
-                return rowspTestListeRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                spTestListeDataTable cln = ((spTestListeDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new spTestListeDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-                this.columnKelimeIngilizce = base.Columns["KelimeIngilizce"];
-                this.columnKelimeTurkce = base.Columns["KelimeTurkce"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-                this.columnKelimeIngilizce = new global::System.Data.DataColumn("KelimeIngilizce", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKelimeIngilizce);
-                this.columnKelimeTurkce = new global::System.Data.DataColumn("KelimeTurkce", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKelimeTurkce);
-                this.columnKelimeIngilizce.MaxLength = 30;
-                this.columnKelimeTurkce.MaxLength = 30;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTestListeRow NewspTestListeRow() {
-                return ((spTestListeRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new spTestListeRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(spTestListeRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.spTestListeRowChanged != null)) {
-                    this.spTestListeRowChanged(this, new spTestListeRowChangeEvent(((spTestListeRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.spTestListeRowChanging != null)) {
-                    this.spTestListeRowChanging(this, new spTestListeRowChangeEvent(((spTestListeRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.spTestListeRowDeleted != null)) {
-                    this.spTestListeRowDeleted(this, new spTestListeRowChangeEvent(((spTestListeRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.spTestListeRowDeleting != null)) {
-                    this.spTestListeRowDeleting(this, new spTestListeRowChangeEvent(((spTestListeRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovespTestListeRow(spTestListeRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SozlukDataSet1 ds = new SozlukDataSet1();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "spTestListeDataTable";
+                attribute2.FixedValue = "spKelimeListeleDurumDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2364,6 +1928,38 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime Tarih {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableKelime.TarihColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tarih\' in table \'Kelime\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKelime.TarihColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Derece {
+                get {
+                    try {
+                        return ((int)(this[this.tableKelime.DereceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Derece\' in table \'Kelime\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKelime.DereceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsKelimeIngilizceNull() {
                 return this.IsNull(this.tableKelime.KelimeIngilizceColumn);
             }
@@ -2424,123 +2020,26 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TestRow[] GetTestRows() {
-                if ((this.Table.ChildRelations["FK__Test__TestID__38996AB5"] == null)) {
-                    return new TestRow[0];
-                }
-                else {
-                    return ((TestRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Test__TestID__38996AB5"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class TestRow : global::System.Data.DataRow {
-            
-            private TestDataTable tableTest;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal TestRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableTest = ((TestDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.Guid TestID {
-                get {
-                    try {
-                        return ((global::System.Guid)(this[this.tableTest.TestIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TestID\' in table \'Test\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTest.TestIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime Tarih {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableTest.TarihColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Tarih\' in table \'Test\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTest.TarihColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Derece {
-                get {
-                    try {
-                        return ((int)(this[this.tableTest.DereceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Derece\' in table \'Test\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTest.DereceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public KelimeRow KelimeRow {
-                get {
-                    return ((KelimeRow)(this.GetParentRow(this.Table.ParentRelations["FK__Test__TestID__38996AB5"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Test__TestID__38996AB5"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsTestIDNull() {
-                return this.IsNull(this.tableTest.TestIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetTestIDNull() {
-                this[this.tableTest.TestIDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsTarihNull() {
-                return this.IsNull(this.tableTest.TarihColumn);
+                return this.IsNull(this.tableKelime.TarihColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetTarihNull() {
-                this[this.tableTest.TarihColumn] = global::System.Convert.DBNull;
+                this[this.tableKelime.TarihColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsDereceNull() {
-                return this.IsNull(this.tableTest.DereceColumn);
+                return this.IsNull(this.tableKelime.DereceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDereceNull() {
-                this[this.tableTest.DereceColumn] = global::System.Convert.DBNull;
+                this[this.tableKelime.DereceColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2651,6 +2150,38 @@ namespace DatabaseLogicLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime Tarih {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablespKelimeListele.TarihColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tarih\' in table \'spKelimeListele\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespKelimeListele.TarihColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Derece {
+                get {
+                    try {
+                        return ((int)(this[this.tablespKelimeListele.DereceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Derece\' in table \'spKelimeListele\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespKelimeListele.DereceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsKelimeIngilizceNull() {
                 return this.IsNull(this.tablespKelimeListele.KelimeIngilizceColumn);
             }
@@ -2708,30 +2239,54 @@ namespace DatabaseLogicLayer {
             public void SetDurumNull() {
                 this[this.tablespKelimeListele.DurumColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTarihNull() {
+                return this.IsNull(this.tablespKelimeListele.TarihColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTarihNull() {
+                this[this.tablespKelimeListele.TarihColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDereceNull() {
+                return this.IsNull(this.tablespKelimeListele.DereceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDereceNull() {
+                this[this.tablespKelimeListele.DereceColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class spTekKelimeGosterRow : global::System.Data.DataRow {
+        public partial class spKelimeListeleDereceRow : global::System.Data.DataRow {
             
-            private spTekKelimeGosterDataTable tablespTekKelimeGoster;
+            private spKelimeListeleDereceDataTable tablespKelimeListeleDerece;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal spTekKelimeGosterRow(global::System.Data.DataRowBuilder rb) : 
+            internal spKelimeListeleDereceRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablespTekKelimeGoster = ((spTekKelimeGosterDataTable)(this.Table));
+                this.tablespKelimeListeleDerece = ((spKelimeListeleDereceDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.Guid KeliemeID {
                 get {
-                    return ((global::System.Guid)(this[this.tablespTekKelimeGoster.KeliemeIDColumn]));
+                    return ((global::System.Guid)(this[this.tablespKelimeListeleDerece.KeliemeIDColumn]));
                 }
                 set {
-                    this[this.tablespTekKelimeGoster.KeliemeIDColumn] = value;
+                    this[this.tablespKelimeListeleDerece.KeliemeIDColumn] = value;
                 }
             }
             
@@ -2740,14 +2295,15 @@ namespace DatabaseLogicLayer {
             public string KelimeIngilizce {
                 get {
                     try {
-                        return ((string)(this[this.tablespTekKelimeGoster.KelimeIngilizceColumn]));
+                        return ((string)(this[this.tablespKelimeListeleDerece.KelimeIngilizceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'KelimeIngilizce\' in table \'spTekKelimeGoster\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'KelimeIngilizce\' in table \'spKelimeListeleDerece\' is DBNull" +
+                                ".", e);
                     }
                 }
                 set {
-                    this[this.tablespTekKelimeGoster.KelimeIngilizceColumn] = value;
+                    this[this.tablespKelimeListeleDerece.KelimeIngilizceColumn] = value;
                 }
             }
             
@@ -2756,14 +2312,14 @@ namespace DatabaseLogicLayer {
             public string KelimeTurkce {
                 get {
                     try {
-                        return ((string)(this[this.tablespTekKelimeGoster.KelimeTurkceColumn]));
+                        return ((string)(this[this.tablespKelimeListeleDerece.KelimeTurkceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'KelimeTurkce\' in table \'spTekKelimeGoster\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'KelimeTurkce\' in table \'spKelimeListeleDerece\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablespTekKelimeGoster.KelimeTurkceColumn] = value;
+                    this[this.tablespKelimeListeleDerece.KelimeTurkceColumn] = value;
                 }
             }
             
@@ -2772,14 +2328,14 @@ namespace DatabaseLogicLayer {
             public string Aciklama {
                 get {
                     try {
-                        return ((string)(this[this.tablespTekKelimeGoster.AciklamaColumn]));
+                        return ((string)(this[this.tablespKelimeListeleDerece.AciklamaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Aciklama\' in table \'spTekKelimeGoster\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Aciklama\' in table \'spKelimeListeleDerece\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablespTekKelimeGoster.AciklamaColumn] = value;
+                    this[this.tablespKelimeListeleDerece.AciklamaColumn] = value;
                 }
             }
             
@@ -2788,14 +2344,14 @@ namespace DatabaseLogicLayer {
             public string Cumle {
                 get {
                     try {
-                        return ((string)(this[this.tablespTekKelimeGoster.CumleColumn]));
+                        return ((string)(this[this.tablespKelimeListeleDerece.CumleColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cumle\' in table \'spTekKelimeGoster\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cumle\' in table \'spKelimeListeleDerece\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablespTekKelimeGoster.CumleColumn] = value;
+                    this[this.tablespKelimeListeleDerece.CumleColumn] = value;
                 }
             }
             
@@ -2804,90 +2360,157 @@ namespace DatabaseLogicLayer {
             public string Durum {
                 get {
                     try {
-                        return ((string)(this[this.tablespTekKelimeGoster.DurumColumn]));
+                        return ((string)(this[this.tablespKelimeListeleDerece.DurumColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Durum\' in table \'spTekKelimeGoster\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Durum\' in table \'spKelimeListeleDerece\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablespTekKelimeGoster.DurumColumn] = value;
+                    this[this.tablespKelimeListeleDerece.DurumColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime Tarih {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablespKelimeListeleDerece.TarihColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tarih\' in table \'spKelimeListeleDerece\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespKelimeListeleDerece.TarihColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Derece {
+                get {
+                    try {
+                        return ((int)(this[this.tablespKelimeListeleDerece.DereceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Derece\' in table \'spKelimeListeleDerece\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespKelimeListeleDerece.DereceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsKelimeIngilizceNull() {
-                return this.IsNull(this.tablespTekKelimeGoster.KelimeIngilizceColumn);
+                return this.IsNull(this.tablespKelimeListeleDerece.KelimeIngilizceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetKelimeIngilizceNull() {
-                this[this.tablespTekKelimeGoster.KelimeIngilizceColumn] = global::System.Convert.DBNull;
+                this[this.tablespKelimeListeleDerece.KelimeIngilizceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsKelimeTurkceNull() {
-                return this.IsNull(this.tablespTekKelimeGoster.KelimeTurkceColumn);
+                return this.IsNull(this.tablespKelimeListeleDerece.KelimeTurkceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetKelimeTurkceNull() {
-                this[this.tablespTekKelimeGoster.KelimeTurkceColumn] = global::System.Convert.DBNull;
+                this[this.tablespKelimeListeleDerece.KelimeTurkceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsAciklamaNull() {
-                return this.IsNull(this.tablespTekKelimeGoster.AciklamaColumn);
+                return this.IsNull(this.tablespKelimeListeleDerece.AciklamaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetAciklamaNull() {
-                this[this.tablespTekKelimeGoster.AciklamaColumn] = global::System.Convert.DBNull;
+                this[this.tablespKelimeListeleDerece.AciklamaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCumleNull() {
-                return this.IsNull(this.tablespTekKelimeGoster.CumleColumn);
+                return this.IsNull(this.tablespKelimeListeleDerece.CumleColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCumleNull() {
-                this[this.tablespTekKelimeGoster.CumleColumn] = global::System.Convert.DBNull;
+                this[this.tablespKelimeListeleDerece.CumleColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsDurumNull() {
-                return this.IsNull(this.tablespTekKelimeGoster.DurumColumn);
+                return this.IsNull(this.tablespKelimeListeleDerece.DurumColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDurumNull() {
-                this[this.tablespTekKelimeGoster.DurumColumn] = global::System.Convert.DBNull;
+                this[this.tablespKelimeListeleDerece.DurumColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTarihNull() {
+                return this.IsNull(this.tablespKelimeListeleDerece.TarihColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTarihNull() {
+                this[this.tablespKelimeListeleDerece.TarihColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDereceNull() {
+                return this.IsNull(this.tablespKelimeListeleDerece.DereceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDereceNull() {
+                this[this.tablespKelimeListeleDerece.DereceColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class spTestDereceListeRow : global::System.Data.DataRow {
+        public partial class spKelimeListeleDurumRow : global::System.Data.DataRow {
             
-            private spTestDereceListeDataTable tablespTestDereceListe;
+            private spKelimeListeleDurumDataTable tablespKelimeListeleDurum;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal spTestDereceListeRow(global::System.Data.DataRowBuilder rb) : 
+            internal spKelimeListeleDurumRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablespTestDereceListe = ((spTestDereceListeDataTable)(this.Table));
+                this.tablespKelimeListeleDurum = ((spKelimeListeleDurumDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.Guid KeliemeID {
+                get {
+                    return ((global::System.Guid)(this[this.tablespKelimeListeleDurum.KeliemeIDColumn]));
+                }
+                set {
+                    this[this.tablespKelimeListeleDurum.KeliemeIDColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2895,14 +2518,15 @@ namespace DatabaseLogicLayer {
             public string KelimeIngilizce {
                 get {
                     try {
-                        return ((string)(this[this.tablespTestDereceListe.KelimeIngilizceColumn]));
+                        return ((string)(this[this.tablespKelimeListeleDurum.KelimeIngilizceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'KelimeIngilizce\' in table \'spTestDereceListe\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'KelimeIngilizce\' in table \'spKelimeListeleDurum\' is DBNull." +
+                                "", e);
                     }
                 }
                 set {
-                    this[this.tablespTestDereceListe.KelimeIngilizceColumn] = value;
+                    this[this.tablespKelimeListeleDurum.KelimeIngilizceColumn] = value;
                 }
             }
             
@@ -2911,110 +2535,179 @@ namespace DatabaseLogicLayer {
             public string KelimeTurkce {
                 get {
                     try {
-                        return ((string)(this[this.tablespTestDereceListe.KelimeTurkceColumn]));
+                        return ((string)(this[this.tablespKelimeListeleDurum.KelimeTurkceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'KelimeTurkce\' in table \'spTestDereceListe\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'KelimeTurkce\' in table \'spKelimeListeleDurum\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablespTestDereceListe.KelimeTurkceColumn] = value;
+                    this[this.tablespKelimeListeleDurum.KelimeTurkceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Aciklama {
+                get {
+                    try {
+                        return ((string)(this[this.tablespKelimeListeleDurum.AciklamaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Aciklama\' in table \'spKelimeListeleDurum\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespKelimeListeleDurum.AciklamaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Cumle {
+                get {
+                    try {
+                        return ((string)(this[this.tablespKelimeListeleDurum.CumleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cumle\' in table \'spKelimeListeleDurum\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespKelimeListeleDurum.CumleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Durum {
+                get {
+                    try {
+                        return ((string)(this[this.tablespKelimeListeleDurum.DurumColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Durum\' in table \'spKelimeListeleDurum\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespKelimeListeleDurum.DurumColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime Tarih {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablespKelimeListeleDurum.TarihColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tarih\' in table \'spKelimeListeleDurum\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespKelimeListeleDurum.TarihColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Derece {
+                get {
+                    try {
+                        return ((int)(this[this.tablespKelimeListeleDurum.DereceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Derece\' in table \'spKelimeListeleDurum\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespKelimeListeleDurum.DereceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsKelimeIngilizceNull() {
-                return this.IsNull(this.tablespTestDereceListe.KelimeIngilizceColumn);
+                return this.IsNull(this.tablespKelimeListeleDurum.KelimeIngilizceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetKelimeIngilizceNull() {
-                this[this.tablespTestDereceListe.KelimeIngilizceColumn] = global::System.Convert.DBNull;
+                this[this.tablespKelimeListeleDurum.KelimeIngilizceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsKelimeTurkceNull() {
-                return this.IsNull(this.tablespTestDereceListe.KelimeTurkceColumn);
+                return this.IsNull(this.tablespKelimeListeleDurum.KelimeTurkceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetKelimeTurkceNull() {
-                this[this.tablespTestDereceListe.KelimeTurkceColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class spTestListeRow : global::System.Data.DataRow {
-            
-            private spTestListeDataTable tablespTestListe;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal spTestListeRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablespTestListe = ((spTestListeDataTable)(this.Table));
+                this[this.tablespKelimeListeleDurum.KelimeTurkceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string KelimeIngilizce {
-                get {
-                    try {
-                        return ((string)(this[this.tablespTestListe.KelimeIngilizceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'KelimeIngilizce\' in table \'spTestListe\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablespTestListe.KelimeIngilizceColumn] = value;
-                }
+            public bool IsAciklamaNull() {
+                return this.IsNull(this.tablespKelimeListeleDurum.AciklamaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string KelimeTurkce {
-                get {
-                    try {
-                        return ((string)(this[this.tablespTestListe.KelimeTurkceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'KelimeTurkce\' in table \'spTestListe\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablespTestListe.KelimeTurkceColumn] = value;
-                }
+            public void SetAciklamaNull() {
+                this[this.tablespKelimeListeleDurum.AciklamaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsKelimeIngilizceNull() {
-                return this.IsNull(this.tablespTestListe.KelimeIngilizceColumn);
+            public bool IsCumleNull() {
+                return this.IsNull(this.tablespKelimeListeleDurum.CumleColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetKelimeIngilizceNull() {
-                this[this.tablespTestListe.KelimeIngilizceColumn] = global::System.Convert.DBNull;
+            public void SetCumleNull() {
+                this[this.tablespKelimeListeleDurum.CumleColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsKelimeTurkceNull() {
-                return this.IsNull(this.tablespTestListe.KelimeTurkceColumn);
+            public bool IsDurumNull() {
+                return this.IsNull(this.tablespKelimeListeleDurum.DurumColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetKelimeTurkceNull() {
-                this[this.tablespTestListe.KelimeTurkceColumn] = global::System.Convert.DBNull;
+            public void SetDurumNull() {
+                this[this.tablespKelimeListeleDurum.DurumColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTarihNull() {
+                return this.IsNull(this.tablespKelimeListeleDurum.TarihColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTarihNull() {
+                this[this.tablespKelimeListeleDurum.TarihColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDereceNull() {
+                return this.IsNull(this.tablespKelimeListeleDurum.DereceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDereceNull() {
+                this[this.tablespKelimeListeleDurum.DereceColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3038,40 +2731,6 @@ namespace DatabaseLogicLayer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public KelimeRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class TestRowChangeEvent : global::System.EventArgs {
-            
-            private TestRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TestRowChangeEvent(TestRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TestRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3124,22 +2783,22 @@ namespace DatabaseLogicLayer {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class spTekKelimeGosterRowChangeEvent : global::System.EventArgs {
+        public class spKelimeListeleDereceRowChangeEvent : global::System.EventArgs {
             
-            private spTekKelimeGosterRow eventRow;
+            private spKelimeListeleDereceRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTekKelimeGosterRowChangeEvent(spTekKelimeGosterRow row, global::System.Data.DataRowAction action) {
+            public spKelimeListeleDereceRowChangeEvent(spKelimeListeleDereceRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTekKelimeGosterRow Row {
+            public spKelimeListeleDereceRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3158,56 +2817,22 @@ namespace DatabaseLogicLayer {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class spTestDereceListeRowChangeEvent : global::System.EventArgs {
+        public class spKelimeListeleDurumRowChangeEvent : global::System.EventArgs {
             
-            private spTestDereceListeRow eventRow;
+            private spKelimeListeleDurumRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTestDereceListeRowChangeEvent(spTestDereceListeRow row, global::System.Data.DataRowAction action) {
+            public spKelimeListeleDurumRowChangeEvent(spKelimeListeleDurumRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTestDereceListeRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class spTestListeRowChangeEvent : global::System.EventArgs {
-            
-            private spTestListeRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTestListeRowChangeEvent(spTestListeRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spTestListeRow Row {
+            public spKelimeListeleDurumRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3223,7 +2848,7 @@ namespace DatabaseLogicLayer {
         }
     }
 }
-namespace DatabaseLogicLayer.SozlukDataSet1TableAdapters {
+namespace DatabaseLogicLayer.SozlukDataSetTableAdapters {
     
     
     /// <summary>
@@ -3353,10 +2978,12 @@ namespace DatabaseLogicLayer.SozlukDataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("Aciklama", "Aciklama");
             tableMapping.ColumnMappings.Add("Cumle", "Cumle");
             tableMapping.ColumnMappings.Add("Durum", "Durum");
+            tableMapping.ColumnMappings.Add("Tarih", "Tarih");
+            tableMapping.ColumnMappings.Add("Derece", "Derece");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Kelime] WHERE (([KeliemeID] = @Original_KeliemeID) AND ((@IsNull_KelimeIngilizce = 1 AND [KelimeIngilizce] IS NULL) OR ([KelimeIngilizce] = @Original_KelimeIngilizce)) AND ((@IsNull_KelimeTurkce = 1 AND [KelimeTurkce] IS NULL) OR ([KelimeTurkce] = @Original_KelimeTurkce)) AND ((@IsNull_Aciklama = 1 AND [Aciklama] IS NULL) OR ([Aciklama] = @Original_Aciklama)) AND ((@IsNull_Cumle = 1 AND [Cumle] IS NULL) OR ([Cumle] = @Original_Cumle)) AND ((@IsNull_Durum = 1 AND [Durum] IS NULL) OR ([Durum] = @Original_Durum)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Kelime] WHERE (([KeliemeID] = @Original_KeliemeID) AND ((@IsNull_KelimeIngilizce = 1 AND [KelimeIngilizce] IS NULL) OR ([KelimeIngilizce] = @Original_KelimeIngilizce)) AND ((@IsNull_KelimeTurkce = 1 AND [KelimeTurkce] IS NULL) OR ([KelimeTurkce] = @Original_KelimeTurkce)) AND ((@IsNull_Aciklama = 1 AND [Aciklama] IS NULL) OR ([Aciklama] = @Original_Aciklama)) AND ((@IsNull_Cumle = 1 AND [Cumle] IS NULL) OR ([Cumle] = @Original_Cumle)) AND ((@IsNull_Durum = 1 AND [Durum] IS NULL) OR ([Durum] = @Original_Durum)) AND ((@IsNull_Tarih = 1 AND [Tarih] IS NULL) OR ([Tarih] = @Original_Tarih)) AND ((@IsNull_Derece = 1 AND [Derece] IS NULL) OR ([Derece] = @Original_Derece)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KeliemeID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KeliemeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_KelimeIngilizce", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KelimeIngilizce", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -3369,10 +2996,14 @@ namespace DatabaseLogicLayer.SozlukDataSet1TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cumle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cumle", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Durum", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Durum", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Durum", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Durum", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tarih", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarih", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tarih", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarih", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Derece", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Derece", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Derece", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Derece", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Kelime] ([KeliemeID], [KelimeIngilizce], [KelimeTurkce], [Aciklama], [Cumle], [Durum]) VALUES (@KeliemeID, @KelimeIngilizce, @KelimeTurkce, @Aciklama, @Cumle, @Durum);
-SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kelime WHERE (KeliemeID = @KeliemeID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Kelime] ([KeliemeID], [KelimeIngilizce], [KelimeTurkce], [Aciklama], [Cumle], [Durum], [Tarih], [Derece]) VALUES (@KeliemeID, @KelimeIngilizce, @KelimeTurkce, @Aciklama, @Cumle, @Durum, @Tarih, @Derece);
+SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum, Tarih, Derece FROM Kelime WHERE (KeliemeID = @KeliemeID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KeliemeID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KeliemeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KelimeIngilizce", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KelimeIngilizce", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3380,10 +3011,12 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Aciklama", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Aciklama", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cumle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cumle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Durum", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Durum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tarih", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarih", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Derece", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Derece", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Kelime] SET [KeliemeID] = @KeliemeID, [KelimeIngilizce] = @KelimeIngilizce, [KelimeTurkce] = @KelimeTurkce, [Aciklama] = @Aciklama, [Cumle] = @Cumle, [Durum] = @Durum WHERE (([KeliemeID] = @Original_KeliemeID) AND ((@IsNull_KelimeIngilizce = 1 AND [KelimeIngilizce] IS NULL) OR ([KelimeIngilizce] = @Original_KelimeIngilizce)) AND ((@IsNull_KelimeTurkce = 1 AND [KelimeTurkce] IS NULL) OR ([KelimeTurkce] = @Original_KelimeTurkce)) AND ((@IsNull_Aciklama = 1 AND [Aciklama] IS NULL) OR ([Aciklama] = @Original_Aciklama)) AND ((@IsNull_Cumle = 1 AND [Cumle] IS NULL) OR ([Cumle] = @Original_Cumle)) AND ((@IsNull_Durum = 1 AND [Durum] IS NULL) OR ([Durum] = @Original_Durum)));
-SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kelime WHERE (KeliemeID = @KeliemeID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Kelime] SET [KeliemeID] = @KeliemeID, [KelimeIngilizce] = @KelimeIngilizce, [KelimeTurkce] = @KelimeTurkce, [Aciklama] = @Aciklama, [Cumle] = @Cumle, [Durum] = @Durum, [Tarih] = @Tarih, [Derece] = @Derece WHERE (([KeliemeID] = @Original_KeliemeID) AND ((@IsNull_KelimeIngilizce = 1 AND [KelimeIngilizce] IS NULL) OR ([KelimeIngilizce] = @Original_KelimeIngilizce)) AND ((@IsNull_KelimeTurkce = 1 AND [KelimeTurkce] IS NULL) OR ([KelimeTurkce] = @Original_KelimeTurkce)) AND ((@IsNull_Aciklama = 1 AND [Aciklama] IS NULL) OR ([Aciklama] = @Original_Aciklama)) AND ((@IsNull_Cumle = 1 AND [Cumle] IS NULL) OR ([Cumle] = @Original_Cumle)) AND ((@IsNull_Durum = 1 AND [Durum] IS NULL) OR ([Durum] = @Original_Durum)) AND ((@IsNull_Tarih = 1 AND [Tarih] IS NULL) OR ([Tarih] = @Original_Tarih)) AND ((@IsNull_Derece = 1 AND [Derece] IS NULL) OR ([Derece] = @Original_Derece)));
+SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum, Tarih, Derece FROM Kelime WHERE (KeliemeID = @KeliemeID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KeliemeID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KeliemeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KelimeIngilizce", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KelimeIngilizce", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3391,6 +3024,8 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Aciklama", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Aciklama", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cumle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cumle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Durum", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Durum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tarih", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarih", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Derece", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Derece", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KeliemeID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KeliemeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_KelimeIngilizce", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KelimeIngilizce", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KelimeIngilizce", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KelimeIngilizce", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3402,6 +3037,10 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cumle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cumle", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Durum", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Durum", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Durum", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Durum", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tarih", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarih", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tarih", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarih", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Derece", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Derece", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Derece", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Derece", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3417,8 +3056,8 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM dbo." +
-                "Kelime";
+            this._commandCollection[0].CommandText = "SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum, Tarih, D" +
+                "erece FROM dbo.Kelime";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3426,7 +3065,7 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SozlukDataSet1.KelimeDataTable dataTable) {
+        public virtual int Fill(SozlukDataSet.KelimeDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3439,9 +3078,9 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SozlukDataSet1.KelimeDataTable GetData() {
+        public virtual SozlukDataSet.KelimeDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SozlukDataSet1.KelimeDataTable dataTable = new SozlukDataSet1.KelimeDataTable();
+            SozlukDataSet.KelimeDataTable dataTable = new SozlukDataSet.KelimeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3449,14 +3088,14 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SozlukDataSet1.KelimeDataTable dataTable) {
+        public virtual int Update(SozlukDataSet.KelimeDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SozlukDataSet1 dataSet) {
+        public virtual int Update(SozlukDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Kelime");
         }
         
@@ -3479,7 +3118,7 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(System.Guid Original_KeliemeID, string Original_KelimeIngilizce, string Original_KelimeTurkce, string Original_Aciklama, string Original_Cumle, string Original_Durum) {
+        public virtual int Delete(System.Guid Original_KeliemeID, string Original_KelimeIngilizce, string Original_KelimeTurkce, string Original_Aciklama, string Original_Cumle, string Original_Durum, global::System.Nullable<global::System.DateTime> Original_Tarih, global::System.Nullable<int> Original_Derece) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((System.Guid)(Original_KeliemeID));
             if ((Original_KelimeIngilizce == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -3521,6 +3160,22 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Durum));
             }
+            if ((Original_Tarih.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((System.DateTime)(Original_Tarih.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Derece.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_Derece.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3541,7 +3196,7 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.Guid KeliemeID, string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum) {
+        public virtual int Insert(System.Guid KeliemeID, string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum, global::System.Nullable<global::System.DateTime> Tarih, global::System.Nullable<int> Derece) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((System.Guid)(KeliemeID));
             if ((KelimeIngilizce == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -3573,6 +3228,18 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Durum));
             }
+            if ((Tarih.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(Tarih.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Derece.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Derece.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3593,7 +3260,23 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.Guid KeliemeID, string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum, System.Guid Original_KeliemeID, string Original_KelimeIngilizce, string Original_KelimeTurkce, string Original_Aciklama, string Original_Cumle, string Original_Durum) {
+        public virtual int Update(
+                    System.Guid KeliemeID, 
+                    string KelimeIngilizce, 
+                    string KelimeTurkce, 
+                    string Aciklama, 
+                    string Cumle, 
+                    string Durum, 
+                    global::System.Nullable<global::System.DateTime> Tarih, 
+                    global::System.Nullable<int> Derece, 
+                    System.Guid Original_KeliemeID, 
+                    string Original_KelimeIngilizce, 
+                    string Original_KelimeTurkce, 
+                    string Original_Aciklama, 
+                    string Original_Cumle, 
+                    string Original_Durum, 
+                    global::System.Nullable<global::System.DateTime> Original_Tarih, 
+                    global::System.Nullable<int> Original_Derece) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((System.Guid)(KeliemeID));
             if ((KelimeIngilizce == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -3625,46 +3308,74 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Durum));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.Guid)(Original_KeliemeID));
-            if ((Original_KelimeIngilizce == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            if ((Tarih.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Tarih.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_KelimeIngilizce));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_KelimeTurkce == null)) {
+            if ((Derece.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Derece.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.Guid)(Original_KeliemeID));
+            if ((Original_KelimeIngilizce == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_KelimeTurkce));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_KelimeIngilizce));
             }
-            if ((Original_Aciklama == null)) {
+            if ((Original_KelimeTurkce == null)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Aciklama));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_KelimeTurkce));
             }
-            if ((Original_Cumle == null)) {
+            if ((Original_Aciklama == null)) {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Cumle));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Aciklama));
             }
-            if ((Original_Durum == null)) {
+            if ((Original_Cumle == null)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Durum));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Cumle));
+            }
+            if ((Original_Durum == null)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Durum));
+            }
+            if ((Original_Tarih.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((System.DateTime)(Original_Tarih.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Derece.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_Derece.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3686,253 +3397,8 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum, System.Guid Original_KeliemeID, string Original_KelimeIngilizce, string Original_KelimeTurkce, string Original_Aciklama, string Original_Cumle, string Original_Durum) {
-            return this.Update(Original_KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum, Original_KeliemeID, Original_KelimeIngilizce, Original_KelimeTurkce, Original_Aciklama, Original_Cumle, Original_Durum);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class TestTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public TestTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Test";
-            tableMapping.ColumnMappings.Add("TestID", "TestID");
-            tableMapping.ColumnMappings.Add("Tarih", "Tarih");
-            tableMapping.ColumnMappings.Add("Derece", "Derece");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Test] ([TestID], [Tarih], [Derece]) VALUES (@TestID, @Tarih, @" +
-                "Derece)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tarih", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarih", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Derece", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Derece", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DatabaseLogicLayer.Properties.Settings.Default.SozlukConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT TestID, Tarih, Derece FROM dbo.Test";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SozlukDataSet1.TestDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SozlukDataSet1.TestDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            SozlukDataSet1.TestDataTable dataTable = new SozlukDataSet1.TestDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SozlukDataSet1.TestDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SozlukDataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "Test");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.Guid> TestID, global::System.Nullable<global::System.DateTime> Tarih, global::System.Nullable<int> Derece) {
-            if ((TestID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((System.Guid)(TestID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((Tarih.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(Tarih.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Derece.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Derece.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
+        public virtual int Update(string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum, global::System.Nullable<global::System.DateTime> Tarih, global::System.Nullable<int> Derece, System.Guid Original_KeliemeID, string Original_KelimeIngilizce, string Original_KelimeTurkce, string Original_Aciklama, string Original_Cumle, string Original_Durum, global::System.Nullable<global::System.DateTime> Original_Tarih, global::System.Nullable<int> Original_Derece) {
+            return this.Update(Original_KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum, Tarih, Derece, Original_KeliemeID, Original_KelimeIngilizce, Original_KelimeTurkce, Original_Aciklama, Original_Cumle, Original_Durum, Original_Tarih, Original_Derece);
         }
     }
     
@@ -4063,6 +3529,8 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
             tableMapping.ColumnMappings.Add("Aciklama", "Aciklama");
             tableMapping.ColumnMappings.Add("Cumle", "Cumle");
             tableMapping.ColumnMappings.Add("Durum", "Durum");
+            tableMapping.ColumnMappings.Add("Tarih", "Tarih");
+            tableMapping.ColumnMappings.Add("Derece", "Derece");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -4088,7 +3556,7 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SozlukDataSet1.spKelimeListeleDataTable dataTable) {
+        public virtual int Fill(SozlukDataSet.spKelimeListeleDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4101,9 +3569,9 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SozlukDataSet1.spKelimeListeleDataTable GetData() {
+        public virtual SozlukDataSet.spKelimeListeleDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SozlukDataSet1.spKelimeListeleDataTable dataTable = new SozlukDataSet1.spKelimeListeleDataTable();
+            SozlukDataSet.spKelimeListeleDataTable dataTable = new SozlukDataSet.spKelimeListeleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4118,7 +3586,7 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class spTekKelimeGosterTableAdapter : global::System.ComponentModel.Component {
+    public partial class spKelimeListeleDereceTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4132,7 +3600,7 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public spTekKelimeGosterTableAdapter() {
+        public spKelimeListeleDereceTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4229,13 +3697,15 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "spTekKelimeGoster";
+            tableMapping.DataSetTable = "spKelimeListeleDerece";
             tableMapping.ColumnMappings.Add("KeliemeID", "KeliemeID");
             tableMapping.ColumnMappings.Add("KelimeIngilizce", "KelimeIngilizce");
             tableMapping.ColumnMappings.Add("KelimeTurkce", "KelimeTurkce");
             tableMapping.ColumnMappings.Add("Aciklama", "Aciklama");
             tableMapping.ColumnMappings.Add("Cumle", "Cumle");
             tableMapping.ColumnMappings.Add("Durum", "Durum");
+            tableMapping.ColumnMappings.Add("Tarih", "Tarih");
+            tableMapping.ColumnMappings.Add("Derece", "Derece");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -4252,189 +3722,7 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.spTekKelimeGoster";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KeliemeID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SozlukDataSet1.spTekKelimeGosterDataTable dataTable, global::System.Nullable<global::System.Guid> KeliemeID) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((KeliemeID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.Guid)(KeliemeID.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SozlukDataSet1.spTekKelimeGosterDataTable GetData(global::System.Nullable<global::System.Guid> KeliemeID) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((KeliemeID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.Guid)(KeliemeID.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            SozlukDataSet1.spTekKelimeGosterDataTable dataTable = new SozlukDataSet1.spTekKelimeGosterDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class spTestDereceListeTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public spTestDereceListeTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "spTestDereceListe";
-            tableMapping.ColumnMappings.Add("KelimeIngilizce", "KelimeIngilizce");
-            tableMapping.ColumnMappings.Add("KelimeTurkce", "KelimeTurkce");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DatabaseLogicLayer.Properties.Settings.Default.SozlukConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.spTestDereceListe";
+            this._commandCollection[0].CommandText = "dbo.spKelimeListeleDerece";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Derece", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4444,7 +3732,7 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SozlukDataSet1.spTestDereceListeDataTable dataTable, global::System.Nullable<int> Derece) {
+        public virtual int Fill(SozlukDataSet.spKelimeListeleDereceDataTable dataTable, global::System.Nullable<int> Derece) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((Derece.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Derece.Value));
@@ -4463,7 +3751,7 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SozlukDataSet1.spTestDereceListeDataTable GetData(global::System.Nullable<int> Derece) {
+        public virtual SozlukDataSet.spKelimeListeleDereceDataTable GetData(global::System.Nullable<int> Derece) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((Derece.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Derece.Value));
@@ -4471,7 +3759,7 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            SozlukDataSet1.spTestDereceListeDataTable dataTable = new SozlukDataSet1.spTestDereceListeDataTable();
+            SozlukDataSet.spKelimeListeleDereceDataTable dataTable = new SozlukDataSet.spKelimeListeleDereceDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4486,7 +3774,7 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class spTestListeTableAdapter : global::System.ComponentModel.Component {
+    public partial class spKelimeListeleDurumTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4500,7 +3788,7 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public spTestListeTableAdapter() {
+        public spKelimeListeleDurumTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4597,9 +3885,15 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "spTestListe";
+            tableMapping.DataSetTable = "spKelimeListeleDurum";
+            tableMapping.ColumnMappings.Add("KeliemeID", "KeliemeID");
             tableMapping.ColumnMappings.Add("KelimeIngilizce", "KelimeIngilizce");
             tableMapping.ColumnMappings.Add("KelimeTurkce", "KelimeTurkce");
+            tableMapping.ColumnMappings.Add("Aciklama", "Aciklama");
+            tableMapping.ColumnMappings.Add("Cumle", "Cumle");
+            tableMapping.ColumnMappings.Add("Durum", "Durum");
+            tableMapping.ColumnMappings.Add("Tarih", "Tarih");
+            tableMapping.ColumnMappings.Add("Derece", "Derece");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -4616,17 +3910,24 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.spTestListe";
+            this._commandCollection[0].CommandText = "dbo.spKelimeListeleDurum";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Durum", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SozlukDataSet1.spTestListeDataTable dataTable) {
+        public virtual int Fill(SozlukDataSet.spKelimeListeleDurumDataTable dataTable, string Durum) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Durum == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Durum));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -4638,9 +3939,15 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SozlukDataSet1.spTestListeDataTable GetData() {
+        public virtual SozlukDataSet.spKelimeListeleDurumDataTable GetData(string Durum) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SozlukDataSet1.spTestListeDataTable dataTable = new SozlukDataSet1.spTestListeDataTable();
+            if ((Durum == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Durum));
+            }
+            SozlukDataSet.spKelimeListeleDurumDataTable dataTable = new SozlukDataSet.spKelimeListeleDurumDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4673,10 +3980,10 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.IDbCommand[3];
+            this._commandCollection = new global::System.Data.IDbCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection(global::DatabaseLogicLayer.Properties.Settings.Default.SozlukConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "dbo.spDuzenle";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "dbo.Sifirla";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KeliemeID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4685,29 +3992,122 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Aciklama", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cumle", global::System.Data.SqlDbType.NVarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Durum", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tarih", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Derece", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Connection = new global::System.Data.SqlClient.SqlConnection(global::DatabaseLogicLayer.Properties.Settings.Default.SozlukConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandText = "dbo.spTestDurumu";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandText = "dbo.spDuzenle";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tarih", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Derece", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KeliemeID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KelimeIngilizce", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KelimeTurkce", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Aciklama", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cumle", global::System.Data.SqlDbType.NVarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Durum", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Connection = new global::System.Data.SqlClient.SqlConnection(global::DatabaseLogicLayer.Properties.Settings.Default.SozlukConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandText = "dbo.spTestDurumuDuzenle";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandText = "dbo.spDuzenleDerece";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KeliemeID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KelimeIngilizce", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KelimeTurkce", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Aciklama", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cumle", global::System.Data.SqlDbType.NVarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Durum", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tarih", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Derece", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Connection = new global::System.Data.SqlClient.SqlConnection(global::DatabaseLogicLayer.Properties.Settings.Default.SozlukConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).CommandText = "dbo.spKelimeEkle";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KeliemeID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KelimeIngilizce", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KelimeTurkce", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Aciklama", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cumle", global::System.Data.SqlDbType.NVarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Durum", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tarih", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Derece", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Sifirla(global::System.Nullable<global::System.Guid> KeliemeID, string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum, global::System.Nullable<global::System.DateTime> Tarih, global::System.Nullable<int> Derece) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[0]));
+            if ((KeliemeID.HasValue == true)) {
+                command.Parameters[1].Value = ((System.Guid)(KeliemeID.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((KelimeIngilizce == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(KelimeIngilizce));
+            }
+            if ((KelimeTurkce == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(KelimeTurkce));
+            }
+            if ((Aciklama == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(Aciklama));
+            }
+            if ((Cumle == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(Cumle));
+            }
+            if ((Durum == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(Durum));
+            }
+            if ((Tarih.HasValue == true)) {
+                command.Parameters[7].Value = ((System.DateTime)(Tarih.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Derece.HasValue == true)) {
+                command.Parameters[8].Value = ((int)(Derece.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int spDuzenle(global::System.Nullable<global::System.Guid> KeliemeID, string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[0]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[1]));
             if ((KeliemeID.HasValue == true)) {
                 command.Parameters[1].Value = ((System.Guid)(KeliemeID.Value));
             }
@@ -4764,25 +4164,55 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int spTestDurumu(global::System.Nullable<global::System.Guid> TestID, global::System.Nullable<global::System.DateTime> Tarih, global::System.Nullable<int> Derece) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[1]));
-            if ((TestID.HasValue == true)) {
-                command.Parameters[1].Value = ((System.Guid)(TestID.Value));
+        public virtual int spDuzenleDerece(global::System.Nullable<global::System.Guid> KeliemeID, string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum, global::System.Nullable<global::System.DateTime> Tarih, global::System.Nullable<int> Derece) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[2]));
+            if ((KeliemeID.HasValue == true)) {
+                command.Parameters[1].Value = ((System.Guid)(KeliemeID.Value));
             }
             else {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((Tarih.HasValue == true)) {
-                command.Parameters[2].Value = ((System.DateTime)(Tarih.Value));
-            }
-            else {
+            if ((KelimeIngilizce == null)) {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Derece.HasValue == true)) {
-                command.Parameters[3].Value = ((int)(Derece.Value));
+            else {
+                command.Parameters[2].Value = ((string)(KelimeIngilizce));
+            }
+            if ((KelimeTurkce == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[3].Value = global::System.DBNull.Value;
+                command.Parameters[3].Value = ((string)(KelimeTurkce));
+            }
+            if ((Aciklama == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(Aciklama));
+            }
+            if ((Cumle == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(Cumle));
+            }
+            if ((Durum == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(Durum));
+            }
+            if ((Tarih.HasValue == true)) {
+                command.Parameters[7].Value = ((System.DateTime)(Tarih.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Derece.HasValue == true)) {
+                command.Parameters[8].Value = ((int)(Derece.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4804,25 +4234,55 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int spTestDurumuDuzenle(global::System.Nullable<global::System.Guid> TestID, global::System.Nullable<global::System.DateTime> Tarih, global::System.Nullable<int> Derece) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[2]));
-            if ((TestID.HasValue == true)) {
-                command.Parameters[1].Value = ((System.Guid)(TestID.Value));
+        public virtual int spKelimeEkle(global::System.Nullable<global::System.Guid> KeliemeID, string KelimeIngilizce, string KelimeTurkce, string Aciklama, string Cumle, string Durum, global::System.Nullable<global::System.DateTime> Tarih, global::System.Nullable<int> Derece) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[3]));
+            if ((KeliemeID.HasValue == true)) {
+                command.Parameters[1].Value = ((System.Guid)(KeliemeID.Value));
             }
             else {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((Tarih.HasValue == true)) {
-                command.Parameters[2].Value = ((System.DateTime)(Tarih.Value));
-            }
-            else {
+            if ((KelimeIngilizce == null)) {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Derece.HasValue == true)) {
-                command.Parameters[3].Value = ((int)(Derece.Value));
+            else {
+                command.Parameters[2].Value = ((string)(KelimeIngilizce));
+            }
+            if ((KelimeTurkce == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[3].Value = global::System.DBNull.Value;
+                command.Parameters[3].Value = ((string)(KelimeTurkce));
+            }
+            if ((Aciklama == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(Aciklama));
+            }
+            if ((Cumle == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(Cumle));
+            }
+            if ((Durum == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(Durum));
+            }
+            if ((Tarih.HasValue == true)) {
+                command.Parameters[7].Value = ((System.DateTime)(Tarih.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Derece.HasValue == true)) {
+                command.Parameters[8].Value = ((int)(Derece.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4856,8 +4316,6 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         
         private KelimeTableAdapter _kelimeTableAdapter;
         
-        private TestTableAdapter _testTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -4889,20 +4347,6 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public TestTableAdapter TestTableAdapter {
-            get {
-                return this._testTableAdapter;
-            }
-            set {
-                this._testTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -4924,10 +4368,6 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
                             && (this._kelimeTableAdapter.Connection != null))) {
                     return this._kelimeTableAdapter.Connection;
                 }
-                if (((this._testTableAdapter != null) 
-                            && (this._testTableAdapter.Connection != null))) {
-                    return this._testTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -4944,9 +4384,6 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
                 if ((this._kelimeTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._testTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -4956,7 +4393,7 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(SozlukDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(SozlukDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._kelimeTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Kelime.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -4964,15 +4401,6 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._kelimeTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._testTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Test.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._testTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -4984,21 +4412,13 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(SozlukDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(SozlukDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._kelimeTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Kelime.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._kelimeTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._testTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Test.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._testTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -5010,16 +4430,8 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(SozlukDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(SozlukDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._testTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Test.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._testTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._kelimeTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Kelime.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -5060,7 +4472,7 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(SozlukDataSet1 dataSet) {
+        public virtual int UpdateAll(SozlukDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
@@ -5069,11 +4481,6 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
             }
             if (((this._kelimeTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._kelimeTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._testTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._testTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -5116,15 +4523,6 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
                     if (this._kelimeTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._kelimeTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._kelimeTableAdapter.Adapter);
-                    }
-                }
-                if ((this._testTableAdapter != null)) {
-                    revertConnections.Add(this._testTableAdapter, this._testTableAdapter.Connection);
-                    this._testTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._testTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._testTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._testTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._testTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -5188,10 +4586,6 @@ SELECT KeliemeID, KelimeIngilizce, KelimeTurkce, Aciklama, Cumle, Durum FROM Kel
                 if ((this._kelimeTableAdapter != null)) {
                     this._kelimeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._kelimeTableAdapter]));
                     this._kelimeTableAdapter.Transaction = null;
-                }
-                if ((this._testTableAdapter != null)) {
-                    this._testTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._testTableAdapter]));
-                    this._testTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

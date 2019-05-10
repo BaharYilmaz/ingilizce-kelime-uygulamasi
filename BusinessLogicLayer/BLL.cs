@@ -175,39 +175,9 @@ namespace BusinessLogicLayer
         {
             return dll.Sifirla();
         }
-        public List<Kelime> TesteYazdir()
-        {
-            List<Kelime> listdurum = ListeleDurum("test");
-            int j = 1;
-            while (j < 5)
-            {
-                List<Kelime> listDerece = ListeleDerece(j);
-                for (int i = 0; i < listDerece.Count; i++)
-                {
-                    TimeSpan fark = DateTime.Now - listDerece[i].Tarih;
-                    if (j == 1 && fark.Days == 1)
-                    {
-                        listdurum.Add(listDerece[i]);
-                    }
-                    else if (j == 2 && fark.Days == 7)
-                    {
-                        listdurum.Add(listDerece[i]);
-                    }
-                    else if (j == 3 && fark.Days == 30)
-                    {
-                        listdurum.Add(listDerece[i]);
-                    }
-                    else if (j == 4 && fark.Days == 180)
-                    {
-                        listdurum.Add(listDerece[i]);
-                    }
-                    else continue;
-                }
-                j++;
-            }
-            return listdurum;
+           
 
-        }
+        
         public List<Istatistik_> IstatistikYazdir()
         {
             try

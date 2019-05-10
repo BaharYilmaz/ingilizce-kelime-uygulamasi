@@ -73,6 +73,8 @@ namespace SözlükUygulaması
 
             if (listBox_sec.ItemCount == 0) //listenin10danAzOlmasıHesaplanmadı
             {
+                btn_secBiliyorum.Enabled = false;
+                btn_secOgren.Enabled = false;
                 if (j < 10)
                 {
                     KelimeOgren ogr = KelimeOgren.Instance;
@@ -96,16 +98,14 @@ namespace SözlükUygulaması
 
             if (listBox_sec.ItemCount == 0)
             {
+                btn_secBiliyorum.Enabled = false;
+                btn_secOgren.Enabled = false;
                 KelimeOgren ogr = KelimeOgren.Instance;
                 ogr.Show();
             }
 
         }
 
-        private void listBox_sec_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void listBox_sec_Click(object sender, EventArgs e)
         {

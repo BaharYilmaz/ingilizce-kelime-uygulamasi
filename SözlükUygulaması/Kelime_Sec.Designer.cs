@@ -42,7 +42,9 @@
             this.btn_secOgren.Appearance.Options.UseBackColor = true;
             this.btn_secOgren.Appearance.Options.UseFont = true;
             this.btn_secOgren.Appearance.Options.UseForeColor = true;
+            this.btn_secOgren.AppearanceDisabled.BackColor = System.Drawing.Color.Silver;
             this.btn_secOgren.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_secOgren.AppearanceDisabled.Options.UseBackColor = true;
             this.btn_secOgren.AppearanceDisabled.Options.UseFont = true;
             this.btn_secOgren.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_secOgren.AppearanceHovered.Options.UseFont = true;
@@ -68,7 +70,9 @@
             this.btn_secBiliyorum.Appearance.Options.UseBackColor = true;
             this.btn_secBiliyorum.Appearance.Options.UseFont = true;
             this.btn_secBiliyorum.Appearance.Options.UseForeColor = true;
+            this.btn_secBiliyorum.AppearanceDisabled.BackColor = System.Drawing.Color.Silver;
             this.btn_secBiliyorum.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_secBiliyorum.AppearanceDisabled.Options.UseBackColor = true;
             this.btn_secBiliyorum.AppearanceDisabled.Options.UseFont = true;
             this.btn_secBiliyorum.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_secBiliyorum.AppearanceHovered.Options.UseFont = true;
@@ -97,7 +101,6 @@
             this.listBox_sec.Name = "listBox_sec";
             this.listBox_sec.Size = new System.Drawing.Size(296, 420);
             this.listBox_sec.TabIndex = 5;
-            this.listBox_sec.SelectedIndexChanged += new System.EventHandler(this.listBox_sec_SelectedIndexChanged);
             this.listBox_sec.Click += new System.EventHandler(this.listBox_sec_Click);
             // 
             // Kelime_Sec

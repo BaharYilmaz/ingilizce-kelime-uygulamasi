@@ -78,7 +78,7 @@ namespace DatabaseLogicLayer
         }
         public SqlDataReader KelimeListeleDerece(int derece)
         {
-            command = new SqlCommand("select*from Kelime where Derece=@Derece and Durum='test'", connect);
+            command = new SqlCommand("select*from Kelime where Derece=@Derece", connect);
             command.Parameters.Add("@Derece", SqlDbType.NVarChar).Value = derece;
             BaglantiAyarla();
             return command.ExecuteReader();
@@ -115,7 +115,7 @@ namespace DatabaseLogicLayer
                 command = new SqlCommand
                  (@"update Kelime set 
                    KeliemeID=@KeliemeID,
-                   Derece=@Derece,Tarih=@Tarih where KeliemeID=@KeliemeID and Durum='test'", connect);
+                   Derece=@Derece,Tarih=@Tarih where KeliemeID=@KeliemeID", connect);
                 command.Parameters.Add("@KeliemeID", SqlDbType.UniqueIdentifier).Value = k.KelimeID;
                 command.Parameters.Add("@Derece", SqlDbType.NVarChar).Value = k.Derece;
                 command.Parameters.Add("@Tarih", SqlDbType.NVarChar).Value = k.Tarih;

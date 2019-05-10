@@ -37,6 +37,7 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txt_TestKelime = new System.Windows.Forms.TextBox();
             this.timer_test = new System.Windows.Forms.Timer(this.components);
+            this.lbl_bilgi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panel_Test)).BeginInit();
             this.panel_Test.SuspendLayout();
             this.SuspendLayout();
@@ -125,12 +126,23 @@
             // 
             this.timer_test.Tick += new System.EventHandler(this.timer_test_Tick);
             // 
+            // lbl_bilgi
+            // 
+            this.lbl_bilgi.AutoSize = true;
+            this.lbl_bilgi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_bilgi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_bilgi.Location = new System.Drawing.Point(243, 47);
+            this.lbl_bilgi.Name = "lbl_bilgi";
+            this.lbl_bilgi.Size = new System.Drawing.Size(0, 24);
+            this.lbl_bilgi.TabIndex = 13;
+            // 
             // Test_
             // 
             this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_bilgi);
             this.Controls.Add(this.txt_TestKelime);
             this.Controls.Add(this.panel_Test);
             this.Controls.Add(this.labelControl2);
@@ -154,5 +166,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.TextBox txt_TestKelime;
         private System.Windows.Forms.Timer timer_test;
+        private System.Windows.Forms.Label lbl_bilgi;
     }
 }
