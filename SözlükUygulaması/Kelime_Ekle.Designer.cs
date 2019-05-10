@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kelime_Ekle));
             this.btn_ekle = new DevExpress.XtraEditors.SimpleButton();
             this.txt_ekleKelime = new DevExpress.XtraEditors.TextEdit();
             this.txt_ekleAnlam = new DevExpress.XtraEditors.TextEdit();
@@ -37,10 +38,12 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ekleKelime.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ekleAnlam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ekleTur.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ekleCumle.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_ekle
@@ -146,12 +149,23 @@
             this.labelControl1.TabIndex = 21;
             this.labelControl1.Text = "Cümle";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(742, 586);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
             // Kelime_Ekle
             // 
             this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_ekle);
             this.Controls.Add(this.txt_ekleKelime);
             this.Controls.Add(this.txt_ekleAnlam);
@@ -162,12 +176,13 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Name = "Kelime_Ekle";
-            this.Size = new System.Drawing.Size(792, 616);
+            this.Size = new System.Drawing.Size(812, 676);
             this.Load += new System.EventHandler(this.Kelime_Ekle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_ekleKelime.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ekleAnlam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ekleTur.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ekleCumle.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,5 +199,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -104,5 +104,10 @@ namespace SözlükUygulaması
             Test_ t =  Test_.Instance;
             t.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

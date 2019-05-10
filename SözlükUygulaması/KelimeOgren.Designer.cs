@@ -39,6 +39,8 @@
             this.txt_ogrnCumle = new System.Windows.Forms.TextBox();
             this.txt_ogrenTur = new System.Windows.Forms.TextBox();
             this.txt_ogrenAnlam = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_bitir
@@ -157,12 +159,24 @@
             this.txt_ogrenAnlam.TabIndex = 16;
             this.txt_ogrenAnlam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(742, 586);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // KelimeOgren
             // 
             this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txt_ogrenAnlam);
             this.Controls.Add(this.txt_ogrenTur);
             this.Controls.Add(this.txt_ogrnCumle);
@@ -174,8 +188,9 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Name = "KelimeOgren";
-            this.Size = new System.Drawing.Size(734, 673);
+            this.Size = new System.Drawing.Size(812, 676);
             this.Load += new System.EventHandler(this.KelimeOgren_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,5 +208,6 @@
         private System.Windows.Forms.TextBox txt_ogrnCumle;
         private System.Windows.Forms.TextBox txt_ogrenTur;
         private System.Windows.Forms.TextBox txt_ogrenAnlam;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

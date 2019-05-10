@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kelime_Sec));
             this.btn_secOgren = new DevExpress.XtraEditors.SimpleButton();
             this.btn_secBiliyorum = new DevExpress.XtraEditors.SimpleButton();
             this.listBox_sec = new DevExpress.XtraEditors.ListBoxControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.listBox_sec)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_secOgren
@@ -103,19 +106,31 @@
             this.listBox_sec.TabIndex = 5;
             this.listBox_sec.Click += new System.EventHandler(this.listBox_sec_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(742, 586);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // Kelime_Sec
             // 
             this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_secOgren);
             this.Controls.Add(this.btn_secBiliyorum);
             this.Controls.Add(this.listBox_sec);
             this.Name = "Kelime_Sec";
-            this.Size = new System.Drawing.Size(815, 619);
+            this.Size = new System.Drawing.Size(812, 676);
             this.Load += new System.EventHandler(this.Kelime_Sec_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listBox_sec)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,5 +140,6 @@
         private DevExpress.XtraEditors.SimpleButton btn_secOgren;
         private DevExpress.XtraEditors.SimpleButton btn_secBiliyorum;
         private DevExpress.XtraEditors.ListBoxControl listBox_sec;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

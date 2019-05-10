@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test_));
             this.btn_testIki = new DevExpress.XtraEditors.CheckButton();
             this.btn_testUc = new DevExpress.XtraEditors.CheckButton();
             this.btn_testBir = new DevExpress.XtraEditors.CheckButton();
@@ -38,8 +39,10 @@
             this.txt_TestKelime = new System.Windows.Forms.TextBox();
             this.timer_test = new System.Windows.Forms.Timer(this.components);
             this.lbl_bilgi = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.panel_Test)).BeginInit();
             this.panel_Test.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_testIki
@@ -95,7 +98,7 @@
             this.panel_Test.Controls.Add(this.btn_testUc);
             this.panel_Test.Controls.Add(this.btn_testBir);
             this.panel_Test.Controls.Add(this.btn_testDort);
-            this.panel_Test.Location = new System.Drawing.Point(193, 250);
+            this.panel_Test.Location = new System.Drawing.Point(206, 249);
             this.panel_Test.Name = "panel_Test";
             this.panel_Test.Size = new System.Drawing.Size(406, 323);
             this.panel_Test.TabIndex = 10;
@@ -106,7 +109,7 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(193, 182);
+            this.labelControl2.Location = new System.Drawing.Point(206, 181);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(406, 28);
             this.labelControl2.TabIndex = 9;
@@ -116,7 +119,7 @@
             // 
             this.txt_TestKelime.BackColor = System.Drawing.Color.AliceBlue;
             this.txt_TestKelime.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_TestKelime.Location = new System.Drawing.Point(246, 101);
+            this.txt_TestKelime.Location = new System.Drawing.Point(259, 100);
             this.txt_TestKelime.Name = "txt_TestKelime";
             this.txt_TestKelime.Size = new System.Drawing.Size(294, 32);
             this.txt_TestKelime.TabIndex = 12;
@@ -131,10 +134,20 @@
             this.lbl_bilgi.AutoSize = true;
             this.lbl_bilgi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_bilgi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_bilgi.Location = new System.Drawing.Point(243, 47);
+            this.lbl_bilgi.Location = new System.Drawing.Point(256, 46);
             this.lbl_bilgi.Name = "lbl_bilgi";
             this.lbl_bilgi.Size = new System.Drawing.Size(0, 24);
             this.lbl_bilgi.TabIndex = 13;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(742, 586);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // Test_
             // 
@@ -142,15 +155,17 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbl_bilgi);
             this.Controls.Add(this.txt_TestKelime);
             this.Controls.Add(this.panel_Test);
             this.Controls.Add(this.labelControl2);
             this.Name = "Test_";
-            this.Size = new System.Drawing.Size(792, 703);
+            this.Size = new System.Drawing.Size(812, 676);
             this.Load += new System.EventHandler(this.Test__Load);
             ((System.ComponentModel.ISupportInitialize)(this.panel_Test)).EndInit();
             this.panel_Test.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +182,6 @@
         private System.Windows.Forms.TextBox txt_TestKelime;
         private System.Windows.Forms.Timer timer_test;
         private System.Windows.Forms.Label lbl_bilgi;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
