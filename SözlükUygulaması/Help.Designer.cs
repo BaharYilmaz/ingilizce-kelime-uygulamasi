@@ -41,31 +41,31 @@
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(195, 262);
+            this.label1.Location = new System.Drawing.Point(171, 256);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(494, 256);
-            this.label1.TabIndex = 11;
+            this.label1.Size = new System.Drawing.Size(481, 299);
+            this.label1.TabIndex = 15;
             this.label1.Text = resources.GetString("label1.Text");
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(479, 126);
+            this.label3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(451, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 130);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Uygulamamızda amacımız ingilizce kelime ezberinde kullanıcılara yardımcı olmaktır" +
-    ".";
+            this.label3.Size = new System.Drawing.Size(201, 132);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Uygulamamızda amacımız ingilizce kelime öğreniminde ve ezberinde kullanıcıya yard" +
+    "ımcı olmaktır.";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(189, 126);
+            this.pictureBox1.Image = global::SözlükUygulaması.Properties.Resources.images2;
+            this.pictureBox1.Location = new System.Drawing.Point(171, 102);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(284, 130);
+            this.pictureBox1.Size = new System.Drawing.Size(273, 132);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
@@ -84,10 +84,10 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "Help";
             this.Size = new System.Drawing.Size(812, 676);
             this.Load += new System.EventHandler(this.Help_Load);
@@ -98,10 +98,9 @@
         }
 
         #endregion
-
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
