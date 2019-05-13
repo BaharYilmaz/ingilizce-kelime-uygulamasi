@@ -48,7 +48,7 @@
             this.btn_bitir.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_bitir.Appearance.Options.UseFont = true;
             this.btn_bitir.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_bitir.ImageOptions.SvgImage")));
-            this.btn_bitir.Location = new System.Drawing.Point(465, 513);
+            this.btn_bitir.Location = new System.Drawing.Point(506, 504);
             this.btn_bitir.Name = "btn_bitir";
             this.btn_bitir.Size = new System.Drawing.Size(105, 39);
             this.btn_bitir.TabIndex = 10;
@@ -60,7 +60,7 @@
             this.btn_geri.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_geri.Appearance.Options.UseFont = true;
             this.btn_geri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_geri.ImageOptions.SvgImage")));
-            this.btn_geri.Location = new System.Drawing.Point(197, 513);
+            this.btn_geri.Location = new System.Drawing.Point(238, 504);
             this.btn_geri.Name = "btn_geri";
             this.btn_geri.Size = new System.Drawing.Size(105, 39);
             this.btn_geri.TabIndex = 11;
@@ -72,7 +72,7 @@
             this.btn_ileri.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_ileri.Appearance.Options.UseFont = true;
             this.btn_ileri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_ileri.ImageOptions.SvgImage")));
-            this.btn_ileri.Location = new System.Drawing.Point(324, 513);
+            this.btn_ileri.Location = new System.Drawing.Point(365, 504);
             this.btn_ileri.Name = "btn_ileri";
             this.btn_ileri.Size = new System.Drawing.Size(105, 39);
             this.btn_ileri.TabIndex = 12;
@@ -138,6 +138,7 @@
             this.txt_ogrnCumle.Name = "txt_ogrnCumle";
             this.txt_ogrnCumle.Size = new System.Drawing.Size(302, 147);
             this.txt_ogrnCumle.TabIndex = 13;
+            this.txt_ogrnCumle.TextChanged += new System.EventHandler(this.txt_ogrnCumle_TextChanged);
             // 
             // txt_ogrenTur
             // 
@@ -168,7 +169,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // KelimeOgren
             // 

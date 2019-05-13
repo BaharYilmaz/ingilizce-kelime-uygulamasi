@@ -19,7 +19,7 @@ namespace DatabaseLogicLayer
 
         public DLL()
         {
-            connect = new SqlConnection(@"Data Source=DESKTOP-GP8FKQL;Initial Catalog=Sozluk;Integrated Security=True");
+            connect = new SqlConnection(@"Data Source=DESKTOP-ECAMK9C\ZISANSQL;Initial Catalog=Sozluk;Integrated Security=True");
 
         }
         public void BaglantiAyarla()
@@ -116,6 +116,7 @@ namespace DatabaseLogicLayer
                  (@"update Kelime set 
                    KeliemeID=@KeliemeID,
                    Derece=@Derece,Tarih=@Tarih where KeliemeID=@KeliemeID", connect);
+
                 command.Parameters.Add("@KeliemeID", SqlDbType.UniqueIdentifier).Value = k.KelimeID;
                 command.Parameters.Add("@Derece", SqlDbType.NVarChar).Value = k.Derece;
                 command.Parameters.Add("@Tarih", SqlDbType.NVarChar).Value = k.Tarih;
@@ -125,7 +126,6 @@ namespace DatabaseLogicLayer
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally

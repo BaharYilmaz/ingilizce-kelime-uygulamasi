@@ -33,12 +33,24 @@ namespace SözlükUygulaması
         public KelimeOgren()
         {
             InitializeComponent();
+                    btn_bitir.Enabled = false;
+
         }
+
 
         private void KelimeOgren_Load(object sender, EventArgs e)
         {
             Doldur();
-            btn_bitir.Enabled = false;
+            txt_ogrenAnlam.Enabled = false;
+            txt_ogrenTur.Enabled = false;
+            txt_ogrnCumle.Enabled = false;
+            txt_ogrenAnlam.BackColor = Color.White;
+            txt_ogrenTur.BackColor = Color.White;
+            txt_ogrnCumle.BackColor = Color.White;
+
+
+
+            //btn_bitir.Enabled = false;
         }
         private void Doldur()
         {
@@ -61,21 +73,25 @@ namespace SözlükUygulaması
                 txt_ogrenAnlam.Text = liste[i].KelimeTurkce;
                 txt_ogrenTur.Text = liste[i].Aciklama;
                 txt_ogrnCumle.Text = liste[i].Cumle;
+                
 
 
 
             }
-            else if (liste.Count == 0) 
+            else if (liste.Count == i)
             {
                 btn_bitir.Enabled = true;
                 if (ButonDurum == false) i++;
                 else if (ButonDurum == false) i--;
+                btn_bitir.Enabled = true;
 
+                
 
             }
-            btn_bitir.Enabled = true;
 
+            
 
+           
         }
 
 
@@ -101,11 +117,12 @@ namespace SözlükUygulaması
                 BLL.KelimeDurumDuzenle(liste[i].KelimeID, "test");
                 BLL.KelimeDereceDuzenle(liste[i].KelimeID,0);
             }
-            Test_ t =  Test_.Instance;
-            t.Show();
+            this.Hide();
+            ////Test_ t =  Test_.Instance;
+            ////t.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void txt_ogrnCumle_TextChanged(object sender, EventArgs e)
         {
 
         }
