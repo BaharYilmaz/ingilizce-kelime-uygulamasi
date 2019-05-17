@@ -119,7 +119,7 @@ namespace DatabaseLogicLayer
 
                 command.Parameters.Add("@KeliemeID", SqlDbType.UniqueIdentifier).Value = k.KelimeID;
                 command.Parameters.Add("@Derece", SqlDbType.NVarChar).Value = k.Derece;
-                command.Parameters.Add("@Tarih", SqlDbType.NVarChar).Value = k.Tarih;
+                command.Parameters.Add("@Tarih", SqlDbType.DateTime).Value = k.Tarih;
 
                 BaglantiAyarla();
                 ReturnValue = command.ExecuteNonQuery();

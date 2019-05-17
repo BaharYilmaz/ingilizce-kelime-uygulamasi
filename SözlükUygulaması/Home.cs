@@ -60,6 +60,7 @@ namespace SözlükUygulaması
                 Kelime_Sec.Instance.BringToFront();
             }
             Kelime_Sec.Instance.BringToFront();
+            
 
         }
 

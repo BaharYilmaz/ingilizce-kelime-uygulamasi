@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using Sözlük.Entities;
+using SözlükUygulaması;
 
 namespace SözlükUygulaması
 {
     public partial class Kelime_Sec : DevExpress.XtraEditors.XtraUserControl
     {
+        private int ogrenmeCount = 0;
         private static Kelime_Sec _instance;
         public static Kelime_Sec Instance
         {
@@ -86,11 +88,13 @@ namespace SözlükUygulaması
                     test.Show();
                 }
             }
+            
 
         }
 
         private void btn_secOgren_Click(object sender, EventArgs e)
         {
+            this.ogrenmeCount = 1;
             BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
             Guid KelimeID = ((Kelime)listBox_sec.SelectedItem).KelimeID;
             BLL.KelimeDurumDuzenle(KelimeID, "ogren");
@@ -103,9 +107,12 @@ namespace SözlükUygulaması
                 KelimeOgren ogr = KelimeOgren.Instance;
                 ogr.Show();
             }
+            
+            
 
         }
 
+        
 
         private void listBox_sec_Click(object sender, EventArgs e)
         {
