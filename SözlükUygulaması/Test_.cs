@@ -38,6 +38,7 @@ namespace SözlükUygulaması
 
         private void Test__Load(object sender, EventArgs e)
         {
+            txt_TestKelime.Enabled = false;
             KelimeDoldur();
         }
         private void KelimeDoldur()
@@ -273,5 +274,9 @@ namespace SözlükUygulaması
             return listdurum;
         }
 
+        private void panel_Test_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
