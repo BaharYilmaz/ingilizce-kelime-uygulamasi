@@ -19,7 +19,7 @@ namespace DatabaseLogicLayer
 
         public DLL()
         {
-            connect = new SqlConnection(@"Data Source=DESKTOP-ECAMK9C\ZISANSQL;Initial Catalog=Sozluk;Integrated Security=True");
+            connect = new SqlConnection(@"Data Source=DESKTOP-GP8FKQL;Initial Catalog=Sozluk;Integrated Security=True");
 
         }
         public void BaglantiAyarla()

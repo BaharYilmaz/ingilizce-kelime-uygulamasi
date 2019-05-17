@@ -33,7 +33,7 @@ namespace SözlükUygulaması
         public Test_()
         {
             InitializeComponent();
-            timer_test.Interval = 1000;
+            timer_test.Interval = 800;
         }
 
         private void Test__Load(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace SözlükUygulaması
         private void KelimeDoldur()
         {
             List<Kelime> ListeYazdir = TesteYazdir();
-            i++;
+            
             if (ListeYazdir != null && ListeYazdir.Count > 0 && i < ListeYazdir.Count)
             {
                 txt_TestKelime.Text = ListeYazdir[i].KelimeIngilizce;
@@ -51,11 +51,12 @@ namespace SözlükUygulaması
                 derece = ListeYazdir[i].Derece;
                 SecenekDoldur(ListeYazdir[i].KelimeTurkce);
             }
-            if (ListeYazdir.Count==0)
-            {
-                panel_Test.Enabled = false;
-                lbl_bilgi.Text = "TEST TAMAMLANDI";
-            }
+            i++;
+            //if (ListeYazdir.Count==0)
+            //{
+            //    panel_Test.Enabled = false;
+            //    lbl_bilgi.Text = "TEST TAMAMLANDI";
+            //}
 
         }
         private void SecenekDoldur(string Cevap)
@@ -151,7 +152,6 @@ namespace SözlükUygulaması
 
         private void btn_testBir_Click(object sender, EventArgs e)
         {
-            panel_Test.Enabled = true;
 
             bool kontrol1 = (bool)btn_testBir.Tag;
             if (kontrol1 == true)
@@ -172,7 +172,6 @@ namespace SözlükUygulaması
 
         private void btn_testIki_Click(object sender, EventArgs e)
         {
-            panel_Test.Enabled = true;
 
             bool kontrol1 = (bool)btn_testIki.Tag;
             if (kontrol1 == true)
@@ -192,7 +191,6 @@ namespace SözlükUygulaması
 
         private void btn_testUc_Click(object sender, EventArgs e)
         {
-            panel_Test.Enabled = true;
 
             bool kontrol1 = (bool)btn_testUc.Tag;
             if (kontrol1 == true)
@@ -211,7 +209,6 @@ namespace SözlükUygulaması
 
         private void btn_testDort_Click(object sender, EventArgs e)
         {
-            panel_Test.Enabled = true;
             
             bool kontrol1 = (bool)btn_testDort.Tag;
             if (kontrol1 == true)
@@ -231,7 +228,7 @@ namespace SözlükUygulaması
 
         private void timer_test_Tick(object sender, EventArgs e)
         {
-            panel_Test.Enabled = false;
+            panel_Test.Enabled = true;
 
             btn_testBir.Appearance.BackColor = Color.White;
             btn_testIki.Appearance.BackColor = Color.White;
