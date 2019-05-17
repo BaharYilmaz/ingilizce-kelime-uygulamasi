@@ -23,7 +23,7 @@ namespace SözlükUygulaması
 
             }
         }
-
+        DialogResult sonuc;
         public bool kontrol;
 
         public Home()
@@ -42,13 +42,18 @@ namespace SözlükUygulaması
 
         private void ace_cikis_Click(object sender, EventArgs e)
         {
-            if (!pnl_home.Controls.Contains(LogOut.Instance))
+            sonuc = MessageBox.Show("Çıkmak İstediğinizden Emin misiniz ?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            //if (sonuc == DialogResult.No)
+            //{
+                
+            //}
+            if (sonuc == DialogResult.Yes)
             {
-                pnl_home.Controls.Add(LogOut.Instance);
-                LogOut.Instance.Dock = DockStyle.Fill;
-                LogOut.Instance.BringToFront();
+
+                this.Close();
+                Application.Exit();
+
             }
-            LogOut.Instance.BringToFront();
         }
 
         private void ace_kelimeSec_Click(object sender, EventArgs e)

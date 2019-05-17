@@ -125,12 +125,6 @@
     <Compile Include="Kelime_Sec.Designer.cs">
       <DependentUpon>Kelime_Sec.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogOut.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="LogOut.Designer.cs">
-      <DependentUpon>LogOut.cs</DependentUpon>
-    </Compile>
     <Compile Include="Ogrenilmis.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -165,9 +159,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Kelime_Sec.resx">
       <DependentUpon>Kelime_Sec.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LogOut.resx">
-      <DependentUpon>LogOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ogrenilmis.resx">
       <DependentUpon>Ogrenilmis.cs</DependentUpon>
