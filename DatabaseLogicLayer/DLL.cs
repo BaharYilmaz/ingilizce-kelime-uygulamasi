@@ -155,7 +155,7 @@ namespace DatabaseLogicLayer
         }
         public SqlDataReader IstatistikYazdir()
         {
-            command = new SqlCommand(" select DATEPART(MM,Tarih)as 'Ay', COUNT(Durum) as 'Kelime' from Kelime where Durum='ogrenilmis' group by Tarih", connect);
+            command = new SqlCommand(" select DATEPART(MM,Tarih)as 'Ay', COUNT(Durum) as 'Kelime' from Kelime where Durum='ogrenilmis' group by DATEPART(MM,Tarih)", connect);
             BaglantiAyarla();
             return command.ExecuteReader();
         }

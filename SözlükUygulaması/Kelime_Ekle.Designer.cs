@@ -177,7 +177,6 @@
             this.Controls.Add(this.labelControl1);
             this.Name = "Kelime_Ekle";
             this.Size = new System.Drawing.Size(812, 676);
-            this.Load += new System.EventHandler(this.Kelime_Ekle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_ekleKelime.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ekleAnlam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ekleTur.Properties)).EndInit();

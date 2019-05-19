@@ -50,7 +50,7 @@
             this.panel1.Controls.Add(this.txt_sifre);
             this.panel1.Controls.Add(this.txt_kullanıcıAdı);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(122, 41);
+            this.panel1.Location = new System.Drawing.Point(314, 116);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(403, 406);
             this.panel1.TabIndex = 4;
@@ -119,7 +119,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 488);
+            this.ClientSize = new System.Drawing.Size(1055, 676);
             this.Controls.Add(this.panel1);
             this.Name = "GirisYap";
             this.Text = "GirisYap";

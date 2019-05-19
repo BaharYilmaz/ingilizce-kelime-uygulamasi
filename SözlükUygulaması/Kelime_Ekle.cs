@@ -30,10 +30,7 @@ namespace SözlükUygulaması
             InitializeComponent();
         }
         private Boolean durum=false;
-        private void Kelime_Ekle_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btn_ekle_Click(object sender, EventArgs e)
         {

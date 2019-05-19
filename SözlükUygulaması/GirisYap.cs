@@ -43,5 +43,6 @@ namespace SözlükUygulaması
                 txt_sifre.Text = "";
             }
         }
+
     }
 }

@@ -39,29 +39,34 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.BackColor = System.Drawing.Color.AliceBlue;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(171, 256);
+            this.label1.Location = new System.Drawing.Point(110, 260);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(481, 299);
+            this.label1.Size = new System.Drawing.Size(564, 301);
             this.label1.TabIndex = 15;
             this.label1.Text = resources.GetString("label1.Text");
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.BackColor = System.Drawing.Color.AliceBlue;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(451, 102);
+            this.label3.Location = new System.Drawing.Point(442, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(201, 132);
+            this.label3.Size = new System.Drawing.Size(232, 132);
             this.label3.TabIndex = 14;
             this.label3.Text = "Uygulamamızda amacımız ingilizce kelime öğreniminde ve ezberinde kullanıcıya yard" +
     "ımcı olmaktır.";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::SözlükUygulaması.Properties.Resources.images2;
-            this.pictureBox1.Location = new System.Drawing.Point(171, 102);
+            this.pictureBox1.Location = new System.Drawing.Point(114, 91);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(273, 132);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

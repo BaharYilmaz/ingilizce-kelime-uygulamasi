@@ -12,41 +12,18 @@ namespace SözlükUygulaması
 {
     public partial class Home : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
-        private static Home _instance;
-        public static Home Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new Home();
-                return _instance;
-
-            }
-        }
         DialogResult sonuc;
         public bool kontrol;
 
         public Home()
         {
             InitializeComponent();
-   
-
         }
-       
-        private void _container_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        
 
         private void ace_cikis_Click(object sender, EventArgs e)
         {
             sonuc = MessageBox.Show("Çıkmak İstediğinizden Emin misiniz ?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            //if (sonuc == DialogResult.No)
-            //{
-                
-            //}
+
             if (sonuc == DialogResult.Yes)
             {
 
@@ -65,7 +42,7 @@ namespace SözlükUygulaması
                 Kelime_Sec.Instance.BringToFront();
             }
             Kelime_Sec.Instance.BringToFront();
-            
+
 
         }
 
@@ -78,6 +55,7 @@ namespace SözlükUygulaması
                 KelimeOgren.Instance.BringToFront();
             }
             KelimeOgren.Instance.BringToFront();
+
         }
 
         private void ace_test_Click(object sender, EventArgs e)
@@ -89,6 +67,7 @@ namespace SözlükUygulaması
                 Test_.Instance.BringToFront();
             }
             Test_.Instance.BringToFront();
+
         }
 
         private void ace_ogrenilen_Click(object sender, EventArgs e)
@@ -124,21 +103,7 @@ namespace SözlükUygulaması
             }
             Help.Instance.BringToFront();
         }
-
-        private void Home_Load(object sender, EventArgs e)
-        {
-           
-                ace_profil.Enabled = true;
-                ace_cikis.Enabled = true;
-                ace_Istatistik.Enabled = true;
-                ace_AnaMenu.Enabled = true;
-                ace_kelimeSec.Enabled = true;
-                ace_kelimeEkle.Enabled = true;
-                ace_ogren.Enabled = true;
-                ace_test.Enabled = true;
-                ace_ogrenilen.Enabled = true;
-            
-        }
+        
 
         private void ace_Istatistik_Click(object sender, EventArgs e)
         {
@@ -149,11 +114,13 @@ namespace SözlükUygulaması
                 Istatistik.Instance.BringToFront();
             }
             Istatistik.Instance.BringToFront();
+           
+
         }
 
-        private void pnl_home_Paint(object sender, PaintEventArgs e)
+        private void Home_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

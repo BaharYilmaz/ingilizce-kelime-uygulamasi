@@ -53,11 +53,12 @@ namespace SözlükUygulaması
                 SecenekDoldur(ListeYazdir[i].KelimeTurkce);
             }
             i++;
-            //if (ListeYazdir.Count==0)
-            //{
-            //    panel_Test.Enabled = false;
-            //    lbl_bilgi.Text = "TEST TAMAMLANDI";
-            //}
+            if (ListeYazdir.Count == i)
+            {
+                panel_Test.Enabled = false;
+                lbl_bilgi.Text = "TEST TAMAMLANDI";
+                this.Hide();
+            }
 
         }
         private void SecenekDoldur(string Cevap)
@@ -274,9 +275,6 @@ namespace SözlükUygulaması
             return listdurum;
         }
 
-        private void panel_Test_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
     }
 }

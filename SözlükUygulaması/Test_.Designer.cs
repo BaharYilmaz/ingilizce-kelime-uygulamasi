@@ -102,7 +102,6 @@
             this.panel_Test.Name = "panel_Test";
             this.panel_Test.Size = new System.Drawing.Size(406, 323);
             this.panel_Test.TabIndex = 10;
-            this.panel_Test.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Test_Paint);
             // 
             // labelControl2
             // 

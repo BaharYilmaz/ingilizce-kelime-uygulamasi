@@ -31,20 +31,14 @@ namespace SözlükUygulaması
         {
             InitializeComponent();
         }
+        string[] aylar = new string[12] {"Ocak","Subat","Mart","Nisan","Mayis","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık" };
+        
 
         private void Istatistik_Load(object sender, EventArgs e)
         {
-            BusinessLogicLayer.BLL bll = new BusinessLogicLayer.BLL();
-            List<Istatistik_> listChart = bll.IstatistikYazdir();
-            if (listChart.Count>0)
-            {
-                chart_Istatistik.Series["Series 1"].Points.AddPoint(Convert.ToInt32(listChart[0].Ay), int.Parse(listChart[1].KelimeSayisi.ToString()));
-                lbl_bilgi.Text = "Öğrenilmiş kelimelerin istatiksel grafiği";
-            }
-            else
-            {
-                lbl_bilgi.Text = "Henüz öğrenilmiş bir kelime yok";
-            }
+            _Istatistik();
+            this.lbl_bilgi.Location = new System.Drawing.Point(200, 350);
+            this.lbl_bilgi.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 
         }
 
@@ -55,11 +49,40 @@ namespace SözlükUygulaması
             {
                 BusinessLogicLayer.BLL bll = new BusinessLogicLayer.BLL();
                 bll.Sifirla();
-            
+                _Istatistik();
+
             }
         }
+        private void _Istatistik()
+        {
+            int i = 0, j = 1;
+            BusinessLogicLayer.BLL bll = new BusinessLogicLayer.BLL();
+            List<Istatistik_> listChart = bll.IstatistikYazdir();
+            if (listChart.Count == 0)
+            {
+                lbl_bilgi.Text = "Henüz öğrenilmiş bir kelime yok";
+            }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+            while (listChart.Count > 0 && i < listChart.Count)
+            {
+                if (listChart[i].Ay == j)
+                {
+                    chart_Istatistik.Series["Kelime"].Points.Add(new DevExpress.XtraCharts.SeriesPoint(aylar[j - 1], listChart[i].KelimeSayisi));
+                    i++; j = 1;
+                }
+                else j++;
+                lbl_bilgi.Text = "Öğrenilmiş kelimelerin istatiksel grafiği";
+            }
+            
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }

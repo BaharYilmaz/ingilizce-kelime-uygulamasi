@@ -33,7 +33,7 @@ namespace SözlükUygulaması
         public KelimeOgren()
         {
             InitializeComponent();
-                    btn_bitir.Enabled = false;
+            btn_bitir.Enabled = false;
 
         }
 
@@ -47,10 +47,7 @@ namespace SözlükUygulaması
             txt_ogrenAnlam.BackColor = Color.White;
             txt_ogrenTur.BackColor = Color.White;
             txt_ogrnCumle.BackColor = Color.White;
-
-
-
-            //btn_bitir.Enabled = false;
+            
         }
         private void Doldur()
         {
@@ -74,9 +71,6 @@ namespace SözlükUygulaması
                 txt_ogrenTur.Text = liste[i].Aciklama;
                 txt_ogrnCumle.Text = liste[i].Cumle;
                 
-
-
-
             }
             else if (liste.Count == i)
             {
@@ -85,15 +79,9 @@ namespace SözlükUygulaması
                 else if (ButonDurum == false) i--;
                 btn_bitir.Enabled = true;
 
-                
-
             }
-
             
-
-           
         }
-
 
         private void btn_geri_Click(object sender, EventArgs e)
         {
@@ -122,9 +110,5 @@ namespace SözlükUygulaması
             ////t.Show();
         }
 
-        private void txt_ogrnCumle_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
