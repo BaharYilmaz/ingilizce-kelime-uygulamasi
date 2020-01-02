@@ -8,9 +8,6 @@ Yazılım Yapımı Dönem Projesi - İngilizce Kelime Öğrenme Uygulaması
 - Bahar YILMAZ 
 - Zişan KARSATAR https://github.com/zisankarsatar
 
-## Ödevin Gerçekleştirildiği Platform ve Sürümü, Kullanılan Dil 
-
-Microsoft Visual Studio 2017 & SQL Server Management Studio- C#
 
 ## Amaç
 
