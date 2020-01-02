@@ -1,4 +1,4 @@
-# IngilizceKelimeUygulamasi
+# Ingilizce Kelime Uygulamasi
 
 Yazılım Yapımı Dönem Projesi - İngilizce Kelime Öğrenme Uygulaması
 (2018-2019)
@@ -30,7 +30,6 @@ Proje,İngilizce kelime öğrenilmesini ve öğrenilen kelimelerin belli aralık
 
 Uygulama C# dili ve katmanlı mimari yapısı kullanılarak Visual Studio ile geliştirilmiştir. Tasarımı DevExpress ile gerçekleştirilip veritabanı olarak MsSQL kullanılmıştır.
 
-![englishLearn](https://user-images.githubusercontent.com/48556212/71688319-b5741880-2db0-11ea-85cc-b5c50515ea24.png)
-
+![englishLearn](https://user-images.githubusercontent.com/48556212/71688542-0f74de00-2db1-11ea-8ab6-fb1a7768029e.png)
 
 
