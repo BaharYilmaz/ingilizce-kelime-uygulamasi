@@ -1,18 +1,36 @@
 # IngilizceKelimeUygulamasi
 
-Manisa Celal Bayar Üniversitesi
-
 Yazılım Yapımı Dönem Projesi - İngilizce Kelime Öğrenme Uygulaması
 (2018-2019)
 
 ## PROJE EKİBİ 
-- Bahar YILMAZ ~172802013
-- Zişan KARSATAR ~172802058
+
+- Bahar YILMAZ 
+- Zişan KARSATAR https://github.com/zisankarsatar
 
 ## Ödevin Gerçekleştirildiği Platform ve Sürümü, Kullanılan Dil 
+
 Microsoft Visual Studio 2017 & SQL Server Management Studio- C#
 
-## Gerçekleştirilen Projenin Kısa Tanımı 
+## Amaç
+
 Proje,İngilizce kelime öğrenilmesini ve öğrenilen kelimelerin belli aralıklarla test edilmesini sağlar.Uygulamamızda amacımız ingilizce kelime ezberinde kullanıcıya yardımcı olmaktır.
+
+## Özellikler
+
+* Giriş yapan kullanıcı öğrenmek istediği kelimeleri seçip o kelimenin anlamını, türünü ve cümle içinde kullanılışını görebilmektedir.
+
+* Öğrendiği kelimelerden belirli aralıklarla teste tabi tutulmaktadır.
+
+* Kullanıcı, ilerlemesini bir istatistik grafiği ile takip edebilmekte ve dilerse ilerlemeyi sıfırlayabilmektedir. 
+
+* Kullanıcı yeni kelime eklemesi de yapabilmektedir.
+
+## Kullanılan Teknolojiler
+
+Uygulama C# dili ve katmanlı mimari yapısı kullanılarak Visual Studio ile geliştirilmiştir. Tasarımı DevExpress ile gerçekleştirilip veritabanı olarak MsSQL kullanılmıştır.
+
+![englishLearn](https://user-images.githubusercontent.com/48556212/71688319-b5741880-2db0-11ea-85cc-b5c50515ea24.png)
+
 
 
